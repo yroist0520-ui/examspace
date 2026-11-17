@@ -4,23 +4,85 @@ import { Pause, Play, Repeat, RotateCcw, SkipBack, SkipForward, Volume2 } from '
 import type { AudioTrack } from '@/types/paper';
 import { formatClock } from '@/lib/text';
 
-/** 按句切分，处理标点处的自然停顿（避免逐字机械朗读） */
-function splitSentences(text: string): string[] {
-  const parts = text.match(/[^.!?；。！？]+[.!?；。！？]+["')\]]*\s*|[^.!?；。！？]+$/g);
-  const out = (parts ?? [text]).map((s) => s.trim()).filter(Boolean);
-  return out.length > 0 ? out : [text];
+/** 明显低质/怪异的音色（系统自带的搞怪与上世纪 macintalk 机械音），自动优选时排除 */
+const ROBOTIC_VOICE =
+  /\b(Albert|Bahh|Bells|Boing|Bubbles|Cellos|Wobble|Jester|Organ|Superstar|Trinoids|Zarvox|Whisper|Bad News|Good News|Fred|Ralph|Junior|Kathy)\b/i;
+/** 高质量音色特征（各平台的自然/神经网络/在线增强音色） */
+const HIGH_QUALITY = /(premium|enhanced|neural|natural|online|google|siri|ava|serena|aria|jenny|guy|nora|libby|sonia)/i;
+/** 公认自然度高的经典音色，自动优选时优先（Samantha 为女声，作主发音；Alex 男声次之） */
+const KNOWN_BEST_SAMANTHA = /\bsamantha\b/i;
+const KNOWN_BEST_ALEX = /\balex\b/i;
+/** 常见男声音色名：用于对话中 “Man” 轮次的第二发音 */
+const MALE_VOICE =
+  /\b(aaron|alex|daniel|david|guy|oliver|ryan|arthur|gordon|rocko|reed|thomas|tom|rishi|bruce|james|mark|grandpa|junior)\b/i;
+
+/** 音色质量打分排序：让默认发音尽量落在自然度最高的英文音色上 */
+function rankVoices(all: SpeechSynthesisVoice[]): SpeechSynthesisVoice[] {
+  const score = (v: SpeechSynthesisVoice): number => {
+    let s = 0;
+    if (HIGH_QUALITY.test(v.name)) s += 8;
+    if (KNOWN_BEST_SAMANTHA.test(v.name)) s += 6;
+    else if (KNOWN_BEST_ALEX.test(v.name)) s += 4;
+    const lang = v.lang.toLowerCase();
+    if (lang === 'en-us') s += 3;
+    else if (lang === 'en-gb') s += 2;
+    else if (lang.startsWith('en')) s += 1;
+    if (v.localService) s += 1;
+    return s;
+  };
+  return all
+    .filter((v) => v.lang.toLowerCase().startsWith('en') && !ROBOTIC_VOICE.test(v.name))
+    .map((v) => ({ v, s: score(v) }))
+    .sort((a, b) => b.s - a.s || a.v.name.localeCompare(b.v.name))
+    .map((x) => x.v);
 }
 
-/** 段落间隔（毫秒）：标点与段落之间留出自然呼吸感，但不制造机械长停顿 */
-const SENTENCE_GAP_MS = 160;
+/** 说话人轮次：把 "Man: … Woman: …" 拆成逐句轮次（标签不朗读），用于男女交替音色 */
+type SpeakerRun = { who: 'A' | 'B'; text: string };
+function splitSpeakerRuns(text: string): SpeakerRun[] {
+  const re = /\b(Man|Woman|Male|Female|M|W|男|女)\s*[:：]/g;
+  const marks: { who: 'A' | 'B'; start: number; textStart: number }[] = [];
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text))) {
+    const label = m[1].toLowerCase();
+    const who: 'A' | 'B' = label === 'man' || label === 'male' || label === 'm' || label === '男' ? 'B' : 'A';
+    marks.push({ who, start: m.index, textStart: m.index + m[0].length });
+  }
+  if (marks.length === 0) {
+    const t = text.trim();
+    return t ? [{ who: 'A', text: t }] : [];
+  }
+  const runs: SpeakerRun[] = [];
+  const lead = text.slice(0, marks[0].start).trim();
+  if (lead) runs.push({ who: 'A', text: lead });
+  marks.forEach((mk, i) => {
+    const end = i + 1 < marks.length ? marks[i + 1].start : text.length;
+    const t = text.slice(mk.textStart, end).trim();
+    if (t) runs.push({ who: mk.who, text: t });
+  });
+  return runs;
+}
+
+/** 轮次之间的呼吸停顿（自然衔接，不制造机械长停顿） */
+const RUN_GAP_MS = 260;
+/** 段落之间的停顿 */
+const SEG_GAP_MS = 520;
+/** Chrome 长语音会静默暂停，定期 resume 守护（解决“中途停住/断断续续”） */
+const WATCHDOG_MS = 8000;
+/** 估算朗读速度（字符/秒），用于无 boundary 事件时的进度兜底 */
+const CHARS_PER_SEC = 14;
 
 /**
  * 听力播放器（双模）：
  * - track.src 存在 → 真题原始录音播放（保留原说话人语气、口音与语速）；
  * - 否则 → 独立的“辅助朗读”功能（浏览器语音合成），界面明确标注为合成语音，
  *   绝不冒充真题原音。
- * 支持播放/暂停、可点击进度条、时间显示、0.75–1.5× 倍速、重新播放、
- * 单题循环、逐段跳转与原文对照。
+ * 辅助朗读优化：
+ * - 自动优选高质量英文音色（可手动切换发音风格）；
+ * - 按说话人轮次整段朗读（对话 Man/Woman 交替音色），由引擎处理句读停顿，
+ *   避免一句一顿的机械拼接；
+ * - resume 守护 + 错误重试，解决播放中途卡住；
+ * - 支持播放/暂停、进度显示、0.75–1.5× 倍速、重新播放、单题循环与原文对照。
  */
 export default function AudioPlayer({
   track,
@@ -47,9 +109,10 @@ export default function AudioPlayer({
   const [ttsProgress, setTtsProgress] = useState(0);
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [voiceURI, setVoiceURI] = useState<string>('');
-  const utterRef = useRef<SpeechSynthesisUtterance | null>(null);
 
   const usingRealAudio = !!track.src;
+  /** 朗读链代际：切换段落/停止时递增，使旧回调失效，避免双跳或卡链 */
+  const chainRef = useRef(0);
 
   const segmentIndex = useMemo(() => {
     const id = activeSegmentId ?? track.segments[0]?.id;
@@ -68,92 +131,147 @@ export default function AudioPlayer({
       return;
     }
     setTtsSupported(true);
-    const loadVoices = () => {
-      const all = window.speechSynthesis.getVoices();
-      setVoices(all.filter((v) => v.lang.toLowerCase().startsWith('en')));
-    };
+    const loadVoices = () => setVoices(rankVoices(window.speechSynthesis.getVoices()));
     loadVoices();
     window.speechSynthesis.addEventListener('voiceschanged', loadVoices);
     return () => window.speechSynthesis.removeEventListener('voiceschanged', loadVoices);
   }, []);
 
+  /** 主发音（自动优选或手动指定）；对话第二发音优先取男声（Man 轮次） */
+  const voiceA = useMemo(
+    () => voices.find((v) => v.voiceURI === voiceURI) ?? voices[0] ?? null,
+    [voices, voiceURI]
+  );
+  const voiceB = useMemo(
+    () =>
+      voices.find((v) => v.voiceURI !== voiceA?.voiceURI && MALE_VOICE.test(v.name)) ??
+      voices.find((v) => v.voiceURI !== voiceA?.voiceURI) ??
+      null,
+    [voices, voiceA]
+  );
+
   const stopTts = useCallback(() => {
     playingRef.current = false;
+    chainRef.current += 1;
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
   }, []);
 
   const speakSegment = useCallback(
     (index: number) => {
       if (!ttsSupported) return;
+      const myChain = ++chainRef.current;
       window.speechSynthesis.cancel();
       const seg = track.segments[index];
       if (!seg) return;
-      const sentences = splitSentences(seg.text);
-      const total = seg.text.length || 1;
-      const voice = voices.find((v) => v.voiceURI === voiceURI) ?? null;
+      const runs = splitSpeakerRuns(seg.text);
+      const totalChars = runs.reduce((n, r) => n + r.text.length, 0) || 1;
       let doneChars = 0;
+      playingRef.current = true;
 
-      const speakAt = (i: number) => {
-        if (!playingRef.current) return;
-        if (i >= sentences.length) {
-          setTtsProgress(100);
-          if (loop) {
-            window.setTimeout(() => {
-              if (!playingRef.current) return;
-              setTtsProgress(0);
-              speakSegment(index);
-            }, 500);
-            return;
-          }
-          const next = index + 1;
-          if (next < track.segments.length) {
-            setTtsIndex(next);
-            setTtsProgress(0);
-            onSegmentChange?.(track.segments[next].id);
-            window.setTimeout(() => speakAt2(next), SENTENCE_GAP_MS);
-          } else {
-            playingRef.current = false;
-            setPlaying(false);
-          }
+      const handleSegEnd = () => {
+        setTtsProgress(100);
+        if (loop) {
+          window.setTimeout(() => {
+            if (chainRef.current === myChain && playingRef.current) speakSegment(index);
+          }, 600);
           return;
         }
-        const u = new SpeechSynthesisUtterance(sentences[i]);
+        const next = index + 1;
+        if (next < track.segments.length) {
+          setTtsIndex(next);
+          setTtsProgress(0);
+          onSegmentChange?.(track.segments[next].id);
+          window.setTimeout(() => {
+            if (playingRef.current) speakSegment(next);
+          }, SEG_GAP_MS);
+        } else {
+          playingRef.current = false;
+          setPlaying(false);
+        }
+      };
+
+      const speakRun = (ri: number, attempt = 0) => {
+        if (chainRef.current !== myChain || !playingRef.current) return;
+        if (ri >= runs.length) {
+          handleSegEnd();
+          return;
+        }
+        const run = runs[ri];
+        const u = new SpeechSynthesisUtterance(run.text);
         u.lang = 'en-US';
         u.rate = rate;
+        const voice = run.who === 'B' ? voiceB ?? voiceA : voiceA;
         if (voice) u.voice = voice;
+
+        const startChars = doneChars;
+        let gotBoundary = false;
+        const estMs = Math.max(1200, (run.text.length / CHARS_PER_SEC / Math.max(0.5, rate)) * 1000);
+        const t0 = performance.now();
+        const ticker = window.setInterval(() => {
+          if (gotBoundary || chainRef.current !== myChain) return;
+          const p = Math.min(99, ((performance.now() - t0) / estMs) * 100);
+          const pct = ((startChars + (run.text.length * p) / 100) / totalChars) * 100;
+          setTtsProgress(Math.min(100, Math.round(pct)));
+        }, 250);
+
+        const cleanup = () => window.clearInterval(ticker);
+        const guard = () => chainRef.current === myChain && playingRef.current;
+
         u.onboundary = (e) => {
-          const pct = ((doneChars + e.charIndex) / total) * 100;
+          gotBoundary = true;
+          const pct = ((startChars + e.charIndex) / totalChars) * 100;
           setTtsProgress(Math.min(100, Math.round(pct)));
         };
         u.onend = () => {
-          doneChars += sentences[i].length;
-          if (playingRef.current) {
-            window.setTimeout(() => speakAt(i + 1), SENTENCE_GAP_MS);
-          }
+          cleanup();
+          if (!guard()) return;
+          doneChars = startChars + run.text.length;
+          setTtsProgress(Math.min(100, Math.round((doneChars / totalChars) * 100)));
+          window.setTimeout(() => speakRun(ri + 1), RUN_GAP_MS);
         };
         u.onerror = () => {
-          /* 取消或失败时停止链条，由播放状态兜底 */
+          cleanup();
+          // 链已被切换/停止（旧回调）则由 guard 退出；同链内被打断（系统通知、语音抢占）也走重试
+          if (!guard()) return;
+          if (attempt === 0) {
+            // 首次错误重试当前轮次一次，避免中途无声中断
+            window.setTimeout(() => speakRun(ri, 1), 150);
+          } else {
+            doneChars = startChars + run.text.length;
+            window.setTimeout(() => speakRun(ri + 1), RUN_GAP_MS);
+          }
         };
-        utterRef.current = u;
         window.speechSynthesis.speak(u);
       };
-      // 进入下一段时重新走 speakSegment 以重置段内状态
-      const speakAt2 = (next: number) => {
-        setTtsIndex(next);
-        speakSegment(next);
-      };
-      playingRef.current = true;
-      speakAt(0);
+
+      speakRun(0);
     },
-    [track.segments, rate, loop, ttsSupported, voices, voiceURI, onSegmentChange]
+    [track.segments, rate, loop, ttsSupported, voiceA, voiceB, onSegmentChange]
   );
 
   useEffect(() => {
     return () => {
       playingRef.current = false;
+      chainRef.current += 1;
       if ('speechSynthesis' in window) window.speechSynthesis.cancel();
     };
   }, []);
+
+  /** 中途卡住守护：Chrome 在长语音/后台标签时会静默暂停，定期恢复 */
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window) || usingRealAudio) return;
+    const tick = window.setInterval(() => {
+      if (playingRef.current && window.speechSynthesis.speaking) window.speechSynthesis.resume();
+    }, WATCHDOG_MS);
+    const onVisibility = () => {
+      if (!document.hidden && playingRef.current) window.speechSynthesis.resume();
+    };
+    document.addEventListener('visibilitychange', onVisibility);
+    return () => {
+      window.clearInterval(tick);
+      document.removeEventListener('visibilitychange', onVisibility);
+    };
+  }, [usingRealAudio]);
 
   const toggle = () => {
     if (usingRealAudio) {
@@ -337,12 +455,14 @@ export default function AudioPlayer({
           <label className="flex items-center gap-1 text-[11px] text-ink-mute">
             发音
             <select
-              className="h-7 max-w-[150px] rounded-lg border hairline bg-transparent px-1.5 text-[11px] text-ink-soft"
+              className="h-7 max-w-[160px] rounded-lg border hairline bg-transparent px-1.5 text-[11px] text-ink-soft"
               value={voiceURI}
               onChange={(e) => setVoiceURI(e.target.value)}
               title="选择英语发音风格（辅助朗读，非考试原音）"
             >
-              <option value="">浏览器默认</option>
+              <option value="">
+                自动优选{voices[0] ? `：${voices[0].name}` : ''}
+              </option>
               {voices.map((v) => (
                 <option key={v.voiceURI} value={v.voiceURI}>
                   {v.name}（{v.lang}）
@@ -390,8 +510,8 @@ export default function AudioPlayer({
 
       {!usingRealAudio && (
         <div className="border-t hairline bg-black/[0.015] px-4 py-2 text-[11px] text-ink-mute">
-          本段未收录真题原始听力录音（官方不公开发布）。当前为独立的辅助朗读功能，由浏览器语音合成朗读站内文本，
-          仅作对照参考，不是考试原音，不用于替代真题录音。
+          本段未收录真题原始听力录音（官方不公开发布）。当前为独立的辅助朗读功能，由浏览器语音合成朗读站内文本
+          （自动优选高质量英文音色，对话按说话人交替音色），仅作对照参考，不是考试原音，不用于替代真题录音。
         </div>
       )}
 
