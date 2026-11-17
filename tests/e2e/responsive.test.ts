@@ -66,7 +66,8 @@ async function waitServer(url: string, timeoutMs = 30000): Promise<void> {
 
 async function open(vpKey: VPKey, route: string): Promise<void> {
   await page.setViewport(VP[vpKey]);
-  await page.goto(BASE + route, { waitUntil: 'networkidle0', timeout: 20000 });
+  // HashRouter：所有路由经 /#/ 访问（兼容 Gitee Pages 子路径托管）
+  await page.goto(BASE + '/#' + route, { waitUntil: 'networkidle0', timeout: 20000 });
   await page.waitForFunction(() => (document.querySelector('#root')?.childElementCount ?? 0) > 0, {
     timeout: 10000
   });

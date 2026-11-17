@@ -4,6 +4,8 @@ import { defineConfig } from 'vitest/config'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // 相对资源路径：同一构建可部署在根域（Trae Site）与子路径（Gitee Pages）
+  base: './',
   plugins: [react()],
   resolve: {
     alias: {

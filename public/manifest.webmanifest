@@ -3,21 +3,21 @@
   "short_name": "EXAMSPACE",
   "description": "真题资源库、在线试卷阅读、模拟考试、生词本与学习统计，离线可用。",
   "lang": "zh-CN",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#faf8f4",
   "theme_color": "#faf8f4",
   "icons": [
     {
-      "src": "/icon.svg",
+      "src": "./icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/icon.svg",
+      "src": "./icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "maskable"
@@ -25,8 +25,8 @@
   ],
   "categories": ["education"],
   "shortcuts": [
-    { "name": "生词本", "url": "/words" },
-    { "name": "错题本", "url": "/mistakes" },
-    { "name": "学习统计", "url": "/stats" }
+    { "name": "生词本", "url": "#/words" },
+    { "name": "错题本", "url": "#/mistakes" },
+    { "name": "学习统计", "url": "#/stats" }
   ]
 }

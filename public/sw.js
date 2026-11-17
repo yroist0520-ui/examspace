@@ -1,6 +1,7 @@
 /* EXAMSPACE Service Worker：应用外壳离线缓存 + 静态资源缓存 */
-const CACHE = 'examspace-v1';
-const SHELL = ['/', '/index.html', '/manifest.webmanifest', '/icon.svg', '/favicon.svg'];
+const CACHE = 'examspace-v2';
+// 相对路径：SW 作用域解析，兼容部署在根域或子路径（Gitee Pages）
+const SHELL = ['./', './index.html', './manifest.webmanifest', './icon.svg', './favicon.svg'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -32,10 +33,10 @@ self.addEventListener('fetch', (event) => {
       fetch(req)
         .then((res) => {
           const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put('/index.html', copy));
+          caches.open(CACHE).then((c) => c.put('./index.html', copy));
           return res;
         })
-        .catch(() => caches.match('/index.html'))
+        .catch(() => caches.match('./index.html'))
     );
     return;
   }
