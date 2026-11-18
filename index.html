@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./icon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#161512" media="(prefers-color-scheme: dark)" />
+    <meta name="description" content="EXAMSPACE 英语真题学习平台：真题资源库、在线试卷阅读、模拟考试与学习统计。" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="EXAMSPACE" />
+    <title>EXAMSPACE｜英语真题学习平台</title>
+    <script type="module" crossorigin src="./assets/index-C2LQDej2.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CMjLWSN_.css">
+  </head>
+  <body>
+    <!-- 首屏兜底：在 React 接管前先渲染品牌加载态；若脚本失败则显示可读提示而非白屏 -->
+    <div id="boot" aria-live="polite" style="position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;background:#f7f6f3;color:#1f2a26;font-family:ui-serif,Georgia,'Songti SC',serif;z-index:9999">
+      <div style="display:grid;place-items:center;width:56px;height:56px;border-radius:15px;background:#1f5d4c;color:#fff;font:700 26px/1 ui-serif,Georgia,serif;letter-spacing:-.04em;box-shadow:0 8px 28px rgba(31,93,76,.22)">E</div>
+      <div style="text-align:center">
+        <div style="font-size:17px;font-weight:600;letter-spacing:.18em">EXAMSPACE</div>
+        <div id="boot-msg" style="margin-top:10px;font:14px/1.7 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;color:#6b756f;letter-spacing:.02em">正在打开你的题库…</div>
+      </div>
+      <div id="boot-retry" hidden style="margin-top:4px">
+        <button id="boot-btn" type="button" style="min-height:44px;padding:0 22px;border:0;border-radius:10px;background:#1f5d4c;color:#fff;font:600 14px/1 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;cursor:pointer">清除缓存并重试</button>
+      </div>
+    </div>
+    <div id="root"></div>
+    <script>
+      // React 成功挂载后移除兜底层；8 秒仍未挂载则判定为加载失败（多为旧缓存导致）。
+      (function () {
+        var boot = document.getElementById('boot');
+        var removed = false;
+        function hideBoot() {
+          var root = document.getElementById('root');
+          if (!removed && root && root.firstElementChild) {
+            removed = true;
+            if (boot && boot.parentNode) boot.parentNode.removeChild(boot);
+            clearTimeout(timer);
+          }
+        }
+        var observer = new MutationObserver(hideBoot);
+        observer.observe(document.getElementById('root'), { childList: true });
+        var timer = setTimeout(function () {
+          if (removed) return;
+          var msg = document.getElementById('boot-msg');
+          var retry = document.getElementById('boot-retry');
+          if (msg) msg.textContent = '加载较慢，可能是旧缓存所致。点击下方按钮清除缓存后重试。';
+          if (retry) retry.hidden = false;
+          var btn = document.getElementById('boot-btn');
+          if (btn) btn.onclick = function () {
+            if ('caches' in window) {
+              caches.keys().then(function (keys) { return Promise.all(keys.map(function (k) { return caches.delete(k); })); })
+                .then(function () { if ('serviceWorker' in navigator) return navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); }); })
+                .then(function () { location.reload(true); })
+                .catch(function () { location.reload(true); });
+            } else { location.reload(true); }
+          };
+        }, 8000);
+      })();
+    </script>
+  </body>
+</html>
