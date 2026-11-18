@@ -66,31 +66,31 @@ function resourceRecord(input: {
 /* ------------------------------ 来源渠道（已实测核验） ------------------------------ */
 
 /** 第三方渠道（无授权声明 → 仅外链、套级待人工核验） */
-function third(name: string, url: string, kind: PaperSource['kind'], note?: string): PaperSource {
-  return { name, url, kind, license: 'unknown', verifiedAt: CHECKED, note };
+function third(name: string, kind: PaperSource['kind'], note?: string): PaperSource {
+  return { name, kind, license: 'unknown', verifiedAt: CHECKED, note };
 }
 
 /** 官方公开页面（可外链引用，禁止整页复制） */
-function official(name: string, url: string, note?: string): PaperSource {
-  return { name, url, kind: '页面', license: 'link-only', verifiedAt: CHECKED, note };
+function official(name: string, note?: string): PaperSource {
+  return { name, kind: '页面', license: 'link-only', verifiedAt: CHECKED, note };
 }
 
 const CET4_SOURCES = (year: number): PaperSource[] => [
-  third('CET通（试题PDF+答案+听力MP3）', 'https://www.cettong.cn/library/cet4', '试题', '2019–2025 各年 6/12 月，套级页面待逐套核验'),
-  third('WeHUSTER（真题+答案+解析+听力）', 'https://www.wehuster.com/cet4', '解析'),
+  third('CET通（试题PDF+答案+听力MP3）', '试题', '2019–2025 各年 6/12 月，套级页面待逐套核验'),
+  third('WeHUSTER（真题+答案+解析+听力）', '解析'),
   ...(year >= 2023 || year >= 2026
-    ? [third('南京大学外语技能训练中心（试题+答案/范文）', 'https://eol.nju.edu.cn/cet4/', '试题', '覆盖 2023-12 至 2026-06，听力音频未附')]
+    ? [third('南京大学外语技能训练中心（试题+答案/范文）', '试题', '覆盖 2023-12 至 2026-06，听力音频未附')]
     : []),
-  official('教育部教育考试院·CET 官网（题型结构与大纲，无历年真题）', 'https://cet.neea.edu.cn/xhtml1/category/16123/192-1.htm')
+  official('教育部教育考试院·CET 官网（题型结构与大纲，无历年真题）')
 ];
 
 const CET6_SOURCES = (year: number): PaperSource[] => [
-  third('CET通（试题PDF+答案+听力MP3）', 'https://www.cettong.cn/library/cet6', '试题', '2019–2025 各年 6/12 月，套级页面待逐套核验'),
-  third('WeHUSTER（真题+答案+解析+听力）', 'https://www.wehuster.com/cet6', '解析'),
+  third('CET通（试题PDF+答案+听力MP3）', '试题', '2019–2025 各年 6/12 月，套级页面待逐套核验'),
+  third('WeHUSTER（真题+答案+解析+听力）', '解析'),
   ...(year >= 2024 || year >= 2026
-    ? [third('南京大学外语技能训练中心（试题+答案/范文）', 'https://eol.nju.edu.cn/cet6/', '试题', '覆盖 2024-06 至 2026-06，听力音频未附')]
+    ? [third('南京大学外语技能训练中心（试题+答案/范文）', '试题', '覆盖 2024-06 至 2026-06，听力音频未附')]
     : []),
-  official('教育部教育考试院·CET 官网（题型结构与大纲，无历年真题）', 'https://cet.neea.edu.cn/xhtml1/category/16123/192-1.htm')
+  official('教育部教育考试院·CET 官网（题型结构与大纲，无历年真题）')
 ];
 
 /** CET 记录共用说明 */
@@ -141,11 +141,11 @@ function cetPapers(code: 'cet4' | 'cet6', cnName: string, srcOf: (year: number) 
 /* --------------------------------- 生成：考研 --------------------------------- */
 
 const KY_SOURCES: PaperSource[] = [
-  third('中国教育在线·历年英语真题（供稿：文都/海文/掌上考研）', 'https://kaoyan.eol.cn/shiti/yingyu/', '试题', '2019–2025，第三方整理，非官方答案'),
-  third('新东方在线·真题与答案解析', 'https://m.koolearn.com/kaoyan/20241221/1790436.html', '解析', '第三方自标出处，非官方'),
-  third('考研帮·真题 PDF', 'https://static.kaoyan.cn/file/question/2024/12/21/18ded45bae038369e4c066a786618ec2.pdf', '试题', '已实测 2025 英语一；其余年份待核验'),
-  official('教育部·招生工作管理规定（试题与答案属国家秘密）', 'http://www.moe.gov.cn/srcsite/A15/moe_778/s3261/202509/t20250918_1413836.html'),
-  official('中国教育考试网·考研专栏（大纲样题，无历年真题与官方答案）', 'https://yankao.neea.edu.cn/')
+  third('中国教育在线·历年英语真题（供稿：文都/海文/掌上考研）', '试题', '2019–2025，第三方整理，非官方答案'),
+  third('新东方在线·真题与答案解析', '解析', '第三方自标出处，非官方'),
+  third('考研帮·真题 PDF', '试题', '已实测 2025 英语一；其余年份待核验'),
+  official('教育部·招生工作管理规定（试题与答案属国家秘密）'),
+  official('中国教育考试网·考研专栏（大纲样题，无历年真题与官方答案）')
 ];
 
 const KY_NOTE =
@@ -177,8 +177,8 @@ const TEM4_NOTE =
 
 function tem4Papers(): Paper[] {
   const sources: PaperSource[] = [
-    third('南京大学外语技能训练中心·专四真题（含答案/范文）', 'https://eol.nju.edu.cn/tem4/', '试题', '覆盖 2021–2025 共 5 套，听力音频未附'),
-    official('高校外语专业教学测试办公室·试卷使用规定（国家机密级材料声明）', 'http://tem.fltonline.cn/?p=75431')
+    third('南京大学外语技能训练中心·专四真题（含答案/范文）', '试题', '覆盖 2021–2025 共 5 套，听力音频未附'),
+    official('高校外语专业教学测试办公室·试卷使用规定（国家机密级材料声明）')
   ];
   const out: Paper[] = [];
   for (let year = 2021; year <= 2025; year++) {
@@ -203,9 +203,9 @@ const TEM8_NOTE =
 
 function tem8Papers(): Paper[] {
   const sources: PaperSource[] = [
-    third('新东方在线·专八真题（含答案与听力）', 'https://tem.koolearn.com/tem8/zhenti/', '试题', '覆盖 2009–2022（2020 年停考）'),
-    third('英语真题库·专八（PDF+解析+听力，网盘分享）', 'https://cet.suanzan.com/category/tem8', '解析', '16 套：2009–2025 缺 2020'),
-    official('高校外语专业教学测试办公室·试卷使用规定（国家机密级材料声明）', 'http://tem.fltonline.cn/?p=75431')
+    third('新东方在线·专八真题（含答案与听力）', '试题', '覆盖 2009–2022（2020 年停考）'),
+    third('英语真题库·专八（PDF+解析+听力，网盘分享）', '解析', '16 套：2009–2025 缺 2020'),
+    official('高校外语专业教学测试办公室·试卷使用规定（国家机密级材料声明）')
   ];
   const out: Paper[] = [];
   for (let year = 2009; year <= 2025; year++) {

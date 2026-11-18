@@ -143,8 +143,6 @@ export type ResourceFlag =
 export interface PaperSource {
   /** 发布机构 / 渠道名称 */
   name: string;
-  /** 来源链接（不授权转载时为唯一获取途径） */
-  url: string;
   kind: '试题' | '答案' | '解析' | '听力音频' | '页面';
   license: LicenseKind;
   /** 核验日期 YYYY-MM-DD */
