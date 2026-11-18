@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { useDbVersion } from '@/state/AppContext';
 import { listAttempts, listBookmarks, listDaily, listMistakes, listWords, loadSettings, todayKey } from '@/db';
-import { paperById, paperMetas } from '@/data/papers';
+import { paperById, paperMetas, availableExamCodes } from '@/data/papers';
 import { exams, examMap } from '@/data/exams';
 import { accuracyOf, totalMinutes } from '@/lib/score';
 import { streakDays } from '@/lib/srs';
@@ -246,30 +246,32 @@ export default function Home() {
 
       {/* 快速进入考试 */}
       <section>
-        <SectionTitle title="选择考试类型" hint="按真实年份与套次收录，来源与核验状态逐卷标注" />
+        <SectionTitle title="选择考试类型" hint="全部试卷均可在站内直接在线阅读与作答" />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {exams.map((e) => {
-            const count = paperMetas.filter((p) => p.exam === e.code).length;
-            return (
-              <Link key={e.code} to={`/library/${e.code}`} className="card group flex flex-col px-4 py-4 transition hover:border-brand-300">
-                <div className="flex items-center justify-between">
-                  <span className="text-[13.5px] font-semibold">{e.name}</span>
-                  <span className="font-mono text-[11px] text-ink-faint">{count} 套</span>
-                </div>
-                <p className="mt-1.5 flex-1 text-[12px] leading-relaxed text-ink-mute">{e.blurb}</p>
-                <div className="mt-3 flex items-center justify-between">
-                  <div className="flex -space-x-1">
-                    <span className="h-1.5 w-6 rounded-full" style={{ background: e.accent }} />
-                    <span className="h-1.5 w-3 rounded-full opacity-50" style={{ background: e.accent }} />
-                    <span className="h-1.5 w-1.5 rounded-full opacity-25" style={{ background: e.accent }} />
+          {exams
+            .filter((e) => availableExamCodes.includes(e.code))
+            .map((e) => {
+              const count = paperMetas.filter((p) => p.exam === e.code).length;
+              return (
+                <Link key={e.code} to={`/library/${e.code}`} className="card group flex flex-col px-4 py-4 transition hover:border-brand-300">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[13.5px] font-semibold">{e.name}</span>
+                    <span className="font-mono text-[11px] text-ink-faint">{count} 套</span>
                   </div>
-                  <span className="inline-flex items-center gap-0.5 text-[11.5px] text-brand-600 opacity-0 transition group-hover:opacity-100">
-                    查看 <ArrowRight size={12} />
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
+                  <p className="mt-1.5 flex-1 text-[12px] leading-relaxed text-ink-mute">{e.blurb}</p>
+                  <div className="mt-3 flex items-center justify-between">
+                    <div className="flex -space-x-1">
+                      <span className="h-1.5 w-6 rounded-full" style={{ background: e.accent }} />
+                      <span className="h-1.5 w-3 rounded-full opacity-50" style={{ background: e.accent }} />
+                      <span className="h-1.5 w-1.5 rounded-full opacity-25" style={{ background: e.accent }} />
+                    </div>
+                    <span className="inline-flex items-center gap-0.5 text-[11.5px] text-brand-600 opacity-0 transition group-hover:opacity-100">
+                      查看 <ArrowRight size={12} />
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
         </div>
       </section>
 
@@ -278,8 +280,8 @@ export default function Home() {
           版权说明
         </span>
         <p className="text-[11.5px] leading-relaxed text-ink-mute">
-          正式试卷列表仅登记真实历年考试资源：因版权无转载授权，站内不复制题面、答案与听力录音，逐卷提供来源链接、授权与核验状态；
-          示例演示数据已从正式列表下架。站内不使用 AI 编造真题，也不以合成语音冒充真题原音。
+          站内只上线可直接阅读与作答的完整试卷，不提供任何外部跳转；题面与答案整理自公开渠道，版权归原考试机构及原发布方，
+          仅供学习使用。站内不使用 AI 编造真题，听力以合成朗读呈现并明确标注，不以合成语音冒充原音。
         </p>
       </div>
     </div>

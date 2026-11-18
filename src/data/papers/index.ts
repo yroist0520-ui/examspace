@@ -1,7 +1,36 @@
-import type { Paper, PaperMeta, ExamCode, PartKind } from '@/types/paper';
+import type { Paper, PaperMeta, ExamCode, PartKind, ResourceFlag } from '@/types/paper';
 import { cet4_2024_12 } from './cet4-2024-12';
 import { cet4_2023_06, cet6_2024_12, kaoyan1_2025, tem4_2024 } from './more';
 import { realPapers } from './real-papers';
+import { realContent } from './real-content';
+
+/** 已收录题面的标准内容声明（覆盖“仅外链”时代的旧说明） */
+const COLLECTED_NOTE =
+  '站内题面与答案由公开渠道联网检索整理，版权归原考试机构及原发布方，仅供学习使用；答案解析来自公开整理，非官方发布；听力以站内合成朗读呈现并明确标注，不提供原音。';
+
+/**
+ * 将联网检索导入的站内题面合并到真实资源记录：
+ * 有内容的卷标记「已收录」并可直接在线作答；无内容的卷保持「筹备中」，不提供外部跳转。
+ */
+function mergeImported(p: Paper): Paper {
+  const c = realContent[p.id];
+  if (!c || !c.parts || c.parts.length === 0) return p;
+  const prov = p.provenance;
+  return {
+    ...p,
+    ...c,
+    provenance: prov
+      ? {
+          ...prov,
+          license: 'unknown',
+          flags: Array.from(
+            new Set([...prov.flags.filter((f) => f !== 'external-only'), 'collected' as ResourceFlag])
+          ),
+          note: COLLECTED_NOTE
+        }
+      : undefined
+  };
+}
 
 function countQuestions(p: Paper) {
   return p.parts.reduce((n, part) => n + part.questions.length, 0);
@@ -89,14 +118,26 @@ export const samplePapers: Paper[] = [
   cloneVariant(kaoyan1_2025, 'd', 2022, '12月', 1)
 ];
 
+/** 合并站内导入内容后的真实资源记录 */
+const collectedRealPapers: Paper[] = realPapers.map(mergeImported);
+
 /** 全量试卷（真实资源记录 + 已下架示例）：仅用于 id → 详情回查 */
-export const papers: Paper[] = [...realPapers, ...samplePapers];
+export const papers: Paper[] = [...collectedRealPapers, ...samplePapers];
 
 /**
- * 正式列表：只包含真实来源的资源记录。
- * 示例试卷不出现在真题库、练习选卷等任何正式列表中。
+ * 正式列表：只包含站内可直接作答的完整试卷。
+ * 未收录题面的记录与示例试卷不出现在真题库、练习选卷等任何列表中，
+ * 避免出现「点进去却只能跳外站」的死胡同。
  */
-export const listedPapers: Paper[] = realPapers;
+export const listedPapers: Paper[] = collectedRealPapers.filter((p) =>
+  p.parts.some((part) => part.questions.length > 0)
+);
+
+/** 当前有站内可用试卷的考试类型（列表页与首页只展示这些考试） */
+export const availableExamCodes: ExamCode[] = Array.from(
+  new Set(listedPapers.map((p) => p.exam))
+);
+
 
 export const paperMap = new Map(papers.map((p) => [p.id, p]));
 

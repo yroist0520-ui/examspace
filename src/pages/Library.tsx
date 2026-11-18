@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import clsx from 'clsx';
 import { Bookmark, Filter, Headphones, Search, SlidersHorizontal, X } from 'lucide-react';
 import { examMap, exams, difficultyLabel, partKindLabel } from '@/data/exams';
-import { paperMetas, allYears } from '@/data/papers';
+import { paperMetas, allYears, availableExamCodes } from '@/data/papers';
 import { useDbVersion } from '@/state/AppContext';
 import { listBookmarks } from '@/db';
 import { SampleBadge, ResourceBadges, LicenseLine } from '@/components/ui';
@@ -75,7 +75,7 @@ export default function LibraryPage() {
           <p className="mt-1 text-[12.5px] text-ink-mute">
             {activeExam
               ? activeExam.blurb
-              : '真实历年真题资源：按年份与考试类型检索，每套标注来源、授权与内容核验状态。'}
+              : '站内可作答的真题：每套都能直接在线阅读与作答，不跳转外部网站。'}
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -108,23 +108,25 @@ export default function LibraryPage() {
         >
           全部
         </Link>
-        {exams.map((e) => {
-          const count = paperMetas.filter((p) => p.exam === e.code).length;
-          const active = activeExam?.code === e.code;
-          return (
-            <Link
-              key={e.code}
-              to={`/library/${e.code}`}
-              className={clsx(
-                'shrink-0 rounded-lg border px-3 py-1.5 text-[12.5px] font-medium transition',
-                active ? 'border-brand-600 bg-brand-600 text-white' : 'hairline text-ink-soft hover:border-brand-300'
-              )}
-            >
-              {e.short}
-              <span className={clsx('ml-1.5 font-mono text-[10.5px]', active ? 'text-white/70' : 'text-ink-faint')}>{count}</span>
-            </Link>
-          );
-        })}
+        {exams
+          .filter((e) => availableExamCodes.includes(e.code))
+          .map((e) => {
+            const count = paperMetas.filter((p) => p.exam === e.code).length;
+            const active = activeExam?.code === e.code;
+            return (
+              <Link
+                key={e.code}
+                to={`/library/${e.code}`}
+                className={clsx(
+                  'shrink-0 rounded-lg border px-3 py-1.5 text-[12.5px] font-medium transition',
+                  active ? 'border-brand-600 bg-brand-600 text-white' : 'hairline text-ink-soft hover:border-brand-300'
+                )}
+              >
+                {e.short}
+                <span className={clsx('ml-1.5 font-mono text-[10.5px]', active ? 'text-white/70' : 'text-ink-faint')}>{count}</span>
+              </Link>
+            );
+          })}
       </div>
 
       <div className="grid gap-5 lg:grid-cols-[210px_1fr]">
@@ -206,9 +208,9 @@ export default function LibraryPage() {
 
           {list.length === 0 && (
             <div className="card px-6 py-12 text-center">
-              <div className="font-serif text-[16px]">暂无合法可用资源</div>
+              <div className="font-serif text-[16px]">当前条件下没有试卷</div>
               <p className="mt-1 text-[12.5px] text-ink-mute">
-                当前筛选条件下没有已核验的真实真题资源；新资源会在联网核验来源与授权后收录。
+                试试放宽年份、题型或难度筛选；站内只列出可直接作答的完整试卷。
               </p>
             </div>
           )}
@@ -243,7 +245,6 @@ function FilterChip({ active, onClick, children }: { active: boolean; onClick: (
 
 function PaperCard({ paper, saved }: { paper: PaperMeta; saved: boolean }) {
   const prov = paper.provenance;
-  const hasContent = paper.questionCount > 0;
   return (
     <Link to={`/paper/${paper.id}`} className="card group flex min-w-0 flex-col px-4 py-4 transition hover:border-brand-300">
       <div className="flex items-start justify-between gap-2">
@@ -273,36 +274,25 @@ function PaperCard({ paper, saved }: { paper: PaperMeta; saved: boolean }) {
         </div>
       )}
 
-      {/* 站内有完整内容时展示题型结构 */}
-      {hasContent && (
-        <div className="mt-2 flex flex-wrap gap-1">
-          {paper.kinds.map((k) => (
-            <span key={k} className="chip">
-              {partKindLabel[k]}
-            </span>
-          ))}
-        </div>
-      )}
+      {/* 题型结构 */}
+      <div className="mt-2 flex flex-wrap gap-1">
+        {paper.kinds.map((k) => (
+          <span key={k} className="chip">
+            {partKindLabel[k]}
+          </span>
+        ))}
+      </div>
 
       <div className="mt-3 flex items-center justify-between border-t hairline pt-2.5 text-[11px] text-ink-mute">
-        {hasContent ? (
-          <>
-            <div className="flex items-center gap-3">
-              <span>{paper.questionCount} 题</span>
-              <span>{paper.minutes} 分钟</span>
-              <span>{paper.words} 词</span>
-            </div>
-            <span className="flex items-center gap-1">
-              <DifficultyDots level={paper.difficulty} />
-              <span className="ml-0.5">{difficultyLabel[paper.difficulty - 1]}</span>
-            </span>
-          </>
-        ) : (
-          <>
-            <span>{prov?.sources.length ?? 0} 个来源</span>
-            <span>{prov?.flags.includes('no-audio') ? '无原始听力' : '见来源详情'}</span>
-          </>
-        )}
+        <div className="flex items-center gap-3">
+          <span>{paper.questionCount} 题</span>
+          <span>{paper.minutes} 分钟</span>
+          <span>{paper.words} 词</span>
+        </div>
+        <span className="flex items-center gap-1">
+          <DifficultyDots level={paper.difficulty} />
+          <span className="ml-0.5">{difficultyLabel[paper.difficulty - 1]}</span>
+        </span>
       </div>
 
       <div className="mt-2 flex items-center gap-1.5">

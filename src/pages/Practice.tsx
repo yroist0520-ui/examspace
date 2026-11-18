@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import { BookOpen, FilePenLine, History, Play, Timer } from 'lucide-react';
 import { examMap, exams, examName } from '@/data/exams';
-import { paperMetas, allPaperMetas, paperById } from '@/data/papers';
+import { paperMetas, allPaperMetas, paperById, availableExamCodes } from '@/data/papers';
 import { listAttempts, listDrafts } from '@/db';
 import { relativeDay } from '@/lib/text';
-import { SampleBadge, ResourceBadge } from '@/components/ui';
+import { SampleBadge } from '@/components/ui';
 import type { Attempt, Draft, ExamCode, PaperMeta } from '@/types/paper';
 
 /**
@@ -46,7 +46,7 @@ export default function Practice() {
       <header>
         <h1 className="text-[19px] font-semibold tracking-tight">练习中心</h1>
         <p className="mt-1 text-[13px] text-ink-mute">
-          继续未完成的作答；真实真题因版权以来源链接提供，获得授权后可站内开练。
+          继续未完成的作答，或直接选一套试卷开始模考与练习，全部内容均在站内完成。
         </p>
       </header>
 
@@ -117,15 +117,17 @@ export default function Practice() {
           >
             全部
           </button>
-          {exams.map((e) => (
-            <button
-              key={e.code}
-              className={clsx('chip', examFilter === e.code && 'border border-brand-500 bg-brand-50 text-brand-700')}
-              onClick={() => setExamFilter(e.code)}
-            >
-              {e.short}
-            </button>
-          ))}
+          {exams
+            .filter((e) => availableExamCodes.includes(e.code))
+            .map((e) => (
+              <button
+                key={e.code}
+                className={clsx('chip', examFilter === e.code && 'border border-brand-500 bg-brand-50 text-brand-700')}
+                onClick={() => setExamFilter(e.code)}
+              >
+                {e.short}
+              </button>
+            ))}
         </div>
 
         <div className="grid gap-3 md:grid-cols-2">
@@ -135,7 +137,7 @@ export default function Practice() {
         </div>
         {filteredPapers.length === 0 && (
           <div className="card p-8 text-center text-[13px] text-ink-mute">
-            该考试暂无已核验的真题资源；站内作答仅对获得授权的收录内容开放。
+            当前筛选下暂无试卷，试试切换到「全部」。
           </div>
         )}
       </section>
@@ -163,7 +165,6 @@ export default function Practice() {
 
 function PaperRow({ meta }: { meta: PaperMeta }) {
   const exam = examMap.get(meta.exam);
-  const answerable = meta.questionCount > 0;
   return (
     <div className="card flex min-w-0 flex-col gap-3 px-4 py-4 transition hover:border-brand-300">
       <div className="flex items-start gap-3">
@@ -179,43 +180,28 @@ function PaperRow({ meta }: { meta: PaperMeta }) {
               {meta.title}
             </Link>
             {meta.sample && <SampleBadge />}
-            {!answerable && meta.provenance && <ResourceBadge flag="external-only" />}
           </div>
           <div className="mt-0.5 flex flex-wrap items-center gap-2 text-[11.5px] text-ink-mute">
             <span>{examName(meta.exam)}</span>
             <span>·</span>
             <span>{meta.year} {meta.session}</span>
             <span>·</span>
-            {answerable ? (
-              <>
-                <span className="font-mono">{meta.questionCount} 题</span>
-                <span>·</span>
-                <span className="inline-flex items-center gap-1">
-                  <Timer size={11} /> {meta.minutes} 分钟
-                </span>
-                {meta.hasAudio && <span className="chip">听力</span>}
-              </>
-            ) : (
-              <span>来源链接 · 无站内题面</span>
-            )}
+            <span className="font-mono">{meta.questionCount} 题</span>
+            <span>·</span>
+            <span className="inline-flex items-center gap-1">
+              <Timer size={11} /> {meta.minutes} 分钟
+            </span>
+            {meta.hasAudio && <span className="chip">听力</span>}
           </div>
         </div>
       </div>
       <div className="mt-auto flex gap-2">
-        {answerable ? (
-          <>
-            <Link className="btn btn-primary h-8 flex-1 text-[12.5px]" to={`/exam/${meta.id}?mode=exam`}>
-              模拟考试
-            </Link>
-            <Link className="btn btn-ghost h-8 flex-1 text-[12.5px]" to={`/exam/${meta.id}?mode=practice`}>
-              练习模式
-            </Link>
-          </>
-        ) : (
-          <Link className="btn btn-ghost h-8 flex-1 text-[12.5px]" to={`/paper/${meta.id}`}>
-            查看来源与获取方式
-          </Link>
-        )}
+        <Link className="btn btn-primary h-8 flex-1 text-[12.5px]" to={`/exam/${meta.id}?mode=exam`}>
+          模拟考试
+        </Link>
+        <Link className="btn btn-ghost h-8 flex-1 text-[12.5px]" to={`/exam/${meta.id}?mode=practice`}>
+          练习模式
+        </Link>
       </div>
     </div>
   );

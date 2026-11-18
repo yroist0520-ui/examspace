@@ -6,7 +6,6 @@ import {
   BookmarkCheck,
   BookOpen,
   Clock3,
-  ExternalLink,
   FileText,
   Headphones,
   ListChecks,
@@ -16,7 +15,7 @@ import {
 import { examMap, partKindLabel, difficultyLabel } from '@/data/exams';
 import { paperById } from '@/data/papers';
 import { DifficultyDots } from './Library';
-import { SampleBadge, ResourceBadges, LicenseLine, licenseLabel, verifyLabel } from '@/components/ui';
+import { SampleBadge, ResourceBadges } from '@/components/ui';
 import { listBookmarks, toggleBookmark, listAttempts, getPdf, savePdf } from '@/db';
 import { useDbVersion, notifyDataChanged } from '@/state/AppContext';
 import PdfViewer from '@/components/PdfViewer';
@@ -52,10 +51,21 @@ export default function PaperDetail() {
 
   const totalQuestions = paper.parts.reduce((n, p) => n + p.questions.length, 0);
   const objective = paper.parts.flatMap((p) => p.questions).filter((q) => ['single', 'blank', 'bank'].includes(q.type)).length;
-  const noContent = paper.parts.length === 0;
   const prov = paper.provenance;
   const active = attempts.find((a) => !a.submittedAt);
   const submitted = attempts.filter((a) => a.submittedAt);
+
+  // 未上线试卷（含已下架示例）不在任何列表中展示，仅保留直接访问时的说明
+  if (paper.parts.every((p) => p.questions.length === 0)) {
+    return (
+      <div className="card p-10 text-center">
+        <p className="text-sm text-ink-soft">这套试卷尚未上线。站内只展示可在线阅读与作答的完整试卷。</p>
+        <Link to="/library" className="btn btn-ghost mt-4">
+          返回真题库
+        </Link>
+      </div>
+    );
+  }
 
   const onBookmark = async () => {
     const next = await toggleBookmark(paperId);
@@ -89,65 +99,29 @@ export default function PaperDetail() {
           <p className="mt-1 text-[13px] text-ink-mute">{paper.subtitle}</p>
           <p className="mt-3 max-w-2xl text-[13.5px] leading-relaxed text-ink-soft">{paper.summary}</p>
 
-          {noContent && prov ? (
-            <div className="mt-4 space-y-1.5">
-              <LicenseLine provenance={prov} />
-              <p className="text-[12px] text-ink-mute">
-                来源 {prov.sources.length} 个 · 因版权无转载授权，站内不提供题面与作答
-              </p>
-            </div>
-          ) : (
-            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-ink-mute">
-              <span className="flex items-center gap-1"><Clock3 size={13} />{paper.minutes} 分钟</span>
-              <span className="flex items-center gap-1"><ListChecks size={13} />{totalQuestions} 题（客观题 {objective}）</span>
-              <span className="flex items-center gap-1"><BookOpen size={13} />约 {paper.words} 词</span>
-              <span className="flex items-center gap-1"><DifficultyDots level={paper.difficulty} />{difficultyLabel[paper.difficulty - 1]}</span>
-              <span className="flex items-center gap-1">
-                {paper.parts.some((p) => p.audio) ? <Headphones size={13} /> : <FileText size={13} />}
-                {paper.parts.some((p) => p.audio) ? '含听力' : '纯文字'}
-              </span>
-            </div>
-          )}
+          <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-ink-mute">
+            <span className="flex items-center gap-1"><Clock3 size={13} />{paper.minutes} 分钟</span>
+            <span className="flex items-center gap-1"><ListChecks size={13} />{totalQuestions} 题（客观题 {objective}）</span>
+            <span className="flex items-center gap-1"><BookOpen size={13} />约 {paper.words} 词</span>
+            <span className="flex items-center gap-1"><DifficultyDots level={paper.difficulty} />{difficultyLabel[paper.difficulty - 1]}</span>
+            <span className="flex items-center gap-1">
+              {paper.parts.some((p) => p.audio) ? <Headphones size={13} /> : <FileText size={13} />}
+              {paper.parts.some((p) => p.audio) ? '含听力' : '纯文字'}
+            </span>
+          </div>
         </div>
 
         <div className="card space-y-2 px-4 py-4">
           <div className="label">开始</div>
-          {noContent && prov ? (
-            <>
-              <p className="rounded-lg border hairline bg-black/[0.02] px-3 py-2 text-[11.5px] leading-relaxed text-ink-mute">
-                {prov.license === 'link-only' && '因版权无转载授权，站内不提供题面作答；请通过来源链接前往原站获取。'}
-              </p>
-              {prov.sources.slice(0, 3).map((s) => (
-                <a
-                  key={`${s.url}-${s.kind}`}
-                  href={s.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-ghost w-full justify-start text-[12.5px]"
-                  title={`${s.kind} · ${s.name}`}
-                >
-                  <ExternalLink size={13} className="shrink-0" />
-                  <span className="min-w-0 flex-1 truncate text-left">{s.name}</span>
-                  <span className="chip shrink-0">{s.kind}</span>
-                </a>
-              ))}
-              {prov.sources.length > 3 && (
-                <p className="text-center text-[11px] text-ink-faint">其余 {prov.sources.length - 3} 个来源见下方资源来源</p>
-              )}
-            </>
-          ) : (
-            <>
-              <Link to={`/read/${paper.id}`} className="btn btn-primary w-full">
-                <BookOpen size={14} /> 在线阅读
-              </Link>
-              <Link to={`/exam/${paper.id}?mode=exam`} className="btn btn-ghost w-full">
-                <Timer size={14} /> 模拟考试
-              </Link>
-              <Link to={`/exam/${paper.id}?mode=practice`} className="btn btn-ghost w-full">
-                <Play size={14} /> 练习模式
-              </Link>
-            </>
-          )}
+          <Link to={`/read/${paper.id}`} className="btn btn-primary w-full">
+            <BookOpen size={14} /> 在线阅读
+          </Link>
+          <Link to={`/exam/${paper.id}?mode=exam`} className="btn btn-ghost w-full">
+            <Timer size={14} /> 模拟考试
+          </Link>
+          <Link to={`/exam/${paper.id}?mode=practice`} className="btn btn-ghost w-full">
+            <Play size={14} /> 练习模式
+          </Link>
           <button className="btn btn-quiet w-full text-[12.5px]" onClick={onBookmark}>
             {saved ? <BookmarkCheck size={14} /> : <Bookmark size={14} />}
             {saved ? '已收藏' : '收藏这套试卷'}
@@ -191,44 +165,7 @@ export default function PaperDetail() {
 
       <section className="grid gap-5 lg:grid-cols-[1fr_300px]">
         <div>
-          <h2 className="mb-3 text-[15px] font-semibold">{noContent && prov ? '资源来源与核验状态' : '试卷结构'}</h2>
-          {noContent && prov ? (
-            <div className="space-y-4">
-              <div className="card space-y-3 px-4 py-4">
-                <div className="flex flex-wrap items-center gap-1.5">
-                  <ResourceBadges flags={prov.flags} />
-                </div>
-                <LicenseLine provenance={prov} />
-                <p className="text-[11.5px] leading-relaxed text-ink-mute">
-                  核验日期 {prov.checkedAt ?? '—'} · 状态 {verifyLabel[prov.verification]} ·
-                  授权 {licenseLabel[prov.license]}
-                </p>
-              </div>
-              <div className="card divide-y hairline">
-                {prov.sources.map((s) => (
-                  <a
-                    key={`${s.url}-${s.kind}`}
-                    href={s.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-4 py-3 transition hover:bg-black/[0.015]"
-                  >
-                    <span className="chip shrink-0">{s.kind}</span>
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate text-[13px] font-medium">{s.name}</span>
-                      <span className="block truncate text-[11px] text-ink-faint">{s.url}</span>
-                    </span>
-                    <span className="shrink-0 text-[11px] text-ink-mute">{licenseLabel[s.license]}</span>
-                    <ExternalLink size={13} className="shrink-0 text-ink-faint" />
-                  </a>
-                ))}
-              </div>
-              <p className="text-[11.5px] leading-relaxed text-ink-mute">
-                本站仅登记与索引上述公开来源，不复制、存储或展示受版权保护的题面、答案与听力录音；
-                站内不提供 AI 生成的题目或配音。
-              </p>
-            </div>
-          ) : (
+          <h2 className="mb-3 text-[15px] font-semibold">试卷结构</h2>
           <div className="card divide-y hairline">
             {paper.parts.map((part, idx) => {
               const passages = part.passages ?? [];
@@ -274,7 +211,6 @@ export default function PaperDetail() {
               );
             })}
           </div>
-          )}
         </div>
 
         <aside className="space-y-5">
@@ -303,7 +239,7 @@ export default function PaperDetail() {
           <div className="card px-4 py-4">
             <div className="label mb-2">内容声明</div>
             <p className="text-[11.5px] leading-relaxed text-ink-mute">
-              {prov?.note ?? paper.sampleNote ?? '本卷内容与来源链接已按核验流程登记。'}
+              {prov?.note ?? paper.sampleNote ?? '本卷题面与答案整理自公开渠道，仅供学习使用。'}
             </p>
           </div>
 

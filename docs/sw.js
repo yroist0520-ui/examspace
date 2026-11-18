@@ -1,5 +1,5 @@
 /* EXAMSPACE Service Worker：应用外壳离线缓存 + 静态资源缓存 */
-const CACHE = 'examspace-v2';
+const CACHE = 'examspace-v3';
 // 相对路径：SW 作用域解析，兼容部署在根域或子路径（Gitee Pages）
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon.svg', './favicon.svg'];
 

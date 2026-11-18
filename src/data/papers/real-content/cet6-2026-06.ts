@@ -1,0 +1,6958 @@
+import type { Paper, PaperPart } from '@/types/paper';
+
+const s1Parts: PaperPart[] = [
+  {
+    id: "writing",
+    kind: "writing",
+    title: "Part I Writing",
+    instructions: "Directions: For this part, you are allowed 30 minutes to write an essay that begins with the sentence \"Faced with growing globalization, students realize that a deep understanding of traditional Chinese culture helps cultivate cultural confidence.\" You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. [You should copy the sentence given in quotes at the beginning of your essay.]",
+    minutes: 30,
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s1-w1",
+          number: 1,
+          type: "writing",
+          stem: "Directions: For this part, you are allowed 30 minutes to write an essay that begins with the sentence \"Faced with growing globalization, students realize that a deep understanding of traditional Chinese culture helps cultivate cultural confidence.\" You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. [You should copy the sentence given in quotes at the beginning of your essay.]",
+          answer: "见参考",
+          explanation: "写作要点：开篇：直接抄写给定句子，点明在全球化的背景下，文化自信的重要性。主体：首先解释传统文化如何帮助建立文化自信（如传统哲学、艺术、节日等），然后举例说明（如书法、国画、传统节日在海外的影响力），最后可结合个人经历说明学习传统文化带来的认同感。结尾：重申文化自信在全球化中的意义，鼓励更多学生深入了解传统文化。",
+          score: 15,
+        },
+      ],
+    reference:
+      {
+        essay: "Faced with growing globalization, students realize that a deep understanding of traditional Chinese culture helps cultivate cultural confidence. Indeed, in an era where Western influences are pervasive, knowing our own cultural roots becomes a source of inner strength and identity. For example, studying ancient Chinese philosophy like Confucianism and Taoism not only provides moral guidance but also offers a unique perspective on life and society. Traditional arts, such as calligraphy and Peking opera, embody the aesthetic wisdom of our ancestors and have gained international recognition. Personally, learning about traditional festivals like the Spring Festival has deepened my appreciation for family values and community bonds. This cultural awareness not only enhances my self-esteem but also enables me to engage in cross-cultural dialogue with confidence and pride. Therefore, I believe that a solid foundation in traditional culture is essential for every student to navigate the globalized world with a strong sense of belonging and purpose.",
+        guidance:
+          [
+            "开篇：直接抄写给定句子，点明在全球化的背景下，文化自信的重要性。",
+            "主体：首先解释传统文化如何帮助建立文化自信（如传统哲学、艺术、节日等），然后举例说明（如书法、国画、传统节日在海外的影响力），最后可结合个人经历说明学习传统文化带来的认同感。",
+            "结尾：重申文化自信在全球化中的意义，鼓励更多学生深入了解传统文化。",
+          ],
+      },
+  },
+  {
+    id: "listening",
+    kind: "listening",
+    title: "Part II Listening Comprehension",
+    instructions: "Directions: In this section, you will hear two long conversations. At the end of each conversation, you will hear four questions. Both the conversation and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Directions: In this section, you will hear two passages. At the end of each passage, you will hear three or four questions. Both the passage and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Directions: In this section, you will hear three recordings of lectures or talks followed by three or four questions. The recordings will be played only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.",
+    minutes: 30,
+    audio:
+      {
+        note: "听力原文由浏览器语音合成朗读（合成语音），非考试原音。",
+        segments:
+          [
+            {
+              id: "ls-1",
+              label: "Conversation 1",
+              questionNo: 1,
+              seconds: 132,
+              text: "M: Welcome to \"Business Matters\". Today we have invited career development consultant Lucy Williams to talk about how to get ahead at work. Hi, Lucy. Many of us never seem to get promoted. Why is that? And what can we do about it? W: One mistake people make is to limit communication only to their bosses. It's important to expand your network and include your co-workers. M: But some of our co-workers are less senior to us. Is it really necessary to connect with them? W: It's important not to underestimate your colleagues. Sometimes a job title might not clearly demonstrate the influence they may have. M: Now many of us think that working hard creates a good impression, but this isn't always true, is it? W: That's right. We should avoid trying to take on too much work and constantly staying late, just to show that you are committed. M: I see. So setting expectations too high at the beginning can make us look bad if we don't maintain them. W: Yeah, it's better to make sure you are putting in quality time instead of just a large quantity of time. And these efforts can easily be demonstrated by the results we achieve. M: What about helping others at work? Should you try and go beyond your normal responsibilities and offer to help people with their projects? W: Extend your assistance to those who need it, but only as long as your own work will not go unattended. If someone can benefit from your assistance or advice, help them out to gain their respect and trust. M: But it goes without saying that you shouldn't act like a know-it-all, otherwise you'll appear arrogant. W: Absolutely. Be humble, and you'll get a lot of time later on to show your genius.",
+            },
+            {
+              id: "ls-2",
+              label: "Conversation 2",
+              questionNo: 5,
+              seconds: 191,
+              text: "W: I think we first need to decide how to divide up the presentation responsibilities. From what I recall, the presentation consists of five parts, not including the introduction and conclusion. That would mean altogether, we need to allocate seven parts between the two of us. M: So, we have the abstract, background research, the project design, the results and the discussion portions. As the abstract section only applies to the article, we needn't include it in the presentation. How would you suggest we dole out the rest? W: How do you feel about handling the background bit? In this way, we can both discuss the part of the project that we devoted most of our time to. M: Hold on a minute. You want me, the one who did the bulk of the task, to also do the majority of the presentation? The background research which was so meticulous took more than a month. W: OK. OK. I get it. Quit your moaning. I appreciate the rigorous work ethic you applied to the research, but not the sarcasm that comes up every time I mention it. What do you think would be a fair arrangement? M: I think the best arrangement would be to split the research into two parts: before-1980 and afterward. I would take the before-portion and you would be assigned the after-1980, leaving the project and results. I volunteer to describe the project. But as I struggled a bit with the statistics in the results section, how about you handling that? W: That's agreeable to me. I propose we both handle the discussion section in parts along with the question and answer afterward, leaving only the introduction and conclusion. M: I will take responsibility for the conclusion and put you in charge of the introduction. This will make it so that we alternate presenting, so as to avoid sounding monotonous to the audience.",
+            },
+            {
+              id: "ls-3",
+              label: "Passage 1",
+              questionNo: 9,
+              seconds: 52,
+              text: "Makeup can do more than just change your appearance—it can also alter others' perceptions of you, for better or for worse. According to new research from the University of Stirling in Scotland, although both men and women perceive women who wear makeup as being of a higher status, men associate makeup with prestigious, positive qualities, while women view other women wearing makeup as being dominant and a potential threat. The research showed that men and women both rated the faces with cosmetics as being more attractive, but only women rated made-up faces as being more dominant, while only men rated made-up faces as being higher in prestige. A follow-up study investigated the root cause behind these differences in perception, and found that female-on-female jealousy seemed to be the main cause of the differences in perception. Women rating women with makeup said they would be more jealous of them and thought they would be more attractive to men than their non-makeup wearing counterparts. Cosmetic products are good for more than just giving you a pretty face. It can be particularly useful for women to understand how wearing makeup alters others' perceptions of them in situations where they are trying to gain others' trust and admiration. At a job interview, knowing whether the hiring committee will consist of men or women might influence a female candidate's decision about wearing makeup. Whether the interviewers will view her as attractive, dominant and prestigious can affect the interviewers' actions and perhaps the outcome of the interview itself.",
+            },
+            {
+              id: "ls-4",
+              label: "Passage 2",
+              questionNo: 12,
+              seconds: 93,
+              text: "You may have seen advertisements trumpeting methods of changing a habit that require absolutely no willpower whatsoever. But can you really change a bad habit or create a good one without willpower? To answer this question, we first have to ask: \"What is willpower?\" Most people, sadly, think of it only as the ability to clench their teeth and resist attractive temptations. In this view, willpower means self-denial and no fun. No wonder people hope to make changes without it. I define willpower as \"using only the thought of your motivators to control your actions.\" Let's say your motivators are \"prevent diabetes\" and \"reach a healthy weight\". So if you are at the all-you-can-eat buffet, you think about your motivator—avoid diabetes through weight loss—and you take small portions and avoid the dessert table. So, amazingly enough, willpower begins with a thought—a bright idea—some way to improve your life or contribute to others. This bright idea is your motivator. Doctor Walter Mischel, an expert on willpower skills, uses the expressive term \"a burning goal\". Whether you call it a motivator, a burning goal, or a bright idea, this idea is the force behind your willpower. What sort of bright ideas—motivators—make for effective willpower? In fact, any goal that you value strongly counts. The list may include good health, self-respect, a better future for your family, a personal mission and being a role model for your child. All these can certainly drive a positive change.",
+            },
+            {
+              id: "ls-5",
+              label: "Recording 1",
+              questionNo: 16,
+              seconds: 156,
+              text: "For many pregnant women, understanding what seafood is safe and healthy and what should be avoided because of mercury concerns comes with a lot of worrying. In part, that's because the federal government's advice on the matter, first issued in 2004, has long been criticized as vague. That guidance has included advice on how much seafood to eat, and which species pregnant and breastfeeding women should avoid over concerns about mercury contamination. But critics say the government advisory has done more harm than good, scaring many pregnant and breastfeeding women away from eating seafood altogether. The problem is real. According to a spokesman for the Food and Drug Administration, or FDA for short, the agency analyzed fish consumption data from more than 1,000 pregnant women in the US and found that 21 per cent of them ate no fish whatsoever in the previous month. And those who did eat fish consumed far less than recommended by the dietary guidelines. Some 50 per cent ate less than two ounces a week and 75 per cent ate less than four ounces. This week the FDA issued an update to the advice, listing more than sixty species in a chart that ranks fish as A Best Choice, Good Choice and Choices to Avoid. The goal is to make it easier for mothers-to-be to feel confident about the type of seafood they include in their diets. The new advice recommends consumers choose a variety of fish to eat, and it comes with an easy-to-understand illustration of what an appropriate portion size should be—four ounces for an adult and two ounces for children aged four to seven. And while expectant mothers have long been warned to stay away from shark and four other particular types of fish from the Gulf of Mexico, now there are three new species on the list of what to avoid. But not everyone is thrilled with the new advice. Critics say the new advice doesn't always agree with the agency's own scientific findings. While mercury is of great concern when people are talking about pregnant women and seafood, it's not the only factor contributing to anxiety. The FDA maintains that its final consumption recommendations were based on thorough scientific analysis. Agency spokesman Cassell says the FDA believes their recommendations will increase confidence, not uncertainty. But critics disagree. They think the FDA's advice is not based on the evidence in its own detailed report, and so it confuses everyone.",
+            },
+            {
+              id: "ls-6",
+              label: "Recording 2",
+              questionNo: 19,
+              seconds: 209,
+              text: "I know you're busy with work, but you also need to take some time off to recharge those batteries. So, should you plan one big vacation for the year, or should you take multiple short vacations throughout? Quantity can sometimes beat quality. First and foremost, regardless of how you use your vacation days, you need to be using them, and soon. The longer you put off your time off, the worse you're making things for yourself. One 9-year-long study published in Psychosomatic Medicine suggests not taking at least one vacation a year may increase your risk of mortality due to heart disease. So, not only are you killing your joy, you're possibly killing yourself. Give yourself a break, folks. When you should take those breaks, however, depends on a few factors: how many days you have available to use, what activities bring you joy, whether you have a family or not, and other variables come into play. Because of that, there's no perfect formula that works for everyone, but there are still a few things everyone can try to shoot for. We know that in terms of maximizing relaxation, you should aim for vacations that range somewhere between 7 and 11 days long. That gives you enough time to let go of your stress at work, completely loosen up, and achieve full-on calm. That above-mentioned study also recommends you space out your vacations evenly instead of using up all of your days at once. Eight days might sound like a lot for someone who only gets 10 days of vacation a year. But if you frame them with weekends, you can manage two evenly spaced 8-day vacations a year. If you have 14 days of paid leave, that's almost three separate 8-day vacations you can use to split your year into thirds. As tempting as it might be to use all your days to take one long summer break, your overall goal should be to achieve the perfect balance between length plus joy and frequency. Vacation frequency is important because planning multiple breaks throughout the year means you always have something to look forward to. Planning things and the anticipation that comes with it tend to make us happier. If you only take one long vacation every year, the excitement builds much more slowly and seems so far off that it can actually lead to feelings of despair.",
+            },
+            {
+              id: "ls-7",
+              label: "Recording 3",
+              questionNo: 22,
+              seconds: 398,
+              text: "Autonomous cars that can take over from drivers if they are tired or caught in the heat of an argument are being developed in Sweden. Researchers working as part of the European Union's €77 billion research program are developing sensor-based systems that monitor whether a driver is distracted, anxious or tired. If a driver is not in a fit state to be on the road, the car automatically takes control of the wheel to prevent accidents. Doctor Anna Anund from the Swedish National Road and Transport Research Institute, who is leading the project, said a driver's state can be measured using a number of sensors, including heart rate monitors and eye sensors, which track where a driver's gaze is. She said the aim was to really make sure that the transition from the driver to the vehicle is done in a safe way, so we can take into consideration the driver's state, and so we do not give control to a driver who is under pressure of fatigue, stress, anxiety, and so on. According to data from the European Commission, Sweden has the safest roads in the EU, with the UK a close second. However, the number of road accidents in both has largely levelled out since 2010. Driver fatigue is thought to be responsible for as many as a fifth of road crashes across the EU, although there are certain times of the day when more accidents happen. At 6:00 a.m., for example, drivers are said to be 20 times more likely to have an accident than at 10:00 a.m. While most experts agree driverless technology should help bring down accident numbers in the long term, some have questioned whether it is safe. The researchers have said the technology they are developing is seeking to bridge the gap between Level 3 on the autonomy scale, in which drivers have to be ready to take control of the car at any point, and Level 4, in which driving is automated. Daniel Ruiz, the chief executive of the UK's connected and autonomous vehicle programme Meridian, said: \"there is a strong debate going on about how it is possible to make a Level 3 car completely safe.\" Despite advances in technology, we still have some way to go in shifting public sentiment. With an increase in attention-grabbing accidents recently, drivers now view self-driving cars as less safe than they used to.",
+            },
+          ],
+      },
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s1-l1",
+          number: 1,
+          type: "single",
+          groupId: "ls-1",
+          stem: "What are the speakers mainly talking about?",
+          options:
+            [
+              {
+                key: "A",
+                text: "How to run one's business successfully.",
+              },
+              {
+                key: "B",
+                text: "How to make progress in one's career.",
+              },
+              {
+                key: "C",
+                text: "Why few people can fully display their capabilities.",
+              },
+              {
+                key: "D",
+                text: "Why young people seldom get the expected promotion.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中的关键信息与选项 B) How to make progress in one's career. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l2",
+          number: 2,
+          type: "single",
+          groupId: "ls-1",
+          stem: "What does the woman say is one mistake people make?",
+          options:
+            [
+              {
+                key: "A",
+                text: "To mix and interact with peers within the organization.",
+              },
+              {
+                key: "B",
+                text: "To restrict their connections exclusively to colleagues.",
+              },
+              {
+                key: "C",
+                text: "To limit communication only to their superiors.",
+              },
+              {
+                key: "D",
+                text: "To underestimate their role in the company.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“W: One mistake people make is to limit communication only to their bosses. It's important to expand your network and include your co-workers.”，与正确选项 C) To limit communication only to their superiors. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l3",
+          number: 3,
+          type: "single",
+          groupId: "ls-1",
+          stem: "What does the woman advise people to do in their work?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Put in quality time.",
+              },
+              {
+                key: "B",
+                text: "Connect with managers.",
+              },
+              {
+                key: "C",
+                text: "Make greater efforts.",
+              },
+              {
+                key: "D",
+                text: "Demonstrate final results.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“W: Yeah, it's better to make sure you are putting in quality time instead of just a large quantity of time. And these efforts can easily be demonstrat…”，与正确选项 A) Put in quality time. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l4",
+          number: 4,
+          type: "single",
+          groupId: "ls-1",
+          stem: "Why does the man say one should not act like a know-it-all?",
+          options:
+            [
+              {
+                key: "A",
+                text: "To show their genius.",
+              },
+              {
+                key: "B",
+                text: "To gain due respect.",
+              },
+              {
+                key: "C",
+                text: "To guard against humiliation.",
+              },
+              {
+                key: "D",
+                text: "To avoid appearing arrogant.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“M: But it goes without saying that you shouldn't act like a know-it-all, otherwise you'll appear arrogant.”，与正确选项 D) To avoid appearing arrogant. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l5",
+          number: 5,
+          type: "single",
+          groupId: "ls-2",
+          stem: "What does the woman say they first need to do?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Decide how to divide up the presentation tasks.",
+              },
+              {
+                key: "B",
+                text: "Investigate the available background research.",
+              },
+              {
+                key: "C",
+                text: "Complete the project design together.",
+              },
+              {
+                key: "D",
+                text: "Find a suitable topic for their article.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“I think we first need to decide how to divide up the presentation responsibilities.”，与正确选项 A) Decide how to divide up the presentation tasks. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l6",
+          number: 6,
+          type: "single",
+          groupId: "ls-2",
+          stem: "Why does the man refuse to handle the background part?",
+          options:
+            [
+              {
+                key: "A",
+                text: "He wants to devote his time to other portions.",
+              },
+              {
+                key: "B",
+                text: "He believes the woman is better able to handle it.",
+              },
+              {
+                key: "C",
+                text: "He claims to have done most of the work already.",
+              },
+              {
+                key: "D",
+                text: "He finds the woman more meticulous about details.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“Hold on a minute. You want me, the one who did the bulk of the task, to also do the majority of the presentation? The background research which was so…”，与正确选项 C) He claims to have done most of the work already. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l7",
+          number: 7,
+          type: "single",
+          groupId: "ls-2",
+          stem: "What does the woman urge the man to stop doing?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Questioning.",
+              },
+              {
+                key: "B",
+                text: "Complaining.",
+              },
+              {
+                key: "C",
+                text: "Arguing.",
+              },
+              {
+                key: "D",
+                text: "Worrying.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中诰及“OK. OK. I get it. Quit your moaning.”，与正确选项 B) Complaining. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l8",
+          number: 8,
+          type: "single",
+          groupId: "ls-2",
+          stem: "Why does the man suggest he present the conclusion and the woman do the introduction?",
+          options:
+            [
+              {
+                key: "A",
+                text: "To avoid sounding monotonous to the listeners.",
+              },
+              {
+                key: "B",
+                text: "To make the division of labor more reasonable.",
+              },
+              {
+                key: "C",
+                text: "To keep himself from being overburdened.",
+              },
+              {
+                key: "D",
+                text: "To bring their capabilities fully into play. Section B Directions: In this section, you will hear two passages. At the end of each passage, you will hear three or four questions. Both the passage and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“I will take responsibility for the conclusion and put you in charge of the introduction. This will make it so that we alternate presenting, so as to a…”，与正确选项 A) To avoid sounding monotonous to the listeners. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l9",
+          number: 9,
+          type: "single",
+          groupId: "ls-3",
+          stem: "What can makeup do according to new research from the University of Stirling in Scotland?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Alter others' perceptions of the wearer.",
+              },
+              {
+                key: "B",
+                text: "Win others' admiration for the wearer.",
+              },
+              {
+                key: "C",
+                text: "Enhance the wearer's confidence.",
+              },
+              {
+                key: "D",
+                text: "Change the wearer's appearance.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中的关键信息与选项 A) Alter others' perceptions of the wearer. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-3",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l10",
+          number: 10,
+          type: "single",
+          groupId: "ls-3",
+          stem: "How did both men and women rate the faces with cosmetics in the new research?",
+          options:
+            [
+              {
+                key: "A",
+                text: "As being a greater threat.",
+              },
+              {
+                key: "B",
+                text: "As being of higher prestige.",
+              },
+              {
+                key: "C",
+                text: "As being more dominant.",
+              },
+              {
+                key: "D",
+                text: "As being more attractive.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中的关键信息与选项 D) As being more attractive. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-3",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l11",
+          number: 11,
+          type: "single",
+          groupId: "ls-3",
+          stem: "Why does a female candidate need to know the gender of the hiring committee members?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It might influence her way of introducing herself.",
+              },
+              {
+                key: "B",
+                text: "It might impact her dressing style for the occasion.",
+              },
+              {
+                key: "C",
+                text: "It might affect her decision on applying cosmetics.",
+              },
+              {
+                key: "D",
+                text: "It might sway her view on the interviewers' questions.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“At a job interview, knowing whether the hiring committee will consist of men or women might influence a female candidate's decision about wearing make…”，与正确选项 C) It might affect her decision on applying cosmetics. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-3",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l12",
+          number: 12,
+          type: "single",
+          groupId: "ls-4",
+          stem: "What methods do some advertisements trumpet about changing a habit?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Those involving no self-recognition.",
+              },
+              {
+                key: "B",
+                text: "Those forcing us to clench our teeth.",
+              },
+              {
+                key: "C",
+                text: "Those resisting various temptations.",
+              },
+              {
+                key: "D",
+                text: "Those requiring no willpower at all.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“You may have seen advertisements trumpeting methods of changing a habit that require absolutely no willpower whatsoever.”，与正确选项 D) Those requiring no willpower at all. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l13",
+          number: 13,
+          type: "single",
+          groupId: "ls-4",
+          stem: "What does the speaker define willpower as?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Regulating one's actions for the sake of good health.",
+              },
+              {
+                key: "B",
+                text: "Controlling one's actions with a motivating thought.",
+              },
+              {
+                key: "C",
+                text: "Using practical examples to guide one's behavior.",
+              },
+              {
+                key: "D",
+                text: "Denying oneself any comfort to prevent diseases.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中诰及“I define willpower as \"using only the thought of your motivators to control your actions.\"”，与正确选项 B) Controlling one's actions with a motivating thought. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l14",
+          number: 14,
+          type: "single",
+          groupId: "ls-4",
+          stem: "What may sound amazing enough as regards willpower?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It equips us with an expert skill.",
+              },
+              {
+                key: "B",
+                text: "It exerts an enduring force on us.",
+              },
+              {
+                key: "C",
+                text: "It leads to a burning goal.",
+              },
+              {
+                key: "D",
+                text: "It begins with a bright idea.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“So, amazingly enough, willpower begins with a thought—a bright idea—some way to improve your life or contribute to others.”，与正确选项 D) It begins with a bright idea. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l15",
+          number: 15,
+          type: "single",
+          groupId: "ls-4",
+          stem: "What does the speaker say may make for effective willpower?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Any cherished goal.",
+              },
+              {
+                key: "B",
+                text: "Any positive mindset.",
+              },
+              {
+                key: "C",
+                text: "Any personal instinct.",
+              },
+              {
+                key: "D",
+                text: "Any valued role model. Section C Directions: In this section, you will hear three recordings of lectures or talks followed by three or four questions. The recordings will be played only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“What sort of bright ideas—motivators—make for effective willpower? In fact, any goal that you value strongly counts.”，与正确选项 A) Any cherished goal. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l16",
+          number: 16,
+          type: "single",
+          groupId: "ls-5",
+          stem: "What does the speaker say about the federal government's advice on seafood safety?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It has long been criticized as unclear.",
+              },
+              {
+                key: "B",
+                text: "It has long been ignored by the public.",
+              },
+              {
+                key: "C",
+                text: "It has caused much panic among women.",
+              },
+              {
+                key: "D",
+                text: "It has resulted in different understandings.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“In part, that's because the federal government's advice on the matter, first issued in 2004, has long been criticized as vague.”，与正确选项 A) It has long been criticized as unclear. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-5",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l17",
+          number: 17,
+          type: "single",
+          groupId: "ls-5",
+          stem: "What did the Food and Drug Administration do this week?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It warned consumers not to eat fish from the Gulf of Mexico.",
+              },
+              {
+                key: "B",
+                text: "It called on expectant mothers to pay attention to food safety.",
+              },
+              {
+                key: "C",
+                text: "It issued an update to the advice on seafood consumption.",
+              },
+              {
+                key: "D",
+                text: "It listed more than sixty species of fish as \"choices to avoid\".",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“This week the FDA issued an update to the advice, listing more than sixty species in a chart that ranks fish as A Best Choice, Good Choice and Choices…”，与正确选项 C) It issued an update to the advice on seafood consumption. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-5",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l18",
+          number: 18,
+          type: "single",
+          groupId: "ls-5",
+          stem: "According to the speaker, what are people concerned about regarding pregnant women and seafood?",
+          options:
+            [
+              {
+                key: "A",
+                text: "The impact of the FDA's analysis.",
+              },
+              {
+                key: "B",
+                text: "Multiple factors including mercury.",
+              },
+              {
+                key: "C",
+                text: "Critics' conclusions.",
+              },
+              {
+                key: "D",
+                text: "The prices of seafood.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中诰及“While mercury is of great concern when people are talking about pregnant women and seafood, it's not the only factor contributing to anxiety.”，与正确选项 B) Multiple factors including mercury. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-5",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l19",
+          number: 19,
+          type: "single",
+          groupId: "ls-6",
+          stem: "What does the speaker say about people not taking any vacation?",
+          options:
+            [
+              {
+                key: "A",
+                text: "They will suffer a breakdown soon.",
+              },
+              {
+                key: "B",
+                text: "They will be losing both joy and life.",
+              },
+              {
+                key: "C",
+                text: "They will be putting themselves and family at risk.",
+              },
+              {
+                key: "D",
+                text: "They will make things worse for people around them.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中的关键信息与选项 B) They will be losing both joy and life. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-6",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l20",
+          number: 20,
+          type: "single",
+          groupId: "ls-6",
+          stem: "What does the 9-year study recommend people do when planning vacations?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Spend 14 days for vacation every year.",
+              },
+              {
+                key: "B",
+                text: "Aim for three separate vacations yearly.",
+              },
+              {
+                key: "C",
+                text: "Space out their vacations evenly instead of taking one long vacation.",
+              },
+              {
+                key: "D",
+                text: "Use all their days off for a long summer break to achieve full-on calm.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“That above-mentioned study also recommends you space out your vacations evenly instead of using up all of your days at once.”，与正确选项 C) Space out their vacations evenly instead of taking one long vacation. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-6",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l21",
+          number: 21,
+          type: "single",
+          groupId: "ls-6",
+          stem: "Why is vacation frequency important according to the speaker?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Expecting to have more vacations in a year will boost one's work efficiency.",
+              },
+              {
+                key: "B",
+                text: "Anticipating more vacations would reduce one's feelings of despair at work.",
+              },
+              {
+                key: "C",
+                text: "Taking more than three vacations yearly would prolong one's excitement.",
+              },
+              {
+                key: "D",
+                text: "Planning multiple breaks throughout the year will add to one's happiness.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中的关键信息与选项 D) Planning multiple breaks throughout the year will add to one's happiness. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-6",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l22",
+          number: 22,
+          type: "single",
+          groupId: "ls-7",
+          stem: "What are researchers doing in Sweden?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Surveying when drivers are caught in the heat of arguments.",
+              },
+              {
+                key: "B",
+                text: "Designing devices to prevent drivers from being distracted.",
+              },
+              {
+                key: "C",
+                text: "Testing models for monitoring drivers easily getting tired.",
+              },
+              {
+                key: "D",
+                text: "Developing sensor-based systems for autonomous vehicles.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“Researchers working as part of the European Union's €77 billion research program are developing sensor-based systems that monitor whether a driver is…”，与正确选项 D) Developing sensor-based systems for autonomous vehicles. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-7",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l23",
+          number: 23,
+          type: "single",
+          groupId: "ls-7",
+          stem: "What did the researchers' project aim to do according to Dr. Anna Anund?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Make sure the autonomous vehicle operates in the simplest manner.",
+              },
+              {
+                key: "B",
+                text: "Ensure the transition from the driver to the vehicle is safely made.",
+              },
+              {
+                key: "C",
+                text: "Alleviate the driver's pressure as much as possible.",
+              },
+              {
+                key: "D",
+                text: "Record the driver's state as accurately as possible.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中的关键信息与选项 B) Ensure the transition from the driver to the vehicle is safely made. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-7",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l24",
+          number: 24,
+          type: "single",
+          groupId: "ls-7",
+          stem: "What is thought to be responsible for a fifth of road accidents across the European Union?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Driver fatigue.",
+              },
+              {
+                key: "B",
+                text: "Dreadful traffic.",
+              },
+              {
+                key: "C",
+                text: "Drunk driving.",
+              },
+              {
+                key: "D",
+                text: "Driving time.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“Driver fatigue is thought to be responsible for as many as a fifth of road crashes across the EU, although there are certain times of the day when mor…”，与正确选项 A) Driver fatigue. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-7",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-l25",
+          number: 25,
+          type: "single",
+          groupId: "ls-7",
+          stem: "Why do drivers now view self-driving cars as less safe than they used to?",
+          options:
+            [
+              {
+                key: "A",
+                text: "There has been a strong debate on the feasibility of Level 3 cars.",
+              },
+              {
+                key: "B",
+                text: "There have been few remarkable advances in auto technology.",
+              },
+              {
+                key: "C",
+                text: "There has been a rise in attention-grabbing accidents recently.",
+              },
+              {
+                key: "D",
+                text: "There have been few feasible ways to shift public sentiment.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“With an increase in attention-grabbing accidents recently, drivers now view self-driving cars as less safe than they used to.”，与正确选项 C) There has been a rise in attention-grabbing accidents recently. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-7",
+            },
+          score: 1,
+        },
+      ],
+  },
+  {
+    id: "cloze",
+    kind: "cloze",
+    title: "Part III Section A Banked Cloze",
+    instructions: "Directions: In this section, there is a passage with ten blanks. You are required to select one word for each blank from a list of choices given in a word bank following the passage. Read the passage through carefully before making your choices. Each choice in the bank is identified by a letter. Please mark the corresponding letter for each item on Answer Sheet 2 with a single line through the centre. You may not use any of the words in the bank more than once.",
+    minutes: 10,
+    bank:
+      {
+        A: "anywhere",
+        B: "asserts",
+        C: "constituent",
+        D: "correlated",
+        E: "determining",
+        F: "devastating",
+        G: "enacted",
+        H: "entails",
+        I: "exemption",
+        J: "impose",
+        K: "notified",
+        L: "notwithstanding",
+        M: "presume",
+        N: "rehabilitation",
+        O: "reproaching",
+      },
+    passages:
+      [
+        {
+          id: "p1",
+          title: "Section A Passage",
+          source: "2026年6月英语六级真题（第1套）",
+          paragraphs:
+            [
+              {
+                id: "p1-1",
+                text: "Two proposals are before the state legislature that looks to put some limits on ever-increasing rent prices, which some lawmakers say are contributing to rising homelessness rates. The proposals [26] caps on rent increases, preventing landlords in the state from raising rent more than the rate of inflation in most cases. There are exceptions for buildings less than 10 years old, public housing, improvements beyond maintenance, and a hardship [27].",
+              },
+              {
+                id: "p1-2",
+                text: "In a 2020 study, researchers at the U. S. Government Accountability Office estimated that every $100 in rent increase is [28] to a 9% rise in homelessness. Rent increases have an even more detrimental effect on some demographic groups, such as racial minorities. Representative Alex Ramel explained why he thought that this kind of legislation was so important, telling the story of a [29] struggling to live in the community.",
+              },
+              {
+                id: "p1-3",
+                text: "Ramel pointed out the [30] effect of double-digit rent increases, saying that he made the decision to introduce the legislation while talking to a young man in Bellingham. \"He's a recent graduate from Western Washington University and just got a new job,\" Ramel said. \"He was leaving our community because his landlord [31] him that his rent was going to go up by $600 a month.\" The Rental Housing Association of Washington opposes the legislation.",
+              },
+              {
+                id: "p1-4",
+                text: "The association [32] that the policy won't actually solve the problem of rental prices. Instead, it will punish small landlords and allow wealthy renters easy access to cheap housing. \"The rent control policy has failed everywhere it has been [33] in this county. It has not fixed one housing problem [34]. It also does not distinguish between rich and poor when [35] who gets the benefits of rent control,\" said Chester Baldwin with the Rental Housing Coalition.",
+              },
+            ],
+        },
+      ],
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s1-c26",
+          number: 26,
+          type: "bank",
+          stem: "The proposals [26] caps on rent increases, preventing landlords in the state from raising rent more than the rate of inflation in most cases.",
+          answer: "J",
+          explanation: "句意： “ 提案对租金上涨施加限制 ” ，impose caps on 固定搭配，意为 “ 对 … 施加上限 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s1-c27",
+          number: 27,
+          type: "bank",
+          stem: "There are exceptions for buildings less than 10 years old, public housing, improvements beyond maintenance, and a hardship [27].",
+          answer: "I",
+          explanation: "前文提到 “ 例外情况 ” ，包括老旧建筑、公共住房等，exemption 表示 “ 豁免、例外 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s1-c28",
+          number: 28,
+          type: "bank",
+          stem: "Government Accountability Office estimated that every $100 in rent increase is [28] to a 9% rise in homelessness.",
+          answer: "D",
+          explanation: "每增加 100 美元租金与流浪者增加 9% 相关，be correlated to表示 “ 与 … 相关 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s1-c29",
+          number: 29,
+          type: "bank",
+          stem: "Representative Alex Ramel explained why he thought that this kind of legislation was so important, telling the story of a [29] struggling to live in the community.",
+          answer: "C",
+          explanation: "代表讲述了一位 “ 选民 ” 挣扎生活的故事，constituent 意为“ 选民、居民 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s1-c30",
+          number: 30,
+          type: "bank",
+          stem: "Ramel pointed out the [30] effect of double-digit rent increases, saying that he made the decision to introduce the legislation while talking to a young man in Bellingham.",
+          answer: "F",
+          explanation: "“ 两位数的租金增长带来的毁灭性影响 ” ，devastating 表示“ 毁灭性的、严重的 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s1-c31",
+          number: 31,
+          type: "bank",
+          stem: "\"He was leaving our community because his landlord [31] him that his rent was going to go up by $600 a month.\" The Rental Housing Association of Washington opposes the legislation.",
+          answer: "K",
+          explanation: "“ 房东通知他租金上涨 ” ，notify 意为 “ 通知 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s1-c32",
+          number: 32,
+          type: "bank",
+          stem: "The association [32] that the policy won't actually solve the problem of rental prices.",
+          answer: "B",
+          explanation: "协会 “ 坚称 ” 政策无法解决问题，assert 表示 “ 断言、声称 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s1-c33",
+          number: 33,
+          type: "bank",
+          stem: "\"The rent control policy has failed everywhere it has been [33] in this county.",
+          answer: "G",
+          explanation: "“ 租金控制政策在实施的任何地方都失败了 ” ，enact 表示 “ 颁布、实施 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s1-c34",
+          number: 34,
+          type: "bank",
+          stem: "It has not fixed one housing problem [34].",
+          answer: "A",
+          explanation: "“ 没有解决任何一个住房问题 ” ，not…anywhere 表示 “ 在任何地方都没有 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s1-c35",
+          number: 35,
+          type: "bank",
+          stem: "It also does not distinguish between rich and poor when [35] who gets the benefits of rent control,\" said Chester Baldwin with the Rental Housing Coalition.",
+          answer: "E",
+          explanation: "“ 在决定谁获得租金控制利益时 ” ，determine 表示 “ 决定 ” 。",
+          score: 0.5,
+        },
+      ],
+  },
+  {
+    id: "reading",
+    kind: "reading",
+    title: "Part III Section B & C Reading Comprehension",
+    instructions: "Directions: In this section, you are going to read a passage with ten statements attached to it. Each statement contains information given in one of the paragraphs. Identify the paragraph from which the information is derived. You may choose a paragraph more than once. Each paragraph is marked with a letter. Answer the questions by marking the corresponding letter on Answer Sheet 2. Directions: There are 2 passages in this section. Each passage is followed by some questions or unfinished statements. For each of them there are four choices marked A), B), C) and D). You should decide on the best choice and mark the corresponding letter on Answer Sheet 2 with a single line through the centre.",
+    minutes: 30,
+    passages:
+      [
+        {
+          id: "p1",
+          title: "Section B Passage",
+          source: "2026年6月英语六级真题（第1套）",
+          paragraphs:
+            [
+              {
+                id: "p1-1",
+                marker: "A",
+                text: "A For those \"citizens of the world\", the office can be anything from a beach hut in Brisbane to a Starbucks in Seattle, thanks to the growing prevalence of remote-based work. But roaming the globe from café to café is not without its challenges.",
+              },
+              {
+                id: "p1-2",
+                marker: "B",
+                text: "B When the average traveller lands in a city like Bangkok, Berlin, or Buenos Aires, their first step might be to drop their bags at their hotel and to log on to TripAdvisor to find out the hours of a popular tourist attraction or the best rooftop bar for happy hour.",
+              },
+              {
+                id: "p1-3",
+                marker: "C",
+                text: "C But people like Pieter Levels are not your average traveller. A Dutch website developer, Levels has been living and working nomadically (像游牧民那样) in places like Singapore, Hong Kong, Tokyo and Manila for two years. With just a carry-on backpack, he chooses his location at will, based on a variety of factors —— Wi-Fi speed, average temperature, exotic food and cost of living —— that have little bearing on the work he actually does.",
+              },
+              {
+                id: "p1-4",
+                marker: "D",
+                text: "D Somewhere in his nomadic journey, Levels noticed that there was a growing need to create an online infrastructure for people like himself. That's when he created #nomads, a membership-based chat system which runs on the team communication platform known as Slack. The channel allows users to ask people in their current city the types of practical questions that a tourist would unlikely need to ask.",
+              },
+              {
+                id: "p1-5",
+                marker: "E",
+                text: "E Members of the geographically dispersed subculture that Levels is a part of call themselves \"digital nomads\". They are borderless, mostly self-employed remote workers who interact with cities in a way that's entirely different from a tourist, but still doesn't quite reach the status of resident. A relatively new phenomenon, there are no hard statistics on the prevalence of digital nomads or location independent workers. But thanks to the growing prevalence of freelance (自由职业的) livelihoods, a global sharing economy and numerous digital tools, the number of people who are able to live this life is growing quickly. And in a rapidly urbanising world, where a major city in Asia increasingly offers the same comforts as one in Europe, many people are reaching the realisation they don't need to stay in one place.",
+              },
+              {
+                id: "p1-6",
+                marker: "F",
+                text: "F So how does a nomad differ from a tourist or resident? In many ways, Levels says, you can think of a digital nomad like a \"short-term independent expat (移居国外的人)\". Unlike a resident expat, they don't work for a large multinational company in an air conditioned office building and they generally enter a country on a tourist visa, simply renewing or moving on when it expires. But unlike a tourist, they don't arrive in a foreign city without any responsibilities. Travel isn't necessarily required for them to do their jobs, but neither is staying in one place.",
+              },
+              {
+                id: "p1-7",
+                marker: "G",
+                text: "G Janet Brent is an independent ebook designer. She says many people she knows assume she travels for work, but in reality her international destinations are largely up to her, and driven by cost. \"Contrary to what some people might think, I don't get paid to travel — I simply choose the lifestyle. Rather than rent in one given city, I choose to travel and do short-term, temporary stays around the world, and my travel decisions are literally based on what makes the most sense financially for me,\" Brent said. \"It's completely different from vacationing —— you really sink into the city life and get your feet wet in the communities.\"",
+              },
+              {
+                id: "p1-8",
+                marker: "H",
+                text: "H Bryce Adams is another such nomad. He works as a developer for a South African company WooThemes, which has a workforce that's more than 80% remote-based. Though Adams frequently posts pictures on Instagram of his enviable cooking adventures from Seoul to Bangkok, he says nomad life in foreign cities has its downsides, including finding adequate Wi-Fi for the bandwidth-hungry work his livelihood depends on. Contrary to the perception that he works under a mango tree in a tropical haven, Adams says the reality of this life means that he often ends up staying in more western style places in globalised cities —— ones that are sure to have air conditioning and a decent connection —— rather than exotic beachfront cafés.",
+              },
+              {
+                id: "p1-9",
+                marker: "I",
+                text: "I \"A fellow nomad posted quite a funny but honest message on Twitter a few days ago that stuck with me: 'It's funny that digital nomads spend 16 hours to fly to the other side of the world to sit in Starbucks,' and it's completely true,\" Adams said. \"When you're a digital nomad, you don't actually have as much freedom as most people think you do. We have deadlines, we all have people relying on us and a mouth (or two) that needs to be fed. It's nice to be able to work anywhere in the world but it's not without its challenges.\"",
+              },
+              {
+                id: "p1-10",
+                marker: "J",
+                text: "J But these challenges can often provide an opportunity for nomads to see a side of a city they may not have if they were staying in a luxury hotel for a long weekend. However inconvenient, a trip to a local doctor, immigration office or laundry —— or a conflict with a local Airbnb host (the accommodation style of choice for most nomads) —— can be far more culturally instructive than a trip to the national museum. And because nomads often have to stay where the strongest internet connection is, they tend to spend more time in developing cities compared to the average tourist, who often flees to more touristy destinations soon after landing at the airport.",
+              },
+              {
+                id: "p1-11",
+                marker: "K",
+                text: "K The nomad life is, by all accounts, one built out of privilege. You not only need a relatively powerful passport that makes tourist visas easy to attain, but also a knowledge economy job and access to the technology and devices that make remote working possible. But nomads like Adams say that while they are aware of this privilege, they believe living this way elevates what they're able to offer, by giving them a broader perspective on what they're building, writing, or designing and expanding their world view.",
+              },
+              {
+                id: "p1-12",
+                marker: "L",
+                text: "L \"Being able to travel and get around makes it easy to stay inspired,\" he added. \"I truly believe that it makes me a more sensible human being, as I tend to see and appreciate the creative solutions people come up with in other parts of the world, even though many tend to have far more constraints than we have at home.\"",
+              },
+              {
+                id: "p1-13",
+                marker: "M",
+                text: "M So when you're constantly on the road and don't own any property or have a fixed address, which city do you call home? It's no surprise that many nomads are dual citizens or \"third culture kids,\" who have grown up with a notion of identity that's not tied to nationalism or staying in one place. Levels says that the nomad life has not only changed his notions of citizenship, but the people he chooses to spend time with as well. \"Saying you're a 'citizen of the world' is a super cliché, right? But it's becoming quite true,\" Levels said. \"This global awareness has been the reason I started Nomad List and it's affected who my friends are. It's normal to have dinner now and sit with a Korean girl, a British-Singaporean guy, a Mexican girl and a Nigerian guy. As much as that sounds like a politically correct TV advertisement, it's great that that's the time we're in now.\" information tourists normally don't seek. suppose. do a better job. for information online about its popular tourist attractions. increasing. citizenship, but his choice of companions. cultural information than a visit to the national museum.",
+              },
+            ],
+        },
+        {
+          id: "p2",
+          title: "Passage One",
+          source: "2026年6月英语六级真题（第1套）",
+          paragraphs:
+            [
+              {
+                id: "p2-1",
+                marker: "A",
+                text: "Children's use of social media is a problem. That doesn't mean it should be stopped. While younger children should not be on platforms where 13 is the minimum age, it is neither practical nor desirable to imagine a world in which teenagers are prevented from accessing the platforms and messaging systems that the adults around them use to organise their lives. But the pleasure and stimulation that people of all ages find on their screens and smartphones must not blind us to the harm that spending time in this way can cause.",
+              },
+              {
+                id: "p2-2",
+                marker: "B",
+                text: "The finding that the alarmingly high rate of depression in British teenage girls is closely correlated to time spent on social media is extremely concerning. Research found that two in five girls are on social media for at least three hours a day —— with half as many boys engaged to the same extent. More than a third of depressed girls have experienced online harassment. About half of affected girls suffered disrupted sleep, compared with 20% of depressed boys.",
+              },
+              {
+                id: "p2-3",
+                marker: "C",
+                text: "Although the research does not prove that social media causes depression, the importance of the finding that there is a connection should not be underestimated. Schools have done important work in communicating key messages about the risks of online abuse. But when it comes to broader questions about \"screen time\", many professionals as well as parents are confused and uncertain. The health secretary, Matt Hancock, wants official guidelines on time and age limits.",
+              },
+              {
+                id: "p2-4",
+                marker: "D",
+                text: "This idea has the virtue of simplicity, though some experts question its effects and call for a greater degree of differentiation, arguing that time online by itself is not a bad thing and it all depends on what you are doing. Also due this year is information commissioner Elizabeth Denham's Age Appropriate Design Code, covering the use of children's personal data. Both initiatives are welcome. But the government is playing catch-up.",
+              },
+              {
+                id: "p2-5",
+                marker: "E",
+                text: "Statutory regulation of the digital media giants is long overdue. The failure to protect children from data harvesting and targeted advertising thus far is as shocking as the lack of concern shown by the companies themselves with regard to children's psychological health. Of course, social media companies are not the source of all our ills, and can offer a too-easy target for politicians keen to divert attention from inadequately resourced schools and health services.",
+              },
+              {
+                id: "p2-6",
+                marker: "F",
+                text: "There are other reasons for the rising incidence of depression in young people, with increasing pressure to succeed in education and in life more broadly —— to be famous, beautiful, rich —— often cited as a source of unhappiness or anxiety which can, if aggravated by other factors, and not managed, tip into ill health. Safeguarding means more than the avoidance of physical threat.",
+              },
+            ],
+        },
+        {
+          id: "p3",
+          title: "Passage Two",
+          source: "2026年6月英语六级真题（第1套）",
+          paragraphs:
+            [
+              {
+                id: "p3-1",
+                marker: "A",
+                text: "About a decade ago, the G-20, a forum of the world's biggest economies, agreed to crack down on multinational corporations' abusive use of tax havens. This resulted in a plan that aimed to curb practices that shielded a large chunk of corporate profits from tax authorities. But, instead of reining in the use of tax havens —— countries such as the Bahamas and Cayman Islands with very low or no effective tax rates —— the problem has only gotten worse.",
+              },
+              {
+                id: "p3-2",
+                marker: "B",
+                text: "In a new study, we measured the excessive profits reported in tax havens that cannot be explained by ordinary economic activity such as employees, factories and research in that country. Our findings show a striking pattern of artificial shifting of paper profits to tax havens by corporations, which has been relentless since the 1980s. We found that the world's biggest multinational businesses shifted 37% of the profits —— $969 billion —— they earned in other countries to tax havens in 2019.",
+              },
+              {
+                id: "p3-3",
+                marker: "C",
+                text: "The figure was less than 2% in the 1970s. The main reasons for the large increase were the growth of the tax avoidance industry in the 1980s and U. S. policies that made it easier to shift profits from high-tax countries to tax havens. We estimate that the amount of corporate taxes lost as a result reached 10% of total corporate revenue in 2019, up from less than 0.1% in the 1970s. In 2019, the total government tax loss globally was $250 billion.",
+              },
+              {
+                id: "p3-4",
+                marker: "D",
+                text: "U. S. multinational corporations alone accounted for about half of that, followed by the U. K. and Germany. How do policymakers fix this? So far, the world as a whole has been trying to solve this problem by cutting or scrapping corporate taxes in a very gradual way. In the past 40 years, the global effective corporate tax rate has fallen from 23% to 17%. At the same time, governments have relied more heavily on consumption taxes.",
+              },
+              {
+                id: "p3-5",
+                marker: "E",
+                text: "But the root cause of profit-shifting is the incentives involved, such as generous or lenient corporate tax rates in other countries. If countries could agree on a global minimum corporate tax rate of, say, 20%, the problem of profit-shifting would largely disappear, as tax havens would simply cease to exist. This type of mechanism is exactly what more than 130 countries signed onto in 2021, with implementation of a 15% minimum tax set to begin soon in the EU, U.",
+              },
+              {
+                id: "p3-6",
+                marker: "F",
+                text: "K., Japan, Indonesia and many other countries. The U. S. has notably not been able to pass this legislation. Our research suggests implementing this type of tax reform is necessary in reversing the shift of ever-greater amounts of corporate profits to tax havens —— instead of being taxed by the governments where they operate and create value.",
+              },
+            ],
+        },
+      ],
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s1-m36",
+          number: 36,
+          type: "single",
+          stem: "Pieter Levels created a chat system to satisfy the need of digital nomads for information tourists normally don't seek.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A For those \"citizens of the world\", the office can be…",
+              },
+              {
+                key: "B",
+                text: "B When the average traveller lands in a city like Bangkok…",
+              },
+              {
+                key: "C",
+                text: "C But people like Pieter Levels are not your average…",
+              },
+              {
+                key: "D",
+                text: "D Somewhere in his nomadic journey, Levels noticed that…",
+              },
+              {
+                key: "E",
+                text: "E Members of the geographically dispersed subculture that…",
+              },
+              {
+                key: "F",
+                text: "F So how does a nomad differ from a tourist or resident?",
+              },
+              {
+                key: "G",
+                text: "G Janet Brent is an independent ebook designer.",
+              },
+              {
+                key: "H",
+                text: "H Bryce Adams is another such nomad.",
+              },
+              {
+                key: "I",
+                text: "I \"A fellow nomad posted quite a funny but honest message…",
+              },
+              {
+                key: "J",
+                text: "J But these challenges can often provide an opportunity for…",
+              },
+              {
+                key: "K",
+                text: "K The nomad life is, by all accounts, one built out of…",
+              },
+              {
+                key: "L",
+                text: "L \"Being able to travel and get around makes it easy to…",
+              },
+              {
+                key: "M",
+                text: "M So when you're constantly on the road and don't own any…",
+              },
+            ],
+          answer: "D",
+          explanation: "Pieter Levels 创建了聊天系统满足数字游民对实用信息的需求（ D 段）。",
+          evidence:
+            {
+              paragraphId: "p1-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-m37",
+          number: 37,
+          type: "single",
+          stem: "It is said that digital nomads do not enjoy as much freedom as most people suppose.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A For those \"citizens of the world\", the office can be…",
+              },
+              {
+                key: "B",
+                text: "B When the average traveller lands in a city like Bangkok…",
+              },
+              {
+                key: "C",
+                text: "C But people like Pieter Levels are not your average…",
+              },
+              {
+                key: "D",
+                text: "D Somewhere in his nomadic journey, Levels noticed that…",
+              },
+              {
+                key: "E",
+                text: "E Members of the geographically dispersed subculture that…",
+              },
+              {
+                key: "F",
+                text: "F So how does a nomad differ from a tourist or resident?",
+              },
+              {
+                key: "G",
+                text: "G Janet Brent is an independent ebook designer.",
+              },
+              {
+                key: "H",
+                text: "H Bryce Adams is another such nomad.",
+              },
+              {
+                key: "I",
+                text: "I \"A fellow nomad posted quite a funny but honest message…",
+              },
+              {
+                key: "J",
+                text: "J But these challenges can often provide an opportunity for…",
+              },
+              {
+                key: "K",
+                text: "K The nomad life is, by all accounts, one built out of…",
+              },
+              {
+                key: "L",
+                text: "L \"Being able to travel and get around makes it easy to…",
+              },
+              {
+                key: "M",
+                text: "M So when you're constantly on the road and don't own any…",
+              },
+            ],
+          answer: "I",
+          explanation: "Adams 指出数字游民并没有人们想象的那么多自由（ I 段）。",
+          evidence:
+            {
+              paragraphId: "p1-9",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-m38",
+          number: 38,
+          type: "single",
+          stem: "Different from tourists, digital nomads travel to foreign places with work to do.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A For those \"citizens of the world\", the office can be…",
+              },
+              {
+                key: "B",
+                text: "B When the average traveller lands in a city like Bangkok…",
+              },
+              {
+                key: "C",
+                text: "C But people like Pieter Levels are not your average…",
+              },
+              {
+                key: "D",
+                text: "D Somewhere in his nomadic journey, Levels noticed that…",
+              },
+              {
+                key: "E",
+                text: "E Members of the geographically dispersed subculture that…",
+              },
+              {
+                key: "F",
+                text: "F So how does a nomad differ from a tourist or resident?",
+              },
+              {
+                key: "G",
+                text: "G Janet Brent is an independent ebook designer.",
+              },
+              {
+                key: "H",
+                text: "H Bryce Adams is another such nomad.",
+              },
+              {
+                key: "I",
+                text: "I \"A fellow nomad posted quite a funny but honest message…",
+              },
+              {
+                key: "J",
+                text: "J But these challenges can often provide an opportunity for…",
+              },
+              {
+                key: "K",
+                text: "K The nomad life is, by all accounts, one built out of…",
+              },
+              {
+                key: "L",
+                text: "L \"Being able to travel and get around makes it easy to…",
+              },
+              {
+                key: "M",
+                text: "M So when you're constantly on the road and don't own any…",
+              },
+            ],
+          answer: "F",
+          explanation: "与游客不同，数字游民去国外是带着工作任务去的（ F 段）。",
+          evidence:
+            {
+              paragraphId: "p1-6",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-m39",
+          number: 39,
+          type: "single",
+          stem: "Digital nomads believe their lifestyle enables them to broaden their vision and do a better job.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A For those \"citizens of the world\", the office can be…",
+              },
+              {
+                key: "B",
+                text: "B When the average traveller lands in a city like Bangkok…",
+              },
+              {
+                key: "C",
+                text: "C But people like Pieter Levels are not your average…",
+              },
+              {
+                key: "D",
+                text: "D Somewhere in his nomadic journey, Levels noticed that…",
+              },
+              {
+                key: "E",
+                text: "E Members of the geographically dispersed subculture that…",
+              },
+              {
+                key: "F",
+                text: "F So how does a nomad differ from a tourist or resident?",
+              },
+              {
+                key: "G",
+                text: "G Janet Brent is an independent ebook designer.",
+              },
+              {
+                key: "H",
+                text: "H Bryce Adams is another such nomad.",
+              },
+              {
+                key: "I",
+                text: "I \"A fellow nomad posted quite a funny but honest message…",
+              },
+              {
+                key: "J",
+                text: "J But these challenges can often provide an opportunity for…",
+              },
+              {
+                key: "K",
+                text: "K The nomad life is, by all accounts, one built out of…",
+              },
+              {
+                key: "L",
+                text: "L \"Being able to travel and get around makes it easy to…",
+              },
+              {
+                key: "M",
+                text: "M So when you're constantly on the road and don't own any…",
+              },
+            ],
+          answer: "K",
+          explanation: "数字游民相信这种生活方式拓宽了视野，能做得更好（ K 段）。",
+          evidence:
+            {
+              paragraphId: "p1-11",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-m40",
+          number: 40,
+          type: "single",
+          stem: "The first thing a typical traveller possibly does after arriving at a city is search for information online about its popular tourist attractions.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A For those \"citizens of the world\", the office can be…",
+              },
+              {
+                key: "B",
+                text: "B When the average traveller lands in a city like Bangkok…",
+              },
+              {
+                key: "C",
+                text: "C But people like Pieter Levels are not your average…",
+              },
+              {
+                key: "D",
+                text: "D Somewhere in his nomadic journey, Levels noticed that…",
+              },
+              {
+                key: "E",
+                text: "E Members of the geographically dispersed subculture that…",
+              },
+              {
+                key: "F",
+                text: "F So how does a nomad differ from a tourist or resident?",
+              },
+              {
+                key: "G",
+                text: "G Janet Brent is an independent ebook designer.",
+              },
+              {
+                key: "H",
+                text: "H Bryce Adams is another such nomad.",
+              },
+              {
+                key: "I",
+                text: "I \"A fellow nomad posted quite a funny but honest message…",
+              },
+              {
+                key: "J",
+                text: "J But these challenges can often provide an opportunity for…",
+              },
+              {
+                key: "K",
+                text: "K The nomad life is, by all accounts, one built out of…",
+              },
+              {
+                key: "L",
+                text: "L \"Being able to travel and get around makes it easy to…",
+              },
+              {
+                key: "M",
+                text: "M So when you're constantly on the road and don't own any…",
+              },
+            ],
+          answer: "B",
+          explanation: "普通游客到达城市后第一件事是上网查找旅游景点信息（ B 段）。",
+          evidence:
+            {
+              paragraphId: "p1-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-m41",
+          number: 41,
+          type: "single",
+          stem: "One digital nomad thinks their life in foreign cities has its disadvantages.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A For those \"citizens of the world\", the office can be…",
+              },
+              {
+                key: "B",
+                text: "B When the average traveller lands in a city like Bangkok…",
+              },
+              {
+                key: "C",
+                text: "C But people like Pieter Levels are not your average…",
+              },
+              {
+                key: "D",
+                text: "D Somewhere in his nomadic journey, Levels noticed that…",
+              },
+              {
+                key: "E",
+                text: "E Members of the geographically dispersed subculture that…",
+              },
+              {
+                key: "F",
+                text: "F So how does a nomad differ from a tourist or resident?",
+              },
+              {
+                key: "G",
+                text: "G Janet Brent is an independent ebook designer.",
+              },
+              {
+                key: "H",
+                text: "H Bryce Adams is another such nomad.",
+              },
+              {
+                key: "I",
+                text: "I \"A fellow nomad posted quite a funny but honest message…",
+              },
+              {
+                key: "J",
+                text: "J But these challenges can often provide an opportunity for…",
+              },
+              {
+                key: "K",
+                text: "K The nomad life is, by all accounts, one built out of…",
+              },
+              {
+                key: "L",
+                text: "L \"Being able to travel and get around makes it easy to…",
+              },
+              {
+                key: "M",
+                text: "M So when you're constantly on the road and don't own any…",
+              },
+            ],
+          answer: "H",
+          explanation: "Bryce Adams 认为在国外城市的生活也有缺点（ H 段）。",
+          evidence:
+            {
+              paragraphId: "p1-8",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-m42",
+          number: 42,
+          type: "single",
+          stem: "Travelling around helps to keep digital nomads inspired.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A For those \"citizens of the world\", the office can be…",
+              },
+              {
+                key: "B",
+                text: "B When the average traveller lands in a city like Bangkok…",
+              },
+              {
+                key: "C",
+                text: "C But people like Pieter Levels are not your average…",
+              },
+              {
+                key: "D",
+                text: "D Somewhere in his nomadic journey, Levels noticed that…",
+              },
+              {
+                key: "E",
+                text: "E Members of the geographically dispersed subculture that…",
+              },
+              {
+                key: "F",
+                text: "F So how does a nomad differ from a tourist or resident?",
+              },
+              {
+                key: "G",
+                text: "G Janet Brent is an independent ebook designer.",
+              },
+              {
+                key: "H",
+                text: "H Bryce Adams is another such nomad.",
+              },
+              {
+                key: "I",
+                text: "I \"A fellow nomad posted quite a funny but honest message…",
+              },
+              {
+                key: "J",
+                text: "J But these challenges can often provide an opportunity for…",
+              },
+              {
+                key: "K",
+                text: "K The nomad life is, by all accounts, one built out of…",
+              },
+              {
+                key: "L",
+                text: "L \"Being able to travel and get around makes it easy to…",
+              },
+              {
+                key: "M",
+                text: "M So when you're constantly on the road and don't own any…",
+              },
+            ],
+          answer: "L",
+          explanation: "旅行有助于保持灵感（ L 段）。",
+          evidence:
+            {
+              paragraphId: "p1-12",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-m43",
+          number: 43,
+          type: "single",
+          stem: "The number of self-employed remote workers living a digital nomad's life is fast increasing.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A For those \"citizens of the world\", the office can be…",
+              },
+              {
+                key: "B",
+                text: "B When the average traveller lands in a city like Bangkok…",
+              },
+              {
+                key: "C",
+                text: "C But people like Pieter Levels are not your average…",
+              },
+              {
+                key: "D",
+                text: "D Somewhere in his nomadic journey, Levels noticed that…",
+              },
+              {
+                key: "E",
+                text: "E Members of the geographically dispersed subculture that…",
+              },
+              {
+                key: "F",
+                text: "F So how does a nomad differ from a tourist or resident?",
+              },
+              {
+                key: "G",
+                text: "G Janet Brent is an independent ebook designer.",
+              },
+              {
+                key: "H",
+                text: "H Bryce Adams is another such nomad.",
+              },
+              {
+                key: "I",
+                text: "I \"A fellow nomad posted quite a funny but honest message…",
+              },
+              {
+                key: "J",
+                text: "J But these challenges can often provide an opportunity for…",
+              },
+              {
+                key: "K",
+                text: "K The nomad life is, by all accounts, one built out of…",
+              },
+              {
+                key: "L",
+                text: "L \"Being able to travel and get around makes it easy to…",
+              },
+              {
+                key: "M",
+                text: "M So when you're constantly on the road and don't own any…",
+              },
+            ],
+          answer: "E",
+          explanation: "数字游民的数量正在快速增长（ E 段）。",
+          evidence:
+            {
+              paragraphId: "p1-5",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-m44",
+          number: 44,
+          type: "single",
+          stem: "Pieter Levels says his life as a nomad has transformed not only his idea of citizenship, but his choice of companions.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A For those \"citizens of the world\", the office can be…",
+              },
+              {
+                key: "B",
+                text: "B When the average traveller lands in a city like Bangkok…",
+              },
+              {
+                key: "C",
+                text: "C But people like Pieter Levels are not your average…",
+              },
+              {
+                key: "D",
+                text: "D Somewhere in his nomadic journey, Levels noticed that…",
+              },
+              {
+                key: "E",
+                text: "E Members of the geographically dispersed subculture that…",
+              },
+              {
+                key: "F",
+                text: "F So how does a nomad differ from a tourist or resident?",
+              },
+              {
+                key: "G",
+                text: "G Janet Brent is an independent ebook designer.",
+              },
+              {
+                key: "H",
+                text: "H Bryce Adams is another such nomad.",
+              },
+              {
+                key: "I",
+                text: "I \"A fellow nomad posted quite a funny but honest message…",
+              },
+              {
+                key: "J",
+                text: "J But these challenges can often provide an opportunity for…",
+              },
+              {
+                key: "K",
+                text: "K The nomad life is, by all accounts, one built out of…",
+              },
+              {
+                key: "L",
+                text: "L \"Being able to travel and get around makes it easy to…",
+              },
+              {
+                key: "M",
+                text: "M So when you're constantly on the road and don't own any…",
+              },
+            ],
+          answer: "M",
+          explanation: "Levels 说游民生活不仅改变了他的公民观念，也改变了朋友选择（ M段）。",
+          evidence:
+            {
+              paragraphId: "p1-13",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-m45",
+          number: 45,
+          type: "single",
+          stem: "Interactions with local people and institutions provide nomads with far more cultural information than a visit to the national museum.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A For those \"citizens of the world\", the office can be…",
+              },
+              {
+                key: "B",
+                text: "B When the average traveller lands in a city like Bangkok…",
+              },
+              {
+                key: "C",
+                text: "C But people like Pieter Levels are not your average…",
+              },
+              {
+                key: "D",
+                text: "D Somewhere in his nomadic journey, Levels noticed that…",
+              },
+              {
+                key: "E",
+                text: "E Members of the geographically dispersed subculture that…",
+              },
+              {
+                key: "F",
+                text: "F So how does a nomad differ from a tourist or resident?",
+              },
+              {
+                key: "G",
+                text: "G Janet Brent is an independent ebook designer.",
+              },
+              {
+                key: "H",
+                text: "H Bryce Adams is another such nomad.",
+              },
+              {
+                key: "I",
+                text: "I \"A fellow nomad posted quite a funny but honest message…",
+              },
+              {
+                key: "J",
+                text: "J But these challenges can often provide an opportunity for…",
+              },
+              {
+                key: "K",
+                text: "K The nomad life is, by all accounts, one built out of…",
+              },
+              {
+                key: "L",
+                text: "L \"Being able to travel and get around makes it easy to…",
+              },
+              {
+                key: "M",
+                text: "M So when you're constantly on the road and don't own any…",
+              },
+            ],
+          answer: "J",
+          explanation: "与当地人的互动比参观国家博物馆提供更多文化信息（ J 段）。",
+          evidence:
+            {
+              paragraphId: "p1-10",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s1-r46",
+          number: 46,
+          type: "single",
+          stem: "What does the author believe regarding social media?",
+          options:
+            [
+              {
+                key: "A",
+                text: "To stop children using it is unrealistic and inadvisable.",
+              },
+              {
+                key: "B",
+                text: "It helps both adults and children to organise their lives.",
+              },
+              {
+                key: "C",
+                text: "It poses problems to both parents and children.",
+              },
+              {
+                key: "D",
+                text: "A world without it is really hard to imagine.",
+              },
+            ],
+          answer: "A",
+          explanation: "第一段： “…it is neither practical nor desirable to imagine a world in which teenagers are prevented from accessing…” 即禁止孩子使用社交媒体既不现实也不可取。",
+          evidence:
+            {
+              paragraphId: "p2-1",
+              quote: "it is neither practical nor desirable to imagine a world in which teenagers are prevented from accessing",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s1-r47",
+          number: 47,
+          type: "single",
+          stem: "What do we learn from the passage about British teenage girls?",
+          options:
+            [
+              {
+                key: "A",
+                text: "The more frequently they interact on social media, the more they experience harassment.",
+              },
+              {
+                key: "B",
+                text: "The more time they spend on social media, the more likely they suffer from depression.",
+              },
+              {
+                key: "C",
+                text: "Most of them are engaged on social media for at least three hours a day.",
+              },
+              {
+                key: "D",
+                text: "They spend half as many hours on social media as British teenage boys.",
+              },
+            ],
+          answer: "B",
+          explanation: "第二段： “…depression…is closely correlated to time spent on social media” 即花在社交媒体上的时间与抑郁密切相关。",
+          evidence:
+            {
+              paragraphId: "p2-2",
+              quote: "is closely correlated to time spent on social media",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s1-r48",
+          number: 48,
+          type: "single",
+          stem: "What is the author's view on the research finding about British teenage girls?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Its implications about online abuse are obvious.",
+              },
+              {
+                key: "B",
+                text: "Its key message calls for immediate attention.",
+              },
+              {
+                key: "C",
+                text: "Its importance should not be undervalued.",
+              },
+              {
+                key: "D",
+                text: "Its uncertainty should not go unnoticed.",
+              },
+            ],
+          answer: "C",
+          explanation: "第三段： “…the importance of the finding…should not be underestimated.” 即不应低估这一发现的重要性。",
+          evidence:
+            {
+              paragraphId: "p2-3",
+              quote: "the importance of the finding",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s1-r49",
+          number: 49,
+          type: "single",
+          stem: "What do experts think of health secretary Matt Hancock's idea?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Its implementation requires prompt action.",
+              },
+              {
+                key: "B",
+                text: "It is a welcome initiative but is long overdue.",
+              },
+              {
+                key: "C",
+                text: "Its success depends on how it is implemented.",
+              },
+              {
+                key: "D",
+                text: "It is too simplistic to produce the desired effect.",
+              },
+            ],
+          answer: "D",
+          explanation: "第四段： “This idea has the virtue of simplicity, though some experts question its effects and call for a greater degree of differentiation” 即专家认为过于简单化，可能无法达到预期效果。",
+          evidence:
+            {
+              paragraphId: "p2-4",
+              quote: "This idea has the virtue of simplicity, though some experts question its effects and call for a greater degree of differentiation",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s1-r50",
+          number: 50,
+          type: "single",
+          stem: "Besides social media companies, what factors contribute to young people's psychological health problems?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Poorly financed schools and health services.",
+              },
+              {
+                key: "B",
+                text: "Politicians' eagerness to divert public attention.",
+              },
+              {
+                key: "C",
+                text: "Bad statutory regulation of digital media giants.",
+              },
+              {
+                key: "D",
+                text: "Their parents' educational background and life.",
+              },
+            ],
+          answer: "A",
+          explanation: "末段： “…with increasing pressure to succeed in education and in life…often cited as a source of unhappiness…” 即资源不足的学校和医疗服务也是因素之一。",
+          evidence:
+            {
+              paragraphId: "p2-6",
+              quote: "with increasing pressure to succeed in education and in life",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s1-r51",
+          number: 51,
+          type: "single",
+          stem: "What do we learn about the G-20's agreement on curbing the use of tax havens?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It has aggravated the problem in non-G-20 countries.",
+              },
+              {
+                key: "B",
+                text: "It has taken a toll on countries such as Cayman Islands.",
+              },
+              {
+                key: "C",
+                text: "It has failed to achieve the expected outcome.",
+              },
+              {
+                key: "D",
+                text: "It has failed to result in any long-term plan.",
+              },
+            ],
+          answer: "C",
+          explanation: "第二段： “But, instead of reining in…the problem has only gotten worse.”即未达到预期效果。",
+          evidence:
+            {
+              paragraphId: "p3-1",
+              quote: "the problem has only gotten worse.",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s1-r52",
+          number: 52,
+          type: "single",
+          stem: "What mainly accounted for the large increase in the world's biggest multinational corporations' shift of profits to tax havens?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Fluctuating tax rates globally.",
+              },
+              {
+                key: "B",
+                text: "Lenient policies of the U. S.",
+              },
+              {
+                key: "C",
+                text: "Heavy taxes imposed on them.",
+              },
+              {
+                key: "D",
+                text: "Rapid growth of their business.",
+              },
+            ],
+          answer: "B",
+          explanation: "第四段： “…the main reasons…were the growth of the tax avoidance industry…and U.S. policies…” 即美国的宽松政策是主因之一。",
+          evidence:
+            {
+              paragraphId: "p3-3",
+              quote: "were the growth of the tax avoidance industry",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s1-r53",
+          number: 53,
+          type: "single",
+          stem: "What have policymakers been doing to prevent government tax loss?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Reducing corporate taxes step by step.",
+              },
+              {
+                key: "B",
+                text: "Scrapping consumption taxes gradually.",
+              },
+              {
+                key: "C",
+                text: "Making joint efforts to levy corporate taxes.",
+              },
+              {
+                key: "D",
+                text: "Adjusting global effective corporate tax rates.",
+              },
+            ],
+          answer: "A",
+          explanation: "第六段： “…trying to solve this problem by cutting or scrapping corporate taxes in a very gradual way.” 即逐步降低企业所得税。",
+          evidence:
+            {
+              paragraphId: "p3-4",
+              quote: "trying to solve this problem by cutting or scrapping corporate taxes in a very gradual way.",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s1-r54",
+          number: 54,
+          type: "single",
+          stem: "What does the author say would bring tax havens to an end?",
+          options:
+            [
+              {
+                key: "A",
+                text: "The alignment of corporate taxes with consumption taxes.",
+              },
+              {
+                key: "B",
+                text: "The implementation of generous tax rates in all countries.",
+              },
+              {
+                key: "C",
+                text: "The agreement on the root cause of global profit-shifting.",
+              },
+              {
+                key: "D",
+                text: "The imposition of a global minimum corporate tax rate.",
+              },
+            ],
+          answer: "D",
+          explanation: "第七段： “If countries could agree on a global minimum corporate tax rate…the problem would largely disappear” 即实施全球最低公司税率。",
+          evidence:
+            {
+              paragraphId: "p3-5",
+              quote: "If countries could agree on a global minimum corporate tax rate",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s1-r55",
+          number: 55,
+          type: "single",
+          stem: "What could be expected of the global problem of profit-shifting in the near future?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It would be solved with more countries cutting tax rates.",
+              },
+              {
+                key: "B",
+                text: "It would end with governments' awareness of its severity.",
+              },
+              {
+                key: "C",
+                text: "It would cease to exist with worldwide corporate support.",
+              },
+              {
+                key: "D",
+                text: "It would continue because of noncooperation from the U. S.",
+              },
+            ],
+          answer: "D",
+          explanation: "第八段提到美国未能通过立法，其他国家的进展也可能受影响，故问题可能继续存在。",
+          evidence:
+            {
+              paragraphId: "p3-6",
+              quote: "The U. S. has notably not been able to pass this legislation.",
+            },
+          score: 2,
+        },
+      ],
+  },
+  {
+    id: "translation",
+    kind: "translation",
+    title: "Part IV Translation",
+    instructions: "Part IV Translation (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+    minutes: 30,
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s1-t1",
+          number: 56,
+          type: "translation",
+          stem: "科技进步使中国的医疗事业得到快速发展。近年来，远程医疗使优质医疗资源惠及更多患者。医学专家可以通过视频为偏远地区患者提供咨询，指导当地医生制定并实施治疗方案。人工智能辅助诊断系统帮助医生识别患者的早期症状，提高诊断准确率。电子健康档案的普及让医生能够快速了解患者病史，避免重复检查。线上医疗咨询平台极大地方便了患者就诊。科技与医疗的深度融合更好地满足了人民的健康需求。",
+          answer: "见参考",
+          explanation: "翻译要点：“科技进步”：译为 “Technological advances”，也可用 “progress in science and technology”。“远程医疗”：“telemedicine” 是标准术语。“惠及”：译为 “made…accessible to”，体现“使可获得”。“制定并实施”：“formulating and implementing”。“早期症状”：“early symptoms”。“电子健康档案”：“electronic health records”。“避免重复检查”：“avoid redundant examinations”。“极大地方便了”：“have greatly facilitated”。全真试题整理 · 答案解析 · 仅供学习参考",
+          score: 15,
+        },
+      ],
+    reference:
+      {
+        translation: "Technological advances have led to rapid development in China's healthcare sector. In recent years, telemedicine has made quality medical resources accessible to more patients. Medical experts can provide consultations via video to patients in remote areas and guide local doctors in formulating and implementing treatment plans. AI-assisted diagnostic systems help doctors identify early symptoms in patients and improve diagnostic accuracy. The widespread use of electronic health records enables doctors to quickly understand patients' medical histories and avoid redundant examinations. Online medical consultation platforms have greatly facilitated patient access to healthcare. The deep integration of technology and medicine better meets the health needs of the people.",
+      },
+  },
+];
+
+const s2Parts: PaperPart[] = [
+  {
+    id: "writing",
+    kind: "writing",
+    title: "Part I Writing",
+    instructions: "Directions: For this part, you are allowed 30 minutes to write an essay that begins with the sentence \"With the trend of urbanization, it is vitally important for city residents to develop a stronger love for nature.\" You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. [You should copy the sentence given in quotes at the beginning of your essay.]",
+    minutes: 30,
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s2-w1",
+          number: 1,
+          type: "writing",
+          stem: "Directions: For this part, you are allowed 30 minutes to write an essay that begins with the sentence \"With the trend of urbanization, it is vitally important for city residents to develop a stronger love for nature.\" You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. [You should copy the sentence given in quotes at the beginning of your essay.]",
+          answer: "见参考",
+          explanation: "写作要点：开篇：直接抄写给定句子，点明城市化背景下热爱自然的重要性。主体：首先解释城市居民与自然接触减少的现状（如绿地减少、生活节奏快），然后阐述热爱自然的好处（如缓解压力、促进身心健康、提升环保意识），可举例说明参与社区园艺、周末郊游等。结尾：呼吁城市居民主动拥抱自然，政府也应增加绿色空间。",
+          score: 15,
+        },
+      ],
+    reference:
+      {
+        essay: "With the trend of urbanization, it is vitally important for city residents to develop a stronger love for nature. As cities expand and green spaces shrink, many urban dwellers find themselves disconnected from the natural world. However, reconnecting with nature is essential for both physical and mental well-being. For example, spending time in parks or community gardens can reduce stress and improve mood. Moreover, a love for nature encourages sustainable living, such as recycling and conserving energy, which helps combat environmental challenges. Personally, I have found that regular walks in a nearby forest park not only clear my mind but also deepen my appreciation for the beauty of the natural world. Therefore, I believe that cultivating a love for nature should be a priority for every city resident. It enriches our lives and ensures a healthier future for our planet.",
+        guidance:
+          [
+            "开篇：直接抄写给定句子，点明城市化背景下热爱自然的重要性。",
+            "主体：首先解释城市居民与自然接触减少的现状（如绿地减少、生活节奏快），然后阐述热爱自然的好处（如缓解压力、促进身心健康、提升环保意识），可举例说明参与社区园艺、周末郊游等。",
+            "结尾：呼吁城市居民主动拥抱自然，政府也应增加绿色空间。",
+          ],
+      },
+  },
+  {
+    id: "listening",
+    kind: "listening",
+    title: "Part II Listening Comprehension",
+    instructions: "Directions: In this section, you will hear two long conversations. At the end of each conversation, you will hear four questions. Both the conversation and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Directions: In this section, you will hear two passages. At the end of each passage, you will hear three or four questions. Both the passage and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Directions: In this section, you will hear three recordings of lectures or talks followed by three or four questions. The recordings will be played only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.",
+    minutes: 30,
+    audio:
+      {
+        note: "听力原文由浏览器语音合成朗读（合成语音），非考试原音。",
+        segments:
+          [
+            {
+              id: "ls-1",
+              label: "Conversation 1",
+              questionNo: 1,
+              seconds: 128,
+              text: "W: Hi, Frank, are you working through your lunch hour again? M: No, not at all. It's my 10th wedding anniversary next week, and I promised Jane that I would book a city break for us, as I have annual leave to take, and it would be nice to celebrate somewhere warm. So, I'm trying to book something in Barcelona. W: That sounds so romantic. I adore Barcelona. It's such a fabulous cosmopolitan city. There's so much to do there, excellent food, and that cathedral that they are still building after about 150 years. Very cool. M: I know. But the anniversary is looming, and I'm still scrambling to find accommodation. Everything is either wildly expensive or already fully booked. I'm starting to feel a bit frantic. W: Well, if you are going for a whole week, why don't you do a couple of nights in somewhere really glamorous, and then do the rest of the week a bit further up the coast, where the accommodation is cheaper, and that will offset the cost of the expensive place? M: That might be a good plan. It's not too expensive to rent a car, so we could still drive into the city. Yes, there are lots of places outside the city that have pools and are all inclusive, so we wouldn't even need to pay for food or drinks. I'll send a query now about the dates we're interested in. W: That sounds perfect. I'm sure that Jane will be absolutely thrilled to bits. I really do recommend visiting that cathedral. You can go all the way up to the top of it, but you need to go up a really steep spiral staircase to get there. M: Considering Jane is terrified of heights, I think if I tried to make her do that, I would come back divorced. Thanks for the help though; it was turning into a logistical nightmare.",
+            },
+            {
+              id: "ls-2",
+              label: "Conversation 2",
+              questionNo: 5,
+              seconds: 129,
+              text: "W: Hey there, Paul. How's it going? M: Hi, Suzanne. Just keeping busy with the usual stuff, filling prescriptions, talking to patients about their medications, that kind of thing. How about you? W: Same here, although I did have an interesting case come in this morning. A patient came in, inquiring about a medication that had a potential interaction with another medication she was already taking. M: Oh, that's always tricky. What did you do? W: I explained the issue to her as best I could, and recommended she double-check with her doctor. And you know what? She actually followed my advice, and the doctor ended up switching the patient's medication. M: Ah, that's great. You must feel quite accomplished. W: Totally. These moments are the highlights of my routine work, employing my pharmaceutical expertise to the benefit of people's health and well-being. M: I fully agree. Unfortunately, the opposite is true when the patient is too stubborn and they refuse to listen to us. W: So true. In other developments, we've had a lot of people coming in to get their flu shots, which is always good to see. M: Good, good. I've been working on a new medication therapy management program for our patients with chronic conditions. It helps patients manage their medications more effectively. W: That sounds interesting. M: We review all of their medications, and make sure that they're taking them as prescribed. We also look for any potential drug interactions or side effects. Patient response has so far been very positive. Some have reported seeing improvements in their health, which is really rewarding to see. W: That's great to hear. Do you use text message reminders? M: Yes, absolutely. W: It's a great idea. Medication non-adherence is a big problem, especially for older patients. M: We're still in the early stages of the program, but I'm hopeful that it will make a real difference for our patients.",
+            },
+            {
+              id: "ls-3",
+              label: "Passage 1",
+              questionNo: 9,
+              seconds: 104,
+              text: "In America, at least, passion is a word that often comes up on job descriptions and in interviews. On the whole, passionate people are thought of in a positive light and considered likely to achieve their goals. But when it comes to predicting achievement, has the importance of passion been overstated? According to a new study from Stanford University, passion may be less important in certain cultures, and the fact that passion is often seen as a key to achievement may reflect a distinctly Western model of motivation. The chief factor explored in the study was how individualistic a society was. In individualistic cultures, the researchers assert, people are more motivated by pursuing paths related to their passions, but those in collectivistic cultures are more likely to see themselves as part of a network. They often place fulfilling obligations to others above focusing on their own interests. The researchers looked at data from nearly 60 countries. They found that in science subjects, passion was positively correlated with academic achievements. Higher levels of enjoyment and interest also bolstered test scores. But the strength of this correlation wasn't the same across cultures. Those in individualistic societies such as the U.S., Australia, and the UK showed a stronger link between passion and achievement. The effect of passion on performance was more subtle for those in more collectivistic societies such as Colombia or Thailand. These findings were mirrored in achievement in both mathematics and reading. It's clear from the findings that passion isn't the only thing that motivates people to achieve their goals.",
+            },
+            {
+              id: "ls-4",
+              label: "Passage 2",
+              questionNo: 12,
+              seconds: 100,
+              text: "Why does nature create patterns? The reason patterns often appear in nature is simple: the same basic physical or chemical processes occur in many pattern substances and organisms as they form. Whether in plants and animals or rocks, foams and ice crystals, the intricate patterns that happen in nature come down to what's happening at the level of atoms and molecules. A pattern in nature is any regularly repeated arrangement of shapes or colors. Some of the most striking examples include the six-sided arrays of rocks at Giant's Causeway in the United Kingdom, and the colorful stripes and spots on tropical fish. Patterns like these begin to form at a small scale when materials undergo processes like drying, freezing, wrinkling, diffusing and reacting. Those changes then give rise to complex patterns at a larger scale that people can see. Imagine delicate frozen crystals on a window during winter. What creates that pattern? When water freezes, its molecules begin clustering together. Water molecules have a particular bent shape that causes them to stack into clusters as they freeze. As the cluster grows, many outside factors, including humidity and temperature, begin to affect its overall shape. If the water is freezing on a window, for example, random imperfections on the glass surface affect the stacking and create the larger pattern. But scientists do not always know the purpose of a pattern, or even if there is one. The molecular processes involved are simple enough that they might generate a pattern by coincidence.",
+            },
+            {
+              id: "ls-5",
+              label: "Recording 1",
+              questionNo: 16,
+              seconds: 162,
+              text: "Many people, myself included, have multiple areas of life they would like to improve. For example, I would like to reach more people with my writing, to lift heavier weights at the gym, and to start practising mindfulness more consistently. Those are just a few of the goals I find desirable, and you probably have a long list yourself. The problem is, even if we are committed to working hard on our goals, our natural tendency is to return to our old habits at some point. Making a permanent lifestyle change is really difficult. Recently I've come across a few studies that will make these difficult lifestyle changes a bit easier. As you'll see, however, the approach to mastering many areas of life is somewhat counterintuitive. Research has shown that you are two to three times more likely to stick with your habits if you make a specific plan for when, where, and how you will perform the behavior. For example, in one study, scientists asked people to fill out a sentence to specify during the next week they would do at least 20 minutes of vigorous exercise on which day, at what time of day, and at or in what place. Researchers found that people who filled out this sentence were two to three times more likely to actually exercise compared to a control group who did not make plans for their future behavior. Psychologists call these specific plans implementation intentions because they state when, where, and how you intend to implement a particular behavior. However, follow-up research has discovered implementation intentions only work when you focus on one thing at a time. In fact, researchers found that people who tried to accomplish multiple goals were less committed and less likely to succeed than those who focused on a single goal. Another science-based reason to focus on one thing at a time is that when you begin practising a new habit, it requires a lot of conscious effort to remember to do it. After a while, however, the pattern of behavior becomes easier. Eventually, your new habit becomes a normal routine, and the process is more or less mindless and automatic. The most important thing to note is that there is some tipping point at which new habits become more or less automatic. The time it takes to build a habit depends on many factors, including how difficult the habit is, your genetics, and more.",
+            },
+            {
+              id: "ls-6",
+              label: "Recording 2",
+              questionNo: 19,
+              seconds: 161,
+              text: "It was a lazy, hazy, crazy day on the dwarf planet Pluto when New Horizons, a spacecraft from Earth, flew by at a speed of 31,000 mph (miles per hour) two years ago. The spacecraft took a bunch of photos, made some quick measurements of Pluto's atmosphere, and sent them all back here, giving planetary scientists their first up-close look of the distant dwarf planet. One of the more bizarre things they found was that the haze in Pluto's atmosphere was much thicker than previously thought. The planet also had an atmosphere much cooler than earlier estimates, topping out at −333.4°F. Now, a study published in Nature links those two atmospheric observations. A computer model developed by planetary scientist Xi Zhang and colleagues shows the haze of tiny droplets in the upper atmosphere is likely scattering light from the Sun, preventing heat from reaching the planet below. We see hazy skies on Earth too, from time to time, whenever solid particles get suspended in the air—from water-based fogs, to ash from fires, to the toxic droplets that make up a thick smog. But on Earth, the overall temperature of the planet is dominated by the distribution of gases in our atmosphere. On Pluto, the authors suggest, haze might be more influential. Particles can reflect light from the Sun here on Earth: It happens after volcanoes erupt, emitting clouds of particles that reflect the Sun's rays into the atmosphere. Some people even propose imitating this phenomenon to alleviate the effects of climate change. But our planet isn't dominated by that process, or at least it hasn't been for a few billion years. If Pluto's atmosphere is very different from ours and from that of other nearby planets, it could help scientists expand their understanding of planetary atmospheres. But right now, this is just a good guess based on data from New Horizons and a sophisticated computer model, not direct observations of the haze's composition. There are other theories floating around to explain Pluto's cool temperatures, including blaming the cold air on gases in the atmosphere. Luckily, the authors will get a chance to test their notions when the James Webb Space Telescope launches later. That observatory can detect different spectrums of light, which the hazy Plutonian atmosphere would be positively glowing with as it scattered sunlight. The researchers just have to wait and see if the light from the telescope validates their bright idea.",
+            },
+            {
+              id: "ls-7",
+              label: "Recording 3",
+              questionNo: 22,
+              seconds: 157,
+              text: "Parents have a small window where they can influence their 8- to 10-year-old children's music taste, researchers have concluded. The 24-month time frame comes at an age when youngsters are old enough to appreciate poetic lyrics and snappy tunes, but have not yet started to be embarrassed by their mother and father's preferences. Dr. Hauke Egermann, a lecturer in music at the University of York, carried out a literature review into more than a dozen studies looking at parental musical influence. \"Children have an openness to new music, and this means parents have an important role to play in developing the musical preferences of their kids,\" he said. However, time is of the essence as parental influence is most likely to be effective during the critical time period before age ten. During adolescence, children tend to gravitate away from their parents' choices and are more influenced by their peers. A separate survey of 2,000 British parents by music streaming service Deezer also found that nearly four-fifths of parents agreed that their children were far more receptive to their musical suggestions before the age of ten. In contrast, just 10 percent of parents reported positive reactions from their teenage children when they shared their favorite music. Some 79 percent of fathers said they had tried to influence their children's music, but just 69 percent of mothers. However, mothers were more effective, with 38 percent reporting that their kids loved the tunes they shared, compared to 30 percent of dads who, in some cases, said their children cried or even fell asleep. Dr. Egermann claims introducing children to a variety of musical styles is the key to fostering good taste in later life. \"By playing children a variety of genres before this critical period, research on familiarization suggests they will enjoy lots of different types of music as adults,\" he added. The benefits of having a wider taste in music include the ability to manage their emotions more effectively, socialize and bond with others more easily, and to have a better understanding of other cultures as well. Dr. Egermann advises parents not to push their favorite music too hard on their children, but instead play it as background music while a child is playing. They can also help create positive memories about artists and bands by going to concerts and live music events together.",
+            },
+          ],
+      },
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s2-l1",
+          number: 1,
+          type: "single",
+          groupId: "ls-1",
+          stem: "What is the man planning to do?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Celebrate his 10th wedding anniversary.",
+              },
+              {
+                key: "B",
+                text: "Celebrate his promotion in Barcelona.",
+              },
+              {
+                key: "C",
+                text: "Give his wife a pleasant surprise.",
+              },
+              {
+                key: "D",
+                text: "Ask for leave to visit Barcelona.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“It's my 10th wedding anniversary next week, and I promised Jane that I would book a city break for us, as I have annual leave to take, and it would be…”，与正确选项 A) Celebrate his 10th wedding anniversary. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l2",
+          number: 2,
+          type: "single",
+          groupId: "ls-1",
+          stem: "Why is the man starting to feel a bit frantic?",
+          options:
+            [
+              {
+                key: "A",
+                text: "He is unable to find some inexpensive accommodation.",
+              },
+              {
+                key: "B",
+                text: "There are few warm places to go at this time of the year.",
+              },
+              {
+                key: "C",
+                text: "There is so much for him to do before going on vacation.",
+              },
+              {
+                key: "D",
+                text: "He is afraid Barcelona may not be so fabulous as expected.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“But the anniversary is looming, and I'm still scrambling to find accommodation. Everything is either wildly expensive or already fully booked. I'm sta…”，与正确选项 A) He is unable to find some inexpensive accommodation. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l3",
+          number: 3,
+          type: "single",
+          groupId: "ls-1",
+          stem: "What does the woman suggest the man do?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Rent a car to drive into the city and scenic spots so as to save the expenses on transportation.",
+              },
+              {
+                key: "B",
+                text: "Spend a couple of nights in a glamorous hotel and the rest of the week in inexpensive places.",
+              },
+              {
+                key: "C",
+                text: "Find all-inclusive accommodation to eliminate the need to pay for food and drinks.",
+              },
+              {
+                key: "D",
+                text: "Stay in a hotel away from the coast where the accommodation is less expensive.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中的关键信息与选项 B) Spend a couple of nights in a glamorous hotel and the rest of the week in inexpensive places. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l4",
+          number: 4,
+          type: "single",
+          groupId: "ls-1",
+          stem: "What does the man say about his wife Jane?",
+          options:
+            [
+              {
+                key: "A",
+                text: "She is sure to like the cathedral.",
+              },
+              {
+                key: "B",
+                text: "She is a romantic at heart.",
+              },
+              {
+                key: "C",
+                text: "She is no good at logistics.",
+              },
+              {
+                key: "D",
+                text: "She is scared of heights.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“Considering Jane is terrified of heights, I think if I tried to make her do that, I would come back divorced.”，与正确选项 D) She is scared of heights. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l5",
+          number: 5,
+          type: "single",
+          groupId: "ls-2",
+          stem: "What do we learn about the speakers?",
+          options:
+            [
+              {
+                key: "A",
+                text: "They often share each other's experiences.",
+              },
+              {
+                key: "B",
+                text: "They enjoy interacting with patients.",
+              },
+              {
+                key: "C",
+                text: "They always do things tricky.",
+              },
+              {
+                key: "D",
+                text: "They are both pharmacists.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“Hi, Suzanne. Just keeping busy with the usual stuff, filling prescriptions, talking to patients about their medications, that kind of thing.”，与正确选项 D) They are both pharmacists. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l6",
+          number: 6,
+          type: "single",
+          groupId: "ls-2",
+          stem: "What does the woman say about an interesting case she had?",
+          options:
+            [
+              {
+                key: "A",
+                text: "The doctor ended up admitting his mistake.",
+              },
+              {
+                key: "B",
+                text: "The patient consulted another doctor.",
+              },
+              {
+                key: "C",
+                text: "The patient actually took her advice.",
+              },
+              {
+                key: "D",
+                text: "The doctor double-checked with her.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中的关键信息与选项 C) The patient actually took her advice. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l7",
+          number: 7,
+          type: "single",
+          groupId: "ls-2",
+          stem: "What does the man say he has been working on?",
+          options:
+            [
+              {
+                key: "A",
+                text: "A proposal for applying flu shots more effectively.",
+              },
+              {
+                key: "B",
+                text: "A new medication therapy management program.",
+              },
+              {
+                key: "C",
+                text: "A novel strategy to persuade stubborn patients.",
+              },
+              {
+                key: "D",
+                text: "A therapy for patients with similar conditions.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中诰及“Good, good. I've been working on a new medication therapy management program for our patients with chronic conditions. It helps patients manage their…”，与正确选项 B) A new medication therapy management program. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l8",
+          number: 8,
+          type: "single",
+          groupId: "ls-2",
+          stem: "What is a big problem, especially for older patients according to the woman?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Inability to send text messages.",
+              },
+              {
+                key: "B",
+                text: "Distrust in pharmaceutical experts.",
+              },
+              {
+                key: "C",
+                text: "Medication non-adherence.",
+              },
+              {
+                key: "D",
+                text: "Need for constant reminding. Section B Directions: In this section, you will hear two passages. At the end of each passage, you will hear three or four questions. Both the passage and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“Medication non-adherence is a big problem, especially for older patients.”，与正确选项 C) Medication non-adherence. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l9",
+          number: 9,
+          type: "single",
+          groupId: "ls-3",
+          stem: "What are passionate people considered likely to do in America?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Accomplish their goals.",
+              },
+              {
+                key: "B",
+                text: "View things positively.",
+              },
+              {
+                key: "C",
+                text: "Overstate their importance.",
+              },
+              {
+                key: "D",
+                text: "Dominate job interviews.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“On the whole, passionate people are thought of in a positive light and considered likely to achieve their goals.”，与正确选项 A) Accomplish their goals. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-3",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l10",
+          number: 10,
+          type: "single",
+          groupId: "ls-3",
+          stem: "What does a new study from Stanford show about the importance of passion in predicting achievement?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It reflects a strong sense of obligation to others.",
+              },
+              {
+                key: "B",
+                text: "It signifies a universal model of motivation.",
+              },
+              {
+                key: "C",
+                text: "It may differ in various cultures.",
+              },
+              {
+                key: "D",
+                text: "It may have been underestimated.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中的关键信息与选项 C) It may differ in various cultures. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-3",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l11",
+          number: 11,
+          type: "single",
+          groupId: "ls-3",
+          stem: "What did the researchers find about the effect of passion on academic achievement for those in more collectivistic societies?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It was under-investigated.",
+              },
+              {
+                key: "B",
+                text: "It was more predictable.",
+              },
+              {
+                key: "C",
+                text: "It was taken for granted.",
+              },
+              {
+                key: "D",
+                text: "It was more subtle.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“The effect of passion on performance was more subtle for those in more collectivistic societies such as Colombia or Thailand.”，与正确选项 D) It was more subtle. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-3",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l12",
+          number: 12,
+          type: "single",
+          groupId: "ls-4",
+          stem: "What does the passage say is a pattern in nature?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It is any incidental happening in plants and animals or ice crystals.",
+              },
+              {
+                key: "B",
+                text: "It is any basic physical or chemical work in designing substances.",
+              },
+              {
+                key: "C",
+                text: "It is any symmetrical and colorful stripes or spots on organisms.",
+              },
+              {
+                key: "D",
+                text: "It is any regularly repeated arrangement of shapes or colors.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“A pattern in nature is any regularly repeated arrangement of shapes or colors.”，与正确选项 D) It is any regularly repeated arrangement of shapes or colors. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l13",
+          number: 13,
+          type: "single",
+          groupId: "ls-4",
+          stem: "What gives rise to complex patterns at a larger scale?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Materials undergoing certain processes.",
+              },
+              {
+                key: "B",
+                text: "Materials exposed to various natural forces.",
+              },
+              {
+                key: "C",
+                text: "Materials impacted by any change of molecules.",
+              },
+              {
+                key: "D",
+                text: "Materials going through extremely radical transformations.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中的关键信息与选项 A) Materials undergoing certain processes. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l14",
+          number: 14,
+          type: "single",
+          groupId: "ls-4",
+          stem: "What does the example of frozen crystals on a window show?",
+          options:
+            [
+              {
+                key: "A",
+                text: "The beauty of molecular clustering.",
+              },
+              {
+                key: "B",
+                text: "The way for appreciating patterns.",
+              },
+              {
+                key: "C",
+                text: "The creation of patterns.",
+              },
+              {
+                key: "D",
+                text: "The factors affecting clusters.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中的关键信息与选项 C) The creation of patterns. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l15",
+          number: 15,
+          type: "single",
+          groupId: "ls-4",
+          stem: "What might molecular processes produce, according to the passage?",
+          options:
+            [
+              {
+                key: "A",
+                text: "A pattern by accident.",
+              },
+              {
+                key: "B",
+                text: "Patterns for specific purposes.",
+              },
+              {
+                key: "C",
+                text: "Patterns with random imperfections.",
+              },
+              {
+                key: "D",
+                text: "A pattern with artificial intervention. Section C Directions: In this section, you will hear three recordings of lectures or talks followed by three or four questions. The recordings will be played only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“But scientists do not always know the purpose of a pattern, or even if there is one. The molecular processes involved are simple enough that they migh…”，与正确选项 A) A pattern by accident. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l16",
+          number: 16,
+          type: "single",
+          groupId: "ls-5",
+          stem: "What does the speaker say is really difficult?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Eliminating all the old habits at once.",
+              },
+              {
+                key: "B",
+                text: "Making a permanent lifestyle change.",
+              },
+              {
+                key: "C",
+                text: "Realizing all the life goals one has set.",
+              },
+              {
+                key: "D",
+                text: "Improving multiple areas of one's life.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中诰及“The problem is, even if we are committed to working hard on our goals, our natural tendency is to return to our old habits at some point. Making a per…”，与正确选项 B) Making a permanent lifestyle change. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-5",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l17",
+          number: 17,
+          type: "single",
+          groupId: "ls-5",
+          stem: "What did researchers find about people with implementation intentions?",
+          options:
+            [
+              {
+                key: "A",
+                text: "They were more likely to implement a particular behavior.",
+              },
+              {
+                key: "B",
+                text: "They were more likely to make plans for their future.",
+              },
+              {
+                key: "C",
+                text: "They tended to be committed to a single goal.",
+              },
+              {
+                key: "D",
+                text: "They tended to focus on one thing at a time.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“Researchers found that people who filled out this sentence were two to three times more likely to actually exercise compared to a control group who di…”，与正确选项 A) They were more likely to implement a particular behavior. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-5",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l18",
+          number: 18,
+          type: "single",
+          groupId: "ls-5",
+          stem: "According to the speaker, what is required of you when you begin practising a new habit?",
+          options:
+            [
+              {
+                key: "A",
+                text: "The ability to make the process automatic.",
+              },
+              {
+                key: "B",
+                text: "A practical timetable for implementation.",
+              },
+              {
+                key: "C",
+                text: "A lot of conscious effort to remember to do it.",
+              },
+              {
+                key: "D",
+                text: "Concentration on the benefits it will provide.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“Another science-based reason to focus on one thing at a time is that when you begin practising a new habit, it requires a lot of conscious effort to r…”，与正确选项 C) A lot of conscious effort to remember to do it. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-5",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l19",
+          number: 19,
+          type: "single",
+          groupId: "ls-6",
+          stem: "What was one of the more bizarre findings about Pluto's atmosphere?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It resembles that of Earth in many inconceivable ways.",
+              },
+              {
+                key: "B",
+                text: "It has a haze much thicker than previously believed.",
+              },
+              {
+                key: "C",
+                text: "It is 333.4 °F cooler than earlier estimates.",
+              },
+              {
+                key: "D",
+                text: "It is far beyond any quick measurements.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中诰及“One of the more bizarre things they found was that the haze in Pluto's atmosphere was much thicker than previously thought.”，与正确选项 B) It has a haze much thicker than previously believed. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-6",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l20",
+          number: 20,
+          type: "single",
+          groupId: "ls-6",
+          stem: "What is said to determine the overall temperature on Earth?",
+          options:
+            [
+              {
+                key: "A",
+                text: "The accumulation of solid particles in the air.",
+              },
+              {
+                key: "B",
+                text: "The distribution of gases in its atmosphere.",
+              },
+              {
+                key: "C",
+                text: "The clouds of particles reflecting sun rays.",
+              },
+              {
+                key: "D",
+                text: "The aggravated effects of climate change.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中诰及“But on Earth, the overall temperature of the planet is dominated by the distribution of gases in our atmosphere.”，与正确选项 B) The distribution of gases in its atmosphere. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-6",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l21",
+          number: 21,
+          type: "single",
+          groupId: "ls-6",
+          stem: "What does the speaker say the researchers have to wait and see?",
+          options:
+            [
+              {
+                key: "A",
+                text: "If spectrums of light can be better detected by telescope.",
+              },
+              {
+                key: "B",
+                text: "If Pluto's hazy atmosphere can be more easily observed.",
+              },
+              {
+                key: "C",
+                text: "If Pluto's hazy atmosphere scatters strong sunlight.",
+              },
+              {
+                key: "D",
+                text: "If the light from the telescope confirms their idea.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“The researchers just have to wait and see if the light from the telescope validates their bright idea.”，与正确选项 D) If the light from the telescope confirms their idea. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-6",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l22",
+          number: 22,
+          type: "single",
+          groupId: "ls-7",
+          stem: "What do we learn from researchers' conclusion at the beginning of the talk?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Parents can play a decisive role in cultivating their children's musical talent.",
+              },
+              {
+                key: "B",
+                text: "Children are embarrassed by parents' failure to appreciate their music.",
+              },
+              {
+                key: "C",
+                text: "Parents can mould their 8-to 10-year-old children's music taste.",
+              },
+              {
+                key: "D",
+                text: "Children aged 8 to 10 are old enough to produce poetic lyrics.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“Parents have a small window where they can influence their 8- to 10-year-old children's music taste, researchers have concluded.”，与正确选项 C) Parents can mould their 8-to 10-year-old children's music taste. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-7",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l23",
+          number: 23,
+          type: "single",
+          groupId: "ls-7",
+          stem: "What does Dr. Hauke Egermann say about adolescents?",
+          options:
+            [
+              {
+                key: "A",
+                text: "They start to show their own musical preference.",
+              },
+              {
+                key: "B",
+                text: "They tend to be more influenced by their peers.",
+              },
+              {
+                key: "C",
+                text: "They tend to gravitate away from their homes.",
+              },
+              {
+                key: "D",
+                text: "They are more open to new genres of music.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中诰及“During adolescence, children tend to gravitate away from their parents' choices and are more influenced by their peers.”，与正确选项 B) They tend to be more influenced by their peers. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-7",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l24",
+          number: 24,
+          type: "single",
+          groupId: "ls-7",
+          stem: "What is the key to fostering good taste in later life, according to Dr. Hauke Egermann?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Enabling children to be receptive to music experts' suggestions.",
+              },
+              {
+                key: "B",
+                text: "Helping children develop the ability to manage their emotions.",
+              },
+              {
+                key: "C",
+                text: "Familiarizing children with different schools of music.",
+              },
+              {
+                key: "D",
+                text: "Introducing children to a variety of musical styles.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“Dr. Egermann claims introducing children to a variety of musical styles is the key to fostering good taste in later life.”，与正确选项 D) Introducing children to a variety of musical styles. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-7",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-l25",
+          number: 25,
+          type: "single",
+          groupId: "ls-7",
+          stem: "How can parents help children create positive memories about artists and bands?",
+          options:
+            [
+              {
+                key: "A",
+                text: "By enhancing children's appreciation of their music.",
+              },
+              {
+                key: "B",
+                text: "By pushing their music hard enough upon children.",
+              },
+              {
+                key: "C",
+                text: "By attending their concerts and live music events with children.",
+              },
+              {
+                key: "D",
+                text: "By introducing their music to children as early as possible.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“They can also help create positive memories about artists and bands by going to concerts and live music events together.”，与正确选项 C) By attending their concerts and live music events with children. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-7",
+            },
+          score: 1,
+        },
+      ],
+  },
+  {
+    id: "cloze",
+    kind: "cloze",
+    title: "Part III Section A Banked Cloze",
+    instructions: "Directions: In this section, there is a passage with ten blanks. You are required to select one word for each blank from a list of choices given in a word bank following the passage. Read the passage through carefully before making your choices. Each choice in the bank is identified by a letter. Please mark the corresponding letter for each item on Answer Sheet 2 with a single line through the centre. You may not use any of the words in the bank more than once.",
+    minutes: 10,
+    bank:
+      {
+        A: "behavioural",
+        B: "eliminate",
+        C: "fragile",
+        D: "global",
+        E: "implications",
+        F: "maximise",
+        G: "overlapping",
+        H: "personally",
+        I: "presume",
+        J: "prone",
+        K: "prototypes",
+        L: "reassure",
+        M: "skeptically",
+        N: "traits",
+        O: "underlying",
+      },
+    passages:
+      [
+        {
+          id: "p1",
+          title: "Section A Passage",
+          source: "2026年6月英语六级真题（第2套）",
+          paragraphs:
+            [
+              {
+                id: "p1-1",
+                text: "Most financial crises have plenty in common: they tend to start in the banking sector and involve excessive borrowing, together with an asset bubble. The [26] crisis of 2008 was no different, with the asset bubble focused on US real estate. But my research suggests this crisis had another [27] cause —— that some people in the banking sector were playing or \"gaming\" the system for their own financial gain. The game being played had several important features.",
+              },
+              {
+                id: "p1-2",
+                text: "The first was the deliberate complexity of the financial products at its core. Then there are the [28] biases that permeate decision-making at all levels of the banking industry. Banking often attracts people with certain personality [29], including those who are overconfident and take excessive risks. Such people tend to like complexity for its own sake, but they often do not fully understand the [30] of that complexity for the stability of the financial system as a whole.",
+              },
+              {
+                id: "p1-3",
+                text: "Often they do not care —— they are primarily interested in gaming the system to [31] their bonuses. The next element is risk. There are parts of the banking sector that will always be [32] to risk, but many bankers have come to feel immune to its potential impact, because they [33] that, however recklessly banks behave, governments will always be there to bail them out. Gaming in the banking sector seems virtually impossible to [34].",
+              },
+              {
+                id: "p1-4",
+                text: "The only effective measure to end it would be to make bankers [35] liable for losses, but no government has ever passed such a law, and no single government could do so on its own, since this would immediately cause their entire national banking sector to move wholesale to another jurisdiction.",
+              },
+            ],
+        },
+      ],
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s2-c26",
+          number: 26,
+          type: "bank",
+          stem: "The [26] crisis of 2008 was no different, with the asset bubble focused on US real estate.",
+          answer: "D",
+          explanation: "修饰 “crisis of 2008” ， 2008 年金融危机是全球性的，global 符合文意。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s2-c27",
+          number: 27,
+          type: "bank",
+          stem: "But my research suggests this crisis had another [27] cause —— that some people in the banking sector were playing or \"gaming\" the system for their own financial gain.",
+          answer: "O",
+          explanation: "指 “ 潜在的、根本的原因 ” ，underlying 表示 “ 根本的 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s2-c28",
+          number: 28,
+          type: "bank",
+          stem: "Then there are the [28] biases that permeate decision-making at all levels of the banking industry.",
+          answer: "A",
+          explanation: "修饰 “biases” ，指 “ 行为偏差 ” ，behavioural 表示 “ 行为的 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s2-c29",
+          number: 29,
+          type: "bank",
+          stem: "Banking often attracts people with certain personality [29], including those who are overconfident and take excessive risks.",
+          answer: "N",
+          explanation: "“ 某些性格特征 ” ，traits 意为 “ 特质、特征 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s2-c30",
+          number: 30,
+          type: "bank",
+          stem: "Such people tend to like complexity for its own sake, but they often do not fully understand the [30] of that complexity for the stability of the financial system as a whole.",
+          answer: "E",
+          explanation: "“ 复杂性的影响 / 含义 ” ，implications 表示 “ 影响、含义 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s2-c31",
+          number: 31,
+          type: "bank",
+          stem: "Often they do not care —— they are primarily interested in gaming the system to [31] their bonuses.",
+          answer: "F",
+          explanation: "“ 最大化他们的奖金 ” ，maximise 意为 “ 最大化 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s2-c32",
+          number: 32,
+          type: "bank",
+          stem: "There are parts of the banking sector that will always be [32] to risk, but many bankers have come to feel immune to its potential impact, because they [33] that, however recklessly banks behave, governments will always be there to bail them out.",
+          answer: "J",
+          explanation: "“ 容易面临风险 ” ，prone to 表示 “ 易于 … 的 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s2-c33",
+          number: 33,
+          type: "bank",
+          stem: "There are parts of the banking sector that will always be [32] to risk, but many bankers have come to feel immune to its potential impact, because they [33] that, however recklessly banks behave, governments will always be there to bail them out.",
+          answer: "I",
+          explanation: "“ 他们假定 ” ，presume 意为 “ 假定、推测 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s2-c34",
+          number: 34,
+          type: "bank",
+          stem: "Gaming in the banking sector seems virtually impossible to [34].",
+          answer: "B",
+          explanation: "“ 似乎几乎不可能消除 ” ，eliminate 表示 “ 消除 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s2-c35",
+          number: 35,
+          type: "bank",
+          stem: "The only effective measure to end it would be to make bankers [35] liable for losses, but no government has ever passed such a law, and no single government could do so on its own, since this would immediately cause their entire national banking sector to move wholesale to another jurisdiction.",
+          answer: "H",
+          explanation: "“ 使银行家个人承担损失责任 ” ，personally 意为 “ 个人地 ” 。",
+          score: 0.5,
+        },
+      ],
+  },
+  {
+    id: "reading",
+    kind: "reading",
+    title: "Part III Section B & C Reading Comprehension",
+    instructions: "Directions: In this section, you are going to read a passage with ten statements attached to it. Each statement contains information given in one of the paragraphs. Identify the paragraph from which the information is derived. You may choose a paragraph more than once. Each paragraph is marked with a letter. Answer the questions by marking the corresponding letter on Answer Sheet 2. Directions: There are 2 passages in this section. Each passage is followed by some questions or unfinished statements. For each of them there are four choices marked A), B), C) and D). You should decide on the best choice and mark the corresponding letter on Answer Sheet 2 with a single line through the centre.",
+    minutes: 30,
+    passages:
+      [
+        {
+          id: "p1",
+          title: "Section B Passage",
+          source: "2026年6月英语六级真题（第2套）",
+          paragraphs:
+            [
+              {
+                id: "p1-1",
+                marker: "A",
+                text: "A Five hundred years ago, forests covered much of the Iberian peninsula. But that soon changed. Centuries of wars and invasions, agricultural expansion and woodcutting for firewood and shipping wiped out most of the woods and transformed places like Matamorisca, a small village in northern Spain, into degraded landscapes.",
+              },
+              {
+                id: "p1-2",
+                marker: "B",
+                text: "B The region's dry climate and depleted soils would be a recipe for disaster in your average program to replant trees, but for the Amsterdam-based Land Life Company it's an ideal place. \"We typically operate where nature does not come back by itself,\" says Jurrian Ruys, its CEO. \"We go where there are rougher conditions in terms of weather, with rough or very hot summers.\" In Matamorisca, they intervened in 17 barren hectares owned by the regional government and peppered them with their signature device: a biodegradable (可生物降解的) cardboard container they call the cocoon which can hold 25 litres of water underground to aid a seedling's first year. Around 16,000 trees, including oaks, ashes, walnuts, rowans, and whitebeams, were planted in May 2018, and the company reports that 96% of them survived that year's burning hot summer without extra irrigation, a critical milestone for a young tree.",
+              },
+              {
+                id: "p1-3",
+                marker: "C",
+                text: "C \"Does nature return by itself?\" asks Arnout Asjes, Land Life Company's chief technology officer, who oversees a mix of drone (无人机) and satellite imagery, big data analysis, soil enhancement, QR (二维码) tagging and site-specific tree configuration designs. \"Probably, but it can take decades or hundreds of years, so we are speeding things up.\"",
+              },
+              {
+                id: "p1-4",
+                marker: "D",
+                text: "D His company belongs to a global movement of organisations trying to save degraded or deforested areas, ranging from fertile tropical lowlands to dry hills in temperate (温带的) regions. Spurred by global biodiversity loss and climate change, these groups are pushing the boundary of how to revive forest cover. \"It's not a theoretical proposition,\" says Walter Vergara, a forest and climate specialist at the World Resources Institute (WRI). \"It requires the right incentives, the right stakeholders, the right analysis and sufficient capital, but it can happen.\"",
+              },
+              {
+                id: "p1-5",
+                marker: "E",
+                text: "E How these factors come together for a particular project —— and whether saving destroyed woods is even possible —— depends on what kind of ecosystem you have in mind. Secondary forests in the Amazon are different from Texas pines recovering after wildfires or the Arctic timber woods that cover much of Sweden. Each provides different reasons for reforestation programs and each has particular needs. In the dry conditions around Matamorisca and similar areas in Spain, Land Life Company worries about rapid desertification (沙漠化). As its focus is on restoring an ecosystem, it works with organisations that don't expect their money back.",
+              },
+              {
+                id: "p1-6",
+                marker: "F",
+                text: "F With around 600 hectares replanted around the world since 2015 and another 1,100 planned for this year, the company's drive fits into the Bonn Challenge, a global effort to restore 150 million hectares of the world's deforested and degraded land by 2020. That's an area roughly the size of Iran or Mongolia. By 2030, the goal is to reach 350 million hectares —— 20% more land than India. These targets include both the rehabilitation of forested areas that have lost density or look a bit weak (a process known as 'restoration' in forestry jargon) and the recovery of forest cover in areas where it was completely cleared (what's known as 'reforestation').",
+              },
+              {
+                id: "p1-7",
+                marker: "G",
+                text: "G That global target is broken into smaller pieces and takes shape in Latin America as the 20x20 Initiative, an effort to contribute 20 million hectares to the overall goal by initiating small to medium projects with the political backing of governments. Unlike Land Life Company, this region-wide project makes the economic and business case for reforestation, even though they are after biodiversity conservation. \"You need to bring in private sector money,\" says WRI's Vergara, who leads the initiative, \"and that capital needs to see a return on their investment.\" A study he led predicts Latin America would see an estimated net present value of about $23bn over a 50-year period if it reaches its goal.",
+              },
+              {
+                id: "p1-8",
+                marker: "H",
+                text: "H Money can come from timber sales in sustainably managed forests or from harvesting 'non-wood products' like nuts, oils and fruits from the trees. You can take note of how much carbon dioxide your forest is capturing and sell carbon credits to companies keen to offset their emissions. Or you can even grow the forest hoping that biodiversity will attract ecotourists who'd pay for lodging, birdwatching tours and meals.",
+              },
+              {
+                id: "p1-9",
+                marker: "I",
+                text: "I Still, these backers are not your high-street bank. Money for the 20x20 Initiative comes mostly from financial organisations with triple goals —— a modest return on their investment, environmental benefits and social gains —— known as impact investors. Take the German fund 12Tree for instance, one of the 20x20 partners. It put $9.5 million into Cuango, a 1,455-hectare property on the Caribbean coast of Panama that combines a commercial cocoa tree plantation with timber extraction from a sustainably managed secondary forest. With their money, they reforested a former cattle ranch, provided high-quality jobs for the surrounding communities and made a return on their investment.",
+              },
+              {
+                id: "p1-10",
+                marker: "J",
+                text: "J Even on land cleared decades ago and currently used by farmers, some crops can coexist with the forest, if you find the right balance. Although not technically reforestation, agroforestry (a system of land use in which harvestable trees or shrubs are grown among or around crops or on pasture land, as a means of preserving or enhancing the productivity of the land) provides an opportunity for small-holder farmers to sustain their livelihoods while adding some forest cover to their farms.",
+              },
+              {
+                id: "p1-11",
+                marker: "K",
+                text: "K A global project called Breedcaf s is studying how trees behave in coffee farms, hoping to find crop varieties that manage to grow under the shade of trees. Coffee grows naturally in such forests, so copying that in farms is taking the crop back to its roots. \"By reintroducing trees in the landscape, we impact positively humidity, rain capture, soil conservation and biodiversity preservation,\" says coffee expert Benoit Bertrand, who leads the project from the French Agricultural Research Centre for International Development. Bertrand is analysing which of dozens of coffee varieties fits better for this system. A similar approach can be applied to land with cocoa, vanilla and fruit trees.",
+              },
+              {
+                id: "p1-12",
+                marker: "L",
+                text: "L Not every piece of land is fit for reforestation. Vergara's partners look for safe investments, and even Land Life Company only runs major projects in what they consider \"low-risk\" countries. \"We tend to avoid large-scale operations in countries in some parts of the Middle East or Africa where the permanence is not secured,\" says Ruys.",
+              },
+              {
+                id: "p1-13",
+                marker: "M",
+                text: "M But in the right location, perhaps all you need is time. In the Central Pacific of Costa Rica, the 330-hectare National Wildlife Refuge Barú looks nothing like the cattle ranch it was before 1987, when Jack Ewing decided to turn this large estate into an ecotourism destination. Instead of intervening, a friend told him to let nature have its way. Barú's former grazing lands are now thriving woods and the property boasts over 150 hectares of secondary forests with no intervention from humans. In the past 10 years, animals such as howling monkeys, scarlet macaws and even migratory cougars have returned to the refuge's land, boosting tourism and revitalising the ecosystem. Ewing, now 75, explains this success using the words his friend chose three decades ago: \"In Costa Rica, when you stop managing the shrubs, the jungle comes back for its revenge.\" hectares of the world's deforested and degraded land. land, while offering small-scale farmers a chance to make a living. investment returns. the location is appropriate. place under the necessary conditions. not high. as well as carbon credits. trees. impossible without human intervention.",
+              },
+            ],
+        },
+        {
+          id: "p2",
+          title: "Passage One",
+          source: "2026年6月英语六级真题（第2套）",
+          paragraphs:
+            [
+              {
+                id: "p2-1",
+                marker: "A",
+                text: "What does self-discipline look like at work? Sometimes, it's the ability to resist temptation, such as distractions to avoid a particular task. Other times it's the ability to persist with a task when your energy and motivation seem low. What do you believe about the nature of your own self-discipline? Is it something that runs on internal energy that is spent with use? Or is it something that is bolstered as you apply it and persist?",
+              },
+              {
+                id: "p2-2",
+                marker: "B",
+                text: "Your answer matters, as it determines how much self-discipline you experience. For years, research in psychology pointed to self-control as a resource that is depleted with use and needs to be restored through breaks, rest, or sleep. More recently, however, research points to the importance of mindset. If you view self-discipline as an expendable resource, your willpower tends to fade with use. If you believe that exercising your self-control strengthens and fuels it, that is more likely to be your experience as you resist temptation or push yourself to get something done that is not appealing.",
+              },
+              {
+                id: "p2-3",
+                marker: "C",
+                text: "If you don't already view self-discipline as a force that feeds itself, what might you do? Reflect on times that you had initial difficulty resisting temptation, getting started on something, or sticking with it, but pushed ahead and accomplished the task or met the goal. That's the kind of experience we're talking about with this particular belief about self-discipline, and you've already had such an experience, so you've shown that it's possible.",
+              },
+              {
+                id: "p2-4",
+                marker: "D",
+                text: "When you feel your willpower and motivation fading, remind yourself of those previous experiences and imagine the same happening now. What if your experiences have always seemed to indicate that your self-control diminishes with use, and you need breaks to recharge? There's nothing wrong with that as long as you can afford to take those breaks. If not, remind yourself that not everyone experiences self-discipline as a depletable resource and that your experience might be different if you focus on gathering more energy at this point rather than focusing on how difficult it is to continue or the need for a break.",
+              },
+              {
+                id: "p2-5",
+                marker: "E",
+                text: "Also, if you know someone who is a role model of self-discipline, picture that person in your situation, persisting in the task. Regardless of how you do it, as you push forward to continue to accomplish progress, be sure to mentally reinforce yourself by taking pride in your ability to exert more willpower as you persist. The benefits of exerting willpower are cumulative. Your self-discipline is akin to a muscle, and each time you resist temptation or persist in a task despite a lack of motivation, you strengthen that muscle, leading to less effort and resistance in similar instances in the future.",
+              },
+            ],
+        },
+        {
+          id: "p3",
+          title: "Passage Two",
+          source: "2026年6月英语六级真题（第2套）",
+          paragraphs:
+            [
+              {
+                id: "p3-1",
+                marker: "A",
+                text: "Smartphones have always posed challenges for parents of teens. From social media apps to excessive screen time, the digital world is as threatening as the physical. A new study shows that about half of parents of teens are worried about their teens being exposed to explicit content online. This is a valid concern, of course. But there are ways to alleviate the spread of explicit content, from changing the settings in their kids' phone to monitoring such content with apps like Bark.",
+              },
+              {
+                id: "p3-2",
+                marker: "B",
+                text: "Just as alarming, if not more so, is that the amount of time teens spend on social media can lead to anxiety and depression. Excessive screen time has detrimental effects, for a lot of obvious reasons. Constant media consumption inhibits healthy activities associated with childhood, like spending time outside, exercising, talking to friends and family. If it interferes with sleep, that's even worse. Ample research shows too much smartphone use produces significant anxiety, depression, and feelings of isolation in teens.",
+              },
+              {
+                id: "p3-3",
+                marker: "C",
+                text: "Teens log on to social media or spend time online trying to make connections, but end up feeling more alone and sad than ever. Faceless communication not only produces feelings of isolation and loneliness but increases instances of online bullying and susceptibility to criminal conducts. Though I've banned most social media, I've still battled smartphone time with my own kids. A lot of the time I wish I could throw my kids' smartphones into the nearest lake.",
+              },
+              {
+                id: "p3-4",
+                marker: "D",
+                text: "The convenience of communication —— when they need a ride home from school after practice, for instance —— often feels like it isn't worth the battle to keep their screen time low and productive, and continue to encourage \"real-life\" activities outside and with friends and family. I understand the addiction and often tell them I'm not sure how I would have handled having a smartphone as a teen. As an adult, I too, struggle with overuse.",
+              },
+              {
+                id: "p3-5",
+                marker: "E",
+                text: "In a recent TV interview to promote a new film about a mother and daughter navigating social media use, actress Kate Winslet expressed her view on teens and social media —— and her concern mirrors the trends. \"I do definitely feel that the world of social media is frightening to parents because we don't really know what's there,\" she said. \"We don't know how our children are using it. We don't know the effects that it's really having on them.\" I don't think the U.",
+              },
+              {
+                id: "p3-6",
+                marker: "F",
+                text: "S. government should regulate social media and teen smartphone use, but it is a vital topic for parents to understand and take seriously. Unfortunately, now, parents don't just have to worry about real-world dangers, but all the ones sneaking online and the effects they have on teenagers and their mental health.",
+              },
+            ],
+        },
+      ],
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s2-m36",
+          number: 36,
+          type: "single",
+          stem: "Land Life Company's efforts fit into the global goal to restore millions of hectares of the world's deforested and degraded land.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A Five hundred years ago, forests covered much of the…",
+              },
+              {
+                key: "B",
+                text: "B The region's dry climate and depleted soils would be a…",
+              },
+              {
+                key: "C",
+                text: "C \"Does nature return by itself?\" asks Arnout Asjes, Land…",
+              },
+              {
+                key: "D",
+                text: "D His company belongs to a global movement of organisations…",
+              },
+              {
+                key: "E",
+                text: "E How these factors come together for a particular project…",
+              },
+              {
+                key: "F",
+                text: "F With around 600 hectares replanted around the world since…",
+              },
+              {
+                key: "G",
+                text: "G That global target is broken into smaller pieces and…",
+              },
+              {
+                key: "H",
+                text: "H Money can come from timber sales in sustainably managed…",
+              },
+              {
+                key: "I",
+                text: "I Still, these backers are not your high-street bank.",
+              },
+              {
+                key: "J",
+                text: "J Even on land cleared decades ago and currently used by…",
+              },
+              {
+                key: "K",
+                text: "K A global project called Breedcaf s is studying how trees…",
+              },
+              {
+                key: "L",
+                text: "L Not every piece of land is fit for reforestation.",
+              },
+              {
+                key: "M",
+                text: "M But in the right location, perhaps all you need is time.",
+              },
+            ],
+          answer: "F",
+          explanation: "Land Life Company 的努力符合全球恢复森林的目标（ F 段首句）。",
+          evidence:
+            {
+              paragraphId: "p1-6",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-m37",
+          number: 37,
+          type: "single",
+          stem: "Planting trees or shrubs together with crops can help improve the yield of the land, while offering small-scale farmers a chance to make a living.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A Five hundred years ago, forests covered much of the…",
+              },
+              {
+                key: "B",
+                text: "B The region's dry climate and depleted soils would be a…",
+              },
+              {
+                key: "C",
+                text: "C \"Does nature return by itself?\" asks Arnout Asjes, Land…",
+              },
+              {
+                key: "D",
+                text: "D His company belongs to a global movement of organisations…",
+              },
+              {
+                key: "E",
+                text: "E How these factors come together for a particular project…",
+              },
+              {
+                key: "F",
+                text: "F With around 600 hectares replanted around the world since…",
+              },
+              {
+                key: "G",
+                text: "G That global target is broken into smaller pieces and…",
+              },
+              {
+                key: "H",
+                text: "H Money can come from timber sales in sustainably managed…",
+              },
+              {
+                key: "I",
+                text: "I Still, these backers are not your high-street bank.",
+              },
+              {
+                key: "J",
+                text: "J Even on land cleared decades ago and currently used by…",
+              },
+              {
+                key: "K",
+                text: "K A global project called Breedcaf s is studying how trees…",
+              },
+              {
+                key: "L",
+                text: "L Not every piece of land is fit for reforestation.",
+              },
+              {
+                key: "M",
+                text: "M But in the right location, perhaps all you need is time.",
+              },
+            ],
+          answer: "J",
+          explanation: "将树木或灌木与农作物一起种植有助于提高土地产量，并为小农提供生计（ J 段）。",
+          evidence:
+            {
+              paragraphId: "p1-10",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-m38",
+          number: 38,
+          type: "single",
+          stem: "One reforestation project bases its argument on economic benefits and investment returns.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A Five hundred years ago, forests covered much of the…",
+              },
+              {
+                key: "B",
+                text: "B The region's dry climate and depleted soils would be a…",
+              },
+              {
+                key: "C",
+                text: "C \"Does nature return by itself?\" asks Arnout Asjes, Land…",
+              },
+              {
+                key: "D",
+                text: "D His company belongs to a global movement of organisations…",
+              },
+              {
+                key: "E",
+                text: "E How these factors come together for a particular project…",
+              },
+              {
+                key: "F",
+                text: "F With around 600 hectares replanted around the world since…",
+              },
+              {
+                key: "G",
+                text: "G That global target is broken into smaller pieces and…",
+              },
+              {
+                key: "H",
+                text: "H Money can come from timber sales in sustainably managed…",
+              },
+              {
+                key: "I",
+                text: "I Still, these backers are not your high-street bank.",
+              },
+              {
+                key: "J",
+                text: "J Even on land cleared decades ago and currently used by…",
+              },
+              {
+                key: "K",
+                text: "K A global project called Breedcaf s is studying how trees…",
+              },
+              {
+                key: "L",
+                text: "L Not every piece of land is fit for reforestation.",
+              },
+              {
+                key: "M",
+                text: "M But in the right location, perhaps all you need is time.",
+              },
+            ],
+          answer: "G",
+          explanation: "20x20 倡议以经济效益和投资回报为论据（ G 段 “makes the economic and business case” ）。",
+          evidence:
+            {
+              paragraphId: "p1-7",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-m39",
+          number: 39,
+          type: "single",
+          stem: "With time, nature may return to its original state without human intervention if the location is appropriate.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A Five hundred years ago, forests covered much of the…",
+              },
+              {
+                key: "B",
+                text: "B The region's dry climate and depleted soils would be a…",
+              },
+              {
+                key: "C",
+                text: "C \"Does nature return by itself?\" asks Arnout Asjes, Land…",
+              },
+              {
+                key: "D",
+                text: "D His company belongs to a global movement of organisations…",
+              },
+              {
+                key: "E",
+                text: "E How these factors come together for a particular project…",
+              },
+              {
+                key: "F",
+                text: "F With around 600 hectares replanted around the world since…",
+              },
+              {
+                key: "G",
+                text: "G That global target is broken into smaller pieces and…",
+              },
+              {
+                key: "H",
+                text: "H Money can come from timber sales in sustainably managed…",
+              },
+              {
+                key: "I",
+                text: "I Still, these backers are not your high-street bank.",
+              },
+              {
+                key: "J",
+                text: "J Even on land cleared decades ago and currently used by…",
+              },
+              {
+                key: "K",
+                text: "K A global project called Breedcaf s is studying how trees…",
+              },
+              {
+                key: "L",
+                text: "L Not every piece of land is fit for reforestation.",
+              },
+              {
+                key: "M",
+                text: "M But in the right location, perhaps all you need is time.",
+              },
+            ],
+          answer: "M",
+          explanation: "在合适的地点，大自然无需人工干预即可恢复（ M 段描述巴鲁保护区）。",
+          evidence:
+            {
+              paragraphId: "p1-13",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-m40",
+          number: 40,
+          type: "single",
+          stem: "According to a forest and climate expert, the revival of forest cover can take place under the necessary conditions.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A Five hundred years ago, forests covered much of the…",
+              },
+              {
+                key: "B",
+                text: "B The region's dry climate and depleted soils would be a…",
+              },
+              {
+                key: "C",
+                text: "C \"Does nature return by itself?\" asks Arnout Asjes, Land…",
+              },
+              {
+                key: "D",
+                text: "D His company belongs to a global movement of organisations…",
+              },
+              {
+                key: "E",
+                text: "E How these factors come together for a particular project…",
+              },
+              {
+                key: "F",
+                text: "F With around 600 hectares replanted around the world since…",
+              },
+              {
+                key: "G",
+                text: "G That global target is broken into smaller pieces and…",
+              },
+              {
+                key: "H",
+                text: "H Money can come from timber sales in sustainably managed…",
+              },
+              {
+                key: "I",
+                text: "I Still, these backers are not your high-street bank.",
+              },
+              {
+                key: "J",
+                text: "J Even on land cleared decades ago and currently used by…",
+              },
+              {
+                key: "K",
+                text: "K A global project called Breedcaf s is studying how trees…",
+              },
+              {
+                key: "L",
+                text: "L Not every piece of land is fit for reforestation.",
+              },
+              {
+                key: "M",
+                text: "M But in the right location, perhaps all you need is time.",
+              },
+            ],
+          answer: "D",
+          explanation: "Vergara 认为在必要条件下森林覆盖可以恢复（ D 段末句）。",
+          evidence:
+            {
+              paragraphId: "p1-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-m41",
+          number: 41,
+          type: "single",
+          stem: "One company runs its major operations exclusively in countries where risks are not high.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A Five hundred years ago, forests covered much of the…",
+              },
+              {
+                key: "B",
+                text: "B The region's dry climate and depleted soils would be a…",
+              },
+              {
+                key: "C",
+                text: "C \"Does nature return by itself?\" asks Arnout Asjes, Land…",
+              },
+              {
+                key: "D",
+                text: "D His company belongs to a global movement of organisations…",
+              },
+              {
+                key: "E",
+                text: "E How these factors come together for a particular project…",
+              },
+              {
+                key: "F",
+                text: "F With around 600 hectares replanted around the world since…",
+              },
+              {
+                key: "G",
+                text: "G That global target is broken into smaller pieces and…",
+              },
+              {
+                key: "H",
+                text: "H Money can come from timber sales in sustainably managed…",
+              },
+              {
+                key: "I",
+                text: "I Still, these backers are not your high-street bank.",
+              },
+              {
+                key: "J",
+                text: "J Even on land cleared decades ago and currently used by…",
+              },
+              {
+                key: "K",
+                text: "K A global project called Breedcaf s is studying how trees…",
+              },
+              {
+                key: "L",
+                text: "L Not every piece of land is fit for reforestation.",
+              },
+              {
+                key: "M",
+                text: "M But in the right location, perhaps all you need is time.",
+              },
+            ],
+          answer: "L",
+          explanation: "Land Life Company 只在低风险国家开展主要业务（ L 段）。",
+          evidence:
+            {
+              paragraphId: "p1-12",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-m42",
+          number: 42,
+          type: "single",
+          stem: "Left alone, nature may take scores of years or even centuries to repair itself.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A Five hundred years ago, forests covered much of the…",
+              },
+              {
+                key: "B",
+                text: "B The region's dry climate and depleted soils would be a…",
+              },
+              {
+                key: "C",
+                text: "C \"Does nature return by itself?\" asks Arnout Asjes, Land…",
+              },
+              {
+                key: "D",
+                text: "D His company belongs to a global movement of organisations…",
+              },
+              {
+                key: "E",
+                text: "E How these factors come together for a particular project…",
+              },
+              {
+                key: "F",
+                text: "F With around 600 hectares replanted around the world since…",
+              },
+              {
+                key: "G",
+                text: "G That global target is broken into smaller pieces and…",
+              },
+              {
+                key: "H",
+                text: "H Money can come from timber sales in sustainably managed…",
+              },
+              {
+                key: "I",
+                text: "I Still, these backers are not your high-street bank.",
+              },
+              {
+                key: "J",
+                text: "J Even on land cleared decades ago and currently used by…",
+              },
+              {
+                key: "K",
+                text: "K A global project called Breedcaf s is studying how trees…",
+              },
+              {
+                key: "L",
+                text: "L Not every piece of land is fit for reforestation.",
+              },
+              {
+                key: "M",
+                text: "M But in the right location, perhaps all you need is time.",
+              },
+            ],
+          answer: "C",
+          explanation: "自然恢复可能需要数十年甚至数百年（ C 段 “decades or hundreds of years” ）。",
+          evidence:
+            {
+              paragraphId: "p1-3",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-m43",
+          number: 43,
+          type: "single",
+          stem: "Economic returns can be derived from selling timber and non-wood products as well as carbon credits.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A Five hundred years ago, forests covered much of the…",
+              },
+              {
+                key: "B",
+                text: "B The region's dry climate and depleted soils would be a…",
+              },
+              {
+                key: "C",
+                text: "C \"Does nature return by itself?\" asks Arnout Asjes, Land…",
+              },
+              {
+                key: "D",
+                text: "D His company belongs to a global movement of organisations…",
+              },
+              {
+                key: "E",
+                text: "E How these factors come together for a particular project…",
+              },
+              {
+                key: "F",
+                text: "F With around 600 hectares replanted around the world since…",
+              },
+              {
+                key: "G",
+                text: "G That global target is broken into smaller pieces and…",
+              },
+              {
+                key: "H",
+                text: "H Money can come from timber sales in sustainably managed…",
+              },
+              {
+                key: "I",
+                text: "I Still, these backers are not your high-street bank.",
+              },
+              {
+                key: "J",
+                text: "J Even on land cleared decades ago and currently used by…",
+              },
+              {
+                key: "K",
+                text: "K A global project called Breedcaf s is studying how trees…",
+              },
+              {
+                key: "L",
+                text: "L Not every piece of land is fit for reforestation.",
+              },
+              {
+                key: "M",
+                text: "M But in the right location, perhaps all you need is time.",
+              },
+            ],
+          answer: "H",
+          explanation: "通过销售木材、非木材产品及碳信用可获得经济回报（ H 段）。",
+          evidence:
+            {
+              paragraphId: "p1-8",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-m44",
+          number: 44,
+          type: "single",
+          stem: "A study is under way across the world to look for crops that can grow among trees.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A Five hundred years ago, forests covered much of the…",
+              },
+              {
+                key: "B",
+                text: "B The region's dry climate and depleted soils would be a…",
+              },
+              {
+                key: "C",
+                text: "C \"Does nature return by itself?\" asks Arnout Asjes, Land…",
+              },
+              {
+                key: "D",
+                text: "D His company belongs to a global movement of organisations…",
+              },
+              {
+                key: "E",
+                text: "E How these factors come together for a particular project…",
+              },
+              {
+                key: "F",
+                text: "F With around 600 hectares replanted around the world since…",
+              },
+              {
+                key: "G",
+                text: "G That global target is broken into smaller pieces and…",
+              },
+              {
+                key: "H",
+                text: "H Money can come from timber sales in sustainably managed…",
+              },
+              {
+                key: "I",
+                text: "I Still, these backers are not your high-street bank.",
+              },
+              {
+                key: "J",
+                text: "J Even on land cleared decades ago and currently used by…",
+              },
+              {
+                key: "K",
+                text: "K A global project called Breedcaf s is studying how trees…",
+              },
+              {
+                key: "L",
+                text: "L Not every piece of land is fit for reforestation.",
+              },
+              {
+                key: "M",
+                text: "M But in the right location, perhaps all you need is time.",
+              },
+            ],
+          answer: "K",
+          explanation: "Breedcaf 项目在全球范围内寻找可在树下生长的作物（ K 段首句）。",
+          evidence:
+            {
+              paragraphId: "p1-11",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-m45",
+          number: 45,
+          type: "single",
+          stem: "Land Life Company's operations are usually located where reforestation is impossible without human intervention.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A Five hundred years ago, forests covered much of the…",
+              },
+              {
+                key: "B",
+                text: "B The region's dry climate and depleted soils would be a…",
+              },
+              {
+                key: "C",
+                text: "C \"Does nature return by itself?\" asks Arnout Asjes, Land…",
+              },
+              {
+                key: "D",
+                text: "D His company belongs to a global movement of organisations…",
+              },
+              {
+                key: "E",
+                text: "E How these factors come together for a particular project…",
+              },
+              {
+                key: "F",
+                text: "F With around 600 hectares replanted around the world since…",
+              },
+              {
+                key: "G",
+                text: "G That global target is broken into smaller pieces and…",
+              },
+              {
+                key: "H",
+                text: "H Money can come from timber sales in sustainably managed…",
+              },
+              {
+                key: "I",
+                text: "I Still, these backers are not your high-street bank.",
+              },
+              {
+                key: "J",
+                text: "J Even on land cleared decades ago and currently used by…",
+              },
+              {
+                key: "K",
+                text: "K A global project called Breedcaf s is studying how trees…",
+              },
+              {
+                key: "L",
+                text: "L Not every piece of land is fit for reforestation.",
+              },
+              {
+                key: "M",
+                text: "M But in the right location, perhaps all you need is time.",
+              },
+            ],
+          answer: "B",
+          explanation: "Land Life Company 通常在没有人为干预就无法再造林的地方运营（ B 段首句）。",
+          evidence:
+            {
+              paragraphId: "p1-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s2-r46",
+          number: 46,
+          type: "single",
+          stem: "What plays an important role in determining how much self-discipline people experience?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Their belief about the nature of motivation.",
+              },
+              {
+                key: "B",
+                text: "Their use of internal energy for persisting.",
+              },
+              {
+                key: "C",
+                text: "Their conception of self-discipline.",
+              },
+              {
+                key: "D",
+                text: "Their ability to resist temptation.",
+              },
+            ],
+          answer: "C",
+          explanation: "第三段： “Your answer matters, as it determines how much self-discipline you experience.” 这里的 “answer” 指对自律本质的看法，即conception of self-discipline。",
+          evidence:
+            {
+              paragraphId: "p2-2",
+              quote: "Your answer matters, as it determines how much self-discipline you experience.",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s2-r47",
+          number: 47,
+          type: "single",
+          stem: "What did years of research suggest about self-discipline?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It is a depletable resource.",
+              },
+              {
+                key: "B",
+                text: "It is bolstered through use.",
+              },
+              {
+                key: "C",
+                text: "Its strength is dependent on willpower.",
+              },
+              {
+                key: "D",
+                text: "Its exercise is an exhausting experience.",
+              },
+            ],
+          answer: "A",
+          explanation: "第三段： “For years, research…pointed to self-control as a resource that is depleted with use” 即自律是可耗尽的资源。",
+          evidence:
+            {
+              paragraphId: "p2-2",
+              quote: "pointed to self-control as a resource that is depleted with use",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s2-r48",
+          number: 48,
+          type: "single",
+          stem: "Why does the author ask us to reflect on our experience of meeting the goal despite initial difficulty?",
+          options:
+            [
+              {
+                key: "A",
+                text: "To show the urgency of abandoning outdated beliefs about self-control.",
+              },
+              {
+                key: "B",
+                text: "To show the feasibility of viewing self-discipline as a force fueling itself.",
+              },
+              {
+                key: "C",
+                text: "To support the argument for persistence in workplace accomplishments.",
+              },
+              {
+                key: "D",
+                text: "To add evidence to consistent findings in previous psychological research.",
+              },
+            ],
+          answer: "B",
+          explanation: "第四段：反思过往成功经历是为了证明 “ 将自律视为自我强化的力量 ” 是可行的。",
+          evidence:
+            {
+              paragraphId: "p2-3",
+              quote: "Reflect on times that you had initial difficulty resisting temptation, getting started on something, or sticking with it, but pushed ahead and accomplished the task or met the goal.",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s2-r49",
+          number: 49,
+          type: "single",
+          stem: "What are we advised to do if we cannot afford to take breaks to recharge?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Figure out what has gone wrong.",
+              },
+              {
+                key: "B",
+                text: "Focus on the hardest part of our task.",
+              },
+              {
+                key: "C",
+                text: "Exert ourselves to go on with the work.",
+              },
+              {
+                key: "D",
+                text: "Gather new energy from people around.",
+              },
+            ],
+          answer: "C",
+          explanation: "第五段：如果无法休息，则应集中精力继续工作，而不是纠结于困难。",
+          evidence:
+            {
+              paragraphId: "p2-4",
+              quote: "If not, remind yourself that not everyone experiences self-discipline as a depletable resource and that your experience might be different if you focus on gathering more energy at this point rather than focusing on how difficult it is to continue or the need for a break.",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s2-r50",
+          number: 50,
+          type: "single",
+          stem: "Why does the author compare our self-discipline to a muscle?",
+          options:
+            [
+              {
+                key: "A",
+                text: "The more it is applied, the more resistance it encounters.",
+              },
+              {
+                key: "B",
+                text: "The more it is exerted, the more proud we become.",
+              },
+              {
+                key: "C",
+                text: "The more it is enforced, the stronger our willpower proves.",
+              },
+              {
+                key: "D",
+                text: "The more it is exercised, the more strengthened it gets.",
+              },
+            ],
+          answer: "D",
+          explanation: "末段： “Your self-discipline is akin to a muscle…each time…you strengthen that muscle” 即锻炼越多，变得越强。",
+          evidence:
+            {
+              paragraphId: "p2-5",
+              quote: "Your self-discipline is akin to a muscle",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s2-r51",
+          number: 51,
+          type: "single",
+          stem: "What do around half of parents of teens do according to a new study?",
+          options:
+            [
+              {
+                key: "A",
+                text: "They set their kids' phones to filter out obscene information.",
+              },
+              {
+                key: "B",
+                text: "They try to alleviate the spread of explicit scenes on the internet.",
+              },
+              {
+                key: "C",
+                text: "They feel concerned about their kids' viewing indecent content online.",
+              },
+              {
+                key: "D",
+                text: "They strive to prevent their kids from spending excessive screen time.",
+              },
+            ],
+          answer: "C",
+          explanation: "第二段： “about half of parents of teens are worried about their teens being exposed to explicit content online” 即担心孩子看到不当内容。",
+          evidence:
+            {
+              paragraphId: "p3-1",
+              quote: "about half of parents of teens are worried about their teens being exposed to explicit content online",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s2-r52",
+          number: 52,
+          type: "single",
+          stem: "What does a large amount of research show about teens' excessive smartphone use?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It allows them less time for meaningful activities.",
+              },
+              {
+                key: "B",
+                text: "It renders them more lonely and low-spirited.",
+              },
+              {
+                key: "C",
+                text: "It gives them less time for social interactions.",
+              },
+              {
+                key: "D",
+                text: "It makes them more alert to online bullying.",
+              },
+            ],
+          answer: "B",
+          explanation: "第五段： “Teens log on…but end up feeling more alone and sad than ever.” 即让他们更孤独、更沮丧。",
+          evidence:
+            {
+              paragraphId: "p3-3",
+              quote: "but end up feeling more alone and sad than ever.",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s2-r53",
+          number: 53,
+          type: "single",
+          stem: "What do we learn about the author's feelings regarding smartphones and screen time?",
+          options:
+            [
+              {
+                key: "A",
+                text: "They are deep-seated.",
+              },
+              {
+                key: "B",
+                text: "They are instinctive.",
+              },
+              {
+                key: "C",
+                text: "They are unique.",
+              },
+              {
+                key: "D",
+                text: "They are mixed.",
+              },
+            ],
+          answer: "D",
+          explanation: "第六段：作者既认识到智能手机的便利，又纠结于屏幕时间的管理，情感是复杂的（ mixed ）。",
+          evidence:
+            {
+              paragraphId: "p3-4",
+              quote: "The convenience of communication —— when they need a ride home from school after practice, for instance —— often feels like it isn't worth the battle to keep their screen time low and productive, and continue to encourage \"real-life\" activities outside and with friends and family.",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s2-r54",
+          number: 54,
+          type: "single",
+          stem: "What does actress Kate Winslet think about the world of social media?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It poses increasing challenges to parents trying to ensure internet safety.",
+              },
+              {
+                key: "B",
+                text: "It scares parents because they don't really know what is on the screen.",
+              },
+              {
+                key: "C",
+                text: "It is a sphere difficult for parents and their teens to navigate.",
+              },
+              {
+                key: "D",
+                text: "It is full of uncertainties frightful to parents and their teens.",
+              },
+            ],
+          answer: "B",
+          explanation: "第七段： Winslet 说 “the world of social media is frightening to parents because we don't really know what's there” 即因为不了解屏幕上的内容而害怕。",
+          evidence:
+            {
+              paragraphId: "p3-5",
+              quote: "the world of social media is frightening to parents because we don't really know what's there",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s2-r55",
+          number: 55,
+          type: "single",
+          stem: "What message does the author try to convey in the last paragraph?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Parents have to be concerned about dangers to their teens in both real and virtual worlds.",
+              },
+              {
+                key: "B",
+                text: "Governments have responsibilities in regulating social media and teens' smartphone use.",
+              },
+              {
+                key: "C",
+                text: "Parents should provide guidance to their teens in the use of social media.",
+              },
+              {
+                key: "D",
+                text: "Online dangers are as serious as problems with teenagers' mental health.",
+              },
+            ],
+          answer: "A",
+          explanation: "末段：父母不仅要担心现实世界的危险，还要担心网络上的危险及其对青少年的影响。",
+          evidence:
+            {
+              paragraphId: "p3-6",
+              quote: "Unfortunately, now, parents don't just have to worry about real-world dangers, but all the ones sneaking online and the effects they have on teenagers and their mental health.",
+            },
+          score: 2,
+        },
+      ],
+  },
+  {
+    id: "translation",
+    kind: "translation",
+    title: "Part IV Translation",
+    instructions: "Part IV Translation (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+    minutes: 30,
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s2-t1",
+          number: 56,
+          type: "translation",
+          stem: "电子商务的蓬勃发展正在深刻改变中国农村的面貌。随着互联网和物流网络快速向农村延伸，越来越多的农村居民通过电子商务平台将农产品直接销售给城市消费者。近年来，直播带货 (live-streaming commerce) 使城市消费者能够与卖家实时互动，已成为促进农村发展的一种新方式。电子商务打破了城乡之间的信息壁垒，拓宽了农产品销售渠道，帮助农村居民增收致富。数字经济与乡村振兴的深度融合，正在为中国农村发展注入前所未有的活力。",
+          answer: "见参考",
+          explanation: "翻译要点：“蓬勃发展”：译为 “booming development”，也可用 “rapid growth”。“深刻改变”：“profoundly changing”。“物流网络”：“logistics networks”。“直播带货”：直接使用 “live-streaming commerce”，题目已给出。“实时互动”：“interact in real time”。“信息壁垒”：“information barriers”。“增收致富”：“increase their income and become better off”。“乡村振兴”：“rural revitalization”，固定译法。“注入前所未有的活力”：“injecting unprecedented vitality into”。全真试题整理 · 答案解析 · 仅供学习参考",
+          score: 15,
+        },
+      ],
+    reference:
+      {
+        translation: "The booming development of e-commerce is profoundly changing the face of rural China. With the rapid extension of the internet and logistics networks to rural areas, more and more rural residents are selling agricultural products directly to urban consumers through e-commerce platforms. In recent years, live-streaming commerce has enabled urban consumers to interact with sellers in real time and has become a new way to promote rural development. E-commerce has broken down the information barriers between urban and rural areas, expanded the sales channels of agricultural products, and helped rural residents increase their income and become better off. The deep integration of the digital economy and rural revitalization is injecting unprecedented vitality into China's rural development.",
+      },
+  },
+];
+
+const s3Parts: PaperPart[] = [
+  {
+    id: "writing",
+    kind: "writing",
+    title: "Part I Writing",
+    instructions: "Directions: For this part, you are allowed 30 minutes to write an essay that begins with the sentence \"In an era of rapid social development, it is vitally important to enhance young people's sense of responsibility.\" You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. [You should copy the sentence given in quotes at the beginning of your essay.]",
+    minutes: 30,
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s3-w1",
+          number: 1,
+          type: "writing",
+          stem: "Directions: For this part, you are allowed 30 minutes to write an essay that begins with the sentence \"In an era of rapid social development, it is vitally important to enhance young people's sense of responsibility.\" You can make comments, cite examples or use your personal experiences to develop your essay. You should write at least 150 words but no more than 200 words. [You should copy the sentence given in quotes at the beginning of your essay.]",
+          answer: "见参考",
+          explanation: "写作要点：开篇：直接抄写给定句子，点明社会责任感的时代意义。主体：首先解释责任感对青年成长的重要性（如培养自律、塑造品格），然后从两个角度展开：一是对个人的责任（如学业、健康），二是对社会的责任（如环保、志愿服务），可结合个人经历或社会现象说明。结尾：呼吁青年主动承担时代责任，并建议学校和社会提供更多实践机会。",
+          score: 15,
+        },
+      ],
+    reference:
+      {
+        essay: "In an era of rapid social development, it is vitally important to enhance young people's sense of responsibility. As society evolves at an unprecedented pace, young individuals are not only beneficiaries of progress but also key drivers of future change. A strong sense of responsibility enables them to make informed decisions, contribute positively to their communities, and navigate challenges with integrity. For instance, young volunteers participating in environmental protection projects demonstrate how personal commitment can lead to collective impact. Moreover, responsible young people are more likely to excel academically and professionally, as they understand the value of hard work and accountability. Personally, I have found that taking on leadership roles in student organizations has deepened my sense of duty and helped me grow as a more reliable and proactive individual. Therefore, I believe that fostering responsibility in youth should be a priority for families, schools, and society as a whole.",
+        guidance:
+          [
+            "开篇：直接抄写给定句子，点明社会责任感的时代意义。",
+            "主体：首先解释责任感对青年成长的重要性（如培养自律、塑造品格），然后从两个角度展开：一是对个人的责任（如学业、健康），二是对社会的责任（如环保、志愿服务），可结合个人经历或社会现象说明。",
+            "结尾：呼吁青年主动承担时代责任，并建议学校和社会提供更多实践机会。",
+          ],
+      },
+  },
+  {
+    id: "listening",
+    kind: "listening",
+    title: "Part II Listening Comprehension",
+    instructions: "Directions: In this section, you will hear two long conversations. At the end of each conversation, you will hear four questions. Both the conversation and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Directions: In this section, you will hear two passages. At the end of each passage, you will hear three or four questions. Both the passage and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Directions: In this section, you will hear three recordings of lectures or talks followed by three or four questions. The recordings will be played only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.",
+    minutes: 30,
+    audio:
+      {
+        note: "听力原文由浏览器语音合成朗读（合成语音），非考试原音。",
+        segments:
+          [
+            {
+              id: "ls-1",
+              label: "Conversation 1",
+              questionNo: 1,
+              seconds: 132,
+              text: "M: Welcome to \"Business Matters\". Today we have invited career development consultant Lucy Williams to talk about how to get ahead at work. Hi, Lucy. Many of us never seem to get promoted. Why is that? And what can we do about it? W: One mistake people make is to limit communication only to their bosses. It's important to expand your network and include your co-workers. M: But some of our co-workers are less senior to us. Is it really necessary to connect with them? W: It's important not to underestimate your colleagues. Sometimes a job title might not clearly demonstrate the influence they may have. M: Now many of us think that working hard creates a good impression, but this isn't always true, is it? W: That's right. We should avoid trying to take on too much work and constantly staying late, just to show that you are committed. M: I see. So setting expectations too high at the beginning can make us look bad if we don't maintain them. W: Yeah, it's better to make sure you are putting in quality time instead of just a large quantity of time. And these efforts can easily be demonstrated by the results we achieve. M: What about helping others at work? Should you try and go beyond your normal responsibilities and offer to help people with their projects? W: Extend your assistance to those who need it, but only as long as your own work will not go unattended. If someone can benefit from your assistance or advice, help them out to gain their respect and trust. M: But it goes without saying that you shouldn't act like a know-it-all, otherwise you'll appear arrogant. W: Absolutely. Be humble, and you'll get a lot of time later on to show your genius.",
+            },
+            {
+              id: "ls-2",
+              label: "Conversation 2",
+              questionNo: 5,
+              seconds: 191,
+              text: "W: I think we first need to decide how to divide up the presentation responsibilities. From what I recall, the presentation consists of five parts, not including the introduction and conclusion. That would mean altogether, we need to allocate seven parts between the two of us. M: So, we have the abstract, background research, the project design, the results and the discussion portions. As the abstract section only applies to the article, we needn't include it in the presentation. How would you suggest we dole out the rest? W: How do you feel about handling the background bit? In this way, we can both discuss the part of the project that we devoted most of our time to. M: Hold on a minute. You want me, the one who did the bulk of the task, to also do the majority of the presentation? The background research which was so meticulous took more than a month. W: OK. OK. I get it. Quit your moaning. I appreciate the rigorous work ethic you applied to the research, but not the sarcasm that comes up every time I mention it. What do you think would be a fair arrangement? M: I think the best arrangement would be to split the research into two parts: before-1980 and afterward. I would take the before-portion and you would be assigned the after-1980, leaving the project and results. I volunteer to describe the project. But as I struggled a bit with the statistics in the results section, how about you handling that? W: That's agreeable to me. I propose we both handle the discussion section in parts along with the question and answer afterward, leaving only the introduction and conclusion. M: I will take responsibility for the conclusion and put you in charge of the introduction. This will make it so that we alternate presenting, so as to avoid sounding monotonous to the audience.",
+            },
+            {
+              id: "ls-3",
+              label: "Passage 1",
+              questionNo: 9,
+              seconds: 52,
+              text: "Makeup can do more than just change your appearance—it can also alter others' perceptions of you, for better or for worse. According to new research from the University of Stirling in Scotland, although both men and women perceive women who wear makeup as being of a higher status, men associate makeup with prestigious, positive qualities, while women view other women wearing makeup as being dominant and a potential threat. The research showed that men and women both rated the faces with cosmetics as being more attractive, but only women rated made-up faces as being more dominant, while only men rated made-up faces as being higher in prestige. A follow-up study investigated the root cause behind these differences in perception, and found that female-on-female jealousy seemed to be the main cause of the differences in perception. Women rating women with makeup said they would be more jealous of them and thought they would be more attractive to men than their non-makeup wearing counterparts. Cosmetic products are good for more than just giving you a pretty face. It can be particularly useful for women to understand how wearing makeup alters others' perceptions of them in situations where they are trying to gain others' trust and admiration. At a job interview, knowing whether the hiring committee will consist of men or women might influence a female candidate's decision about wearing makeup. Whether the interviewers will view her as attractive, dominant and prestigious can affect the interviewers' actions and perhaps the outcome of the interview itself.",
+            },
+            {
+              id: "ls-4",
+              label: "Passage 2",
+              questionNo: 12,
+              seconds: 93,
+              text: "You may have seen advertisements trumpeting methods of changing a habit that require absolutely no willpower whatsoever. But can you really change a bad habit or create a good one without willpower? To answer this question, we first have to ask: \"What is willpower?\" Most people, sadly, think of it only as the ability to clench their teeth and resist attractive temptations. In this view, willpower means self-denial and no fun. No wonder people hope to make changes without it. I define willpower as \"using only the thought of your motivators to control your actions.\" Let's say your motivators are \"prevent diabetes\" and \"reach a healthy weight\". So if you are at the all-you-can-eat buffet, you think about your motivator—avoid diabetes through weight loss—and you take small portions and avoid the dessert table. So, amazingly enough, willpower begins with a thought—a bright idea—some way to improve your life or contribute to others. This bright idea is your motivator. Doctor Walter Mischel, an expert on willpower skills, uses the expressive term \"a burning goal\". Whether you call it a motivator, a burning goal, or a bright idea, this idea is the force behind your willpower. What sort of bright ideas—motivators—make for effective willpower? In fact, any goal that you value strongly counts. The list may include good health, self-respect, a better future for your family, a personal mission and being a role model for your child. All these can certainly drive a positive change.",
+            },
+            {
+              id: "ls-5",
+              label: "Recording 1",
+              questionNo: 16,
+              seconds: 156,
+              text: "For many pregnant women, understanding what seafood is safe and healthy and what should be avoided because of mercury concerns comes with a lot of worrying. In part, that's because the federal government's advice on the matter, first issued in 2004, has long been criticized as vague. That guidance has included advice on how much seafood to eat, and which species pregnant and breastfeeding women should avoid over concerns about mercury contamination. But critics say the government advisory has done more harm than good, scaring many pregnant and breastfeeding women away from eating seafood altogether. The problem is real. According to a spokesman for the Food and Drug Administration, or FDA for short, the agency analyzed fish consumption data from more than 1,000 pregnant women in the US and found that 21 per cent of them ate no fish whatsoever in the previous month. And those who did eat fish consumed far less than recommended by the dietary guidelines. Some 50 per cent ate less than two ounces a week and 75 per cent ate less than four ounces. This week the FDA issued an update to the advice, listing more than sixty species in a chart that ranks fish as A Best Choice, Good Choice and Choices to Avoid. The goal is to make it easier for mothers-to-be to feel confident about the type of seafood they include in their diets. The new advice recommends consumers choose a variety of fish to eat, and it comes with an easy-to-understand illustration of what an appropriate portion size should be—four ounces for an adult and two ounces for children aged four to seven. And while expectant mothers have long been warned to stay away from shark and four other particular types of fish from the Gulf of Mexico, now there are three new species on the list of what to avoid. But not everyone is thrilled with the new advice. Critics say the new advice doesn't always agree with the agency's own scientific findings. While mercury is of great concern when people are talking about pregnant women and seafood, it's not the only factor contributing to anxiety. The FDA maintains that its final consumption recommendations were based on thorough scientific analysis. Agency spokesman Cassell says the FDA believes their recommendations will increase confidence, not uncertainty. But critics disagree. They think the FDA's advice is not based on the evidence in its own detailed report, and so it confuses everyone.",
+            },
+            {
+              id: "ls-6",
+              label: "Recording 2",
+              questionNo: 19,
+              seconds: 209,
+              text: "I know you're busy with work, but you also need to take some time off to recharge those batteries. So, should you plan one big vacation for the year, or should you take multiple short vacations throughout? Quantity can sometimes beat quality. First and foremost, regardless of how you use your vacation days, you need to be using them, and soon. The longer you put off your time off, the worse you're making things for yourself. One 9-year-long study published in Psychosomatic Medicine suggests not taking at least one vacation a year may increase your risk of mortality due to heart disease. So, not only are you killing your joy, you're possibly killing yourself. Give yourself a break, folks. When you should take those breaks, however, depends on a few factors: how many days you have available to use, what activities bring you joy, whether you have a family or not, and other variables come into play. Because of that, there's no perfect formula that works for everyone, but there are still a few things everyone can try to shoot for. We know that in terms of maximizing relaxation, you should aim for vacations that range somewhere between 7 and 11 days long. That gives you enough time to let go of your stress at work, completely loosen up, and achieve full-on calm. That above-mentioned study also recommends you space out your vacations evenly instead of using up all of your days at once. Eight days might sound like a lot for someone who only gets 10 days of vacation a year. But if you frame them with weekends, you can manage two evenly spaced 8-day vacations a year. If you have 14 days of paid leave, that's almost three separate 8-day vacations you can use to split your year into thirds. As tempting as it might be to use all your days to take one long summer break, your overall goal should be to achieve the perfect balance between length plus joy and frequency. Vacation frequency is important because planning multiple breaks throughout the year means you always have something to look forward to. Planning things and the anticipation that comes with it tend to make us happier. If you only take one long vacation every year, the excitement builds much more slowly and seems so far off that it can actually lead to feelings of despair.",
+            },
+            {
+              id: "ls-7",
+              label: "Recording 3",
+              questionNo: 22,
+              seconds: 398,
+              text: "Autonomous cars that can take over from drivers if they are tired or caught in the heat of an argument are being developed in Sweden. Researchers working as part of the European Union's €77 billion research program are developing sensor-based systems that monitor whether a driver is distracted, anxious or tired. If a driver is not in a fit state to be on the road, the car automatically takes control of the wheel to prevent accidents. Doctor Anna Anund from the Swedish National Road and Transport Research Institute, who is leading the project, said a driver's state can be measured using a number of sensors, including heart rate monitors and eye sensors, which track where a driver's gaze is. She said the aim was to really make sure that the transition from the driver to the vehicle is done in a safe way, so we can take into consideration the driver's state, and so we do not give control to a driver who is under pressure of fatigue, stress, anxiety, and so on. According to data from the European Commission, Sweden has the safest roads in the EU, with the UK a close second. However, the number of road accidents in both has largely levelled out since 2010. Driver fatigue is thought to be responsible for as many as a fifth of road crashes across the EU, although there are certain times of the day when more accidents happen. At 6:00 a.m., for example, drivers are said to be 20 times more likely to have an accident than at 10:00 a.m. While most experts agree driverless technology should help bring down accident numbers in the long term, some have questioned whether it is safe. The researchers have said the technology they are developing is seeking to bridge the gap between Level 3 on the autonomy scale, in which drivers have to be ready to take control of the car at any point, and Level 4, in which driving is automated. Daniel Ruiz, the chief executive of the UK's connected and autonomous vehicle programme Meridian, said: \"there is a strong debate going on about how it is possible to make a Level 3 car completely safe.\" Despite advances in technology, we still have some way to go in shifting public sentiment. With an increase in attention-grabbing accidents recently, drivers now view self-driving cars as less safe than they used to.",
+            },
+          ],
+      },
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s3-l1",
+          number: 1,
+          type: "single",
+          groupId: "ls-1",
+          stem: "What are the speakers mainly talking about?",
+          options:
+            [
+              {
+                key: "A",
+                text: "How to run one's business successfully.",
+              },
+              {
+                key: "B",
+                text: "How to make progress in one's career.",
+              },
+              {
+                key: "C",
+                text: "Why few people can fully display their capabilities.",
+              },
+              {
+                key: "D",
+                text: "Why young people seldom get the expected promotion.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中的关键信息与选项 B) How to make progress in one's career. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l2",
+          number: 2,
+          type: "single",
+          groupId: "ls-1",
+          stem: "What does the woman say is one mistake people make?",
+          options:
+            [
+              {
+                key: "A",
+                text: "To mix and interact with peers within the organization.",
+              },
+              {
+                key: "B",
+                text: "To restrict their connections exclusively to colleagues.",
+              },
+              {
+                key: "C",
+                text: "To limit communication only to their superiors.",
+              },
+              {
+                key: "D",
+                text: "To underestimate their role in the company.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“W: One mistake people make is to limit communication only to their bosses. It's important to expand your network and include your co-workers.”，与正确选项 C) To limit communication only to their superiors. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l3",
+          number: 3,
+          type: "single",
+          groupId: "ls-1",
+          stem: "What does the woman advise people to do in their work?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Put in quality time.",
+              },
+              {
+                key: "B",
+                text: "Connect with managers.",
+              },
+              {
+                key: "C",
+                text: "Make greater efforts.",
+              },
+              {
+                key: "D",
+                text: "Demonstrate final results.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“W: Yeah, it's better to make sure you are putting in quality time instead of just a large quantity of time. And these efforts can easily be demonstrat…”，与正确选项 A) Put in quality time. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l4",
+          number: 4,
+          type: "single",
+          groupId: "ls-1",
+          stem: "Why does the man say one should not act like a know-it-all?",
+          options:
+            [
+              {
+                key: "A",
+                text: "To show their genius.",
+              },
+              {
+                key: "B",
+                text: "To gain due respect.",
+              },
+              {
+                key: "C",
+                text: "To guard against humiliation.",
+              },
+              {
+                key: "D",
+                text: "To avoid appearing arrogant.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“M: But it goes without saying that you shouldn't act like a know-it-all, otherwise you'll appear arrogant.”，与正确选项 D) To avoid appearing arrogant. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l5",
+          number: 5,
+          type: "single",
+          groupId: "ls-2",
+          stem: "What does the woman say they first need to do?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Decide how to divide up the presentation tasks.",
+              },
+              {
+                key: "B",
+                text: "Investigate the available background research.",
+              },
+              {
+                key: "C",
+                text: "Complete the project design together.",
+              },
+              {
+                key: "D",
+                text: "Find a suitable topic for their article.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“I think we first need to decide how to divide up the presentation responsibilities.”，与正确选项 A) Decide how to divide up the presentation tasks. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l6",
+          number: 6,
+          type: "single",
+          groupId: "ls-2",
+          stem: "Why does the man refuse to handle the background part?",
+          options:
+            [
+              {
+                key: "A",
+                text: "He wants to devote his time to other portions.",
+              },
+              {
+                key: "B",
+                text: "He believes the woman is better able to handle it.",
+              },
+              {
+                key: "C",
+                text: "He claims to have done most of the work already.",
+              },
+              {
+                key: "D",
+                text: "He finds the woman more meticulous about details.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“Hold on a minute. You want me, the one who did the bulk of the task, to also do the majority of the presentation? The background research which was so…”，与正确选项 C) He claims to have done most of the work already. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l7",
+          number: 7,
+          type: "single",
+          groupId: "ls-2",
+          stem: "What does the woman urge the man to stop doing?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Questioning.",
+              },
+              {
+                key: "B",
+                text: "Complaining.",
+              },
+              {
+                key: "C",
+                text: "Arguing.",
+              },
+              {
+                key: "D",
+                text: "Worrying.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中诰及“OK. OK. I get it. Quit your moaning.”，与正确选项 B) Complaining. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l8",
+          number: 8,
+          type: "single",
+          groupId: "ls-2",
+          stem: "Why does the man suggest he present the conclusion and the woman do the introduction?",
+          options:
+            [
+              {
+                key: "A",
+                text: "To avoid sounding monotonous to the listeners.",
+              },
+              {
+                key: "B",
+                text: "To make the division of labor more reasonable.",
+              },
+              {
+                key: "C",
+                text: "To keep himself from being overburdened.",
+              },
+              {
+                key: "D",
+                text: "To bring their capabilities fully into play. Section B Directions: In this section, you will hear two passages. At the end of each passage, you will hear three or four questions. Both the passage and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“I will take responsibility for the conclusion and put you in charge of the introduction. This will make it so that we alternate presenting, so as to a…”，与正确选项 A) To avoid sounding monotonous to the listeners. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l9",
+          number: 9,
+          type: "single",
+          groupId: "ls-3",
+          stem: "What can makeup do according to new research from the University of Stirling in Scotland?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Alter others' perceptions of the wearer.",
+              },
+              {
+                key: "B",
+                text: "Win others' admiration for the wearer.",
+              },
+              {
+                key: "C",
+                text: "Enhance the wearer's confidence.",
+              },
+              {
+                key: "D",
+                text: "Change the wearer's appearance.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中的关键信息与选项 A) Alter others' perceptions of the wearer. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-3",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l10",
+          number: 10,
+          type: "single",
+          groupId: "ls-3",
+          stem: "How did both men and women rate the faces with cosmetics in the new research?",
+          options:
+            [
+              {
+                key: "A",
+                text: "As being a greater threat.",
+              },
+              {
+                key: "B",
+                text: "As being of higher prestige.",
+              },
+              {
+                key: "C",
+                text: "As being more dominant.",
+              },
+              {
+                key: "D",
+                text: "As being more attractive.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中的关键信息与选项 D) As being more attractive. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-3",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l11",
+          number: 11,
+          type: "single",
+          groupId: "ls-3",
+          stem: "Why does a female candidate need to know the gender of the hiring committee members?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It might influence her way of introducing herself.",
+              },
+              {
+                key: "B",
+                text: "It might impact her dressing style for the occasion.",
+              },
+              {
+                key: "C",
+                text: "It might affect her decision on applying cosmetics.",
+              },
+              {
+                key: "D",
+                text: "It might sway her view on the interviewers' questions.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“At a job interview, knowing whether the hiring committee will consist of men or women might influence a female candidate's decision about wearing make…”，与正确选项 C) It might affect her decision on applying cosmetics. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-3",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l12",
+          number: 12,
+          type: "single",
+          groupId: "ls-4",
+          stem: "What methods do some advertisements trumpet about changing a habit?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Those involving no self-recognition.",
+              },
+              {
+                key: "B",
+                text: "Those forcing us to clench our teeth.",
+              },
+              {
+                key: "C",
+                text: "Those resisting various temptations.",
+              },
+              {
+                key: "D",
+                text: "Those requiring no willpower at all.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“You may have seen advertisements trumpeting methods of changing a habit that require absolutely no willpower whatsoever.”，与正确选项 D) Those requiring no willpower at all. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l13",
+          number: 13,
+          type: "single",
+          groupId: "ls-4",
+          stem: "What does the speaker define willpower as?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Regulating one's actions for the sake of good health.",
+              },
+              {
+                key: "B",
+                text: "Controlling one's actions with a motivating thought.",
+              },
+              {
+                key: "C",
+                text: "Using practical examples to guide one's behavior.",
+              },
+              {
+                key: "D",
+                text: "Denying oneself any comfort to prevent diseases.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中诰及“I define willpower as \"using only the thought of your motivators to control your actions.\"”，与正确选项 B) Controlling one's actions with a motivating thought. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l14",
+          number: 14,
+          type: "single",
+          groupId: "ls-4",
+          stem: "What may sound amazing enough as regards willpower?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It equips us with an expert skill.",
+              },
+              {
+                key: "B",
+                text: "It exerts an enduring force on us.",
+              },
+              {
+                key: "C",
+                text: "It leads to a burning goal.",
+              },
+              {
+                key: "D",
+                text: "It begins with a bright idea.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“So, amazingly enough, willpower begins with a thought—a bright idea—some way to improve your life or contribute to others.”，与正确选项 D) It begins with a bright idea. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l15",
+          number: 15,
+          type: "single",
+          groupId: "ls-4",
+          stem: "What does the speaker say may make for effective willpower?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Any cherished goal.",
+              },
+              {
+                key: "B",
+                text: "Any positive mindset.",
+              },
+              {
+                key: "C",
+                text: "Any personal instinct.",
+              },
+              {
+                key: "D",
+                text: "Any valued role model. Section C Directions: In this section, you will hear three recordings of lectures or talks followed by three or four questions. The recordings will be played only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“What sort of bright ideas—motivators—make for effective willpower? In fact, any goal that you value strongly counts.”，与正确选项 A) Any cherished goal. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l16",
+          number: 16,
+          type: "single",
+          groupId: "ls-5",
+          stem: "What does the speaker say about the federal government's advice on seafood safety?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It has long been criticized as unclear.",
+              },
+              {
+                key: "B",
+                text: "It has long been ignored by the public.",
+              },
+              {
+                key: "C",
+                text: "It has caused much panic among women.",
+              },
+              {
+                key: "D",
+                text: "It has resulted in different understandings.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“In part, that's because the federal government's advice on the matter, first issued in 2004, has long been criticized as vague.”，与正确选项 A) It has long been criticized as unclear. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-5",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l17",
+          number: 17,
+          type: "single",
+          groupId: "ls-5",
+          stem: "What did the Food and Drug Administration do this week?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It warned consumers not to eat fish from the Gulf of Mexico.",
+              },
+              {
+                key: "B",
+                text: "It called on expectant mothers to pay attention to food safety.",
+              },
+              {
+                key: "C",
+                text: "It issued an update to the advice on seafood consumption.",
+              },
+              {
+                key: "D",
+                text: "It listed more than sixty species of fish as \"choices to avoid\".",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“This week the FDA issued an update to the advice, listing more than sixty species in a chart that ranks fish as A Best Choice, Good Choice and Choices…”，与正确选项 C) It issued an update to the advice on seafood consumption. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-5",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l18",
+          number: 18,
+          type: "single",
+          groupId: "ls-5",
+          stem: "According to the speaker, what are people concerned about regarding pregnant women and seafood?",
+          options:
+            [
+              {
+                key: "A",
+                text: "The impact of the FDA's analysis.",
+              },
+              {
+                key: "B",
+                text: "Multiple factors including mercury.",
+              },
+              {
+                key: "C",
+                text: "Critics' conclusions.",
+              },
+              {
+                key: "D",
+                text: "The prices of seafood.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中诰及“While mercury is of great concern when people are talking about pregnant women and seafood, it's not the only factor contributing to anxiety.”，与正确选项 B) Multiple factors including mercury. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-5",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l19",
+          number: 19,
+          type: "single",
+          groupId: "ls-6",
+          stem: "What does the speaker say about people not taking any vacation?",
+          options:
+            [
+              {
+                key: "A",
+                text: "They will suffer a breakdown soon.",
+              },
+              {
+                key: "B",
+                text: "They will be losing both joy and life.",
+              },
+              {
+                key: "C",
+                text: "They will be putting themselves and family at risk.",
+              },
+              {
+                key: "D",
+                text: "They will make things worse for people around them.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中的关键信息与选项 B) They will be losing both joy and life. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-6",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l20",
+          number: 20,
+          type: "single",
+          groupId: "ls-6",
+          stem: "What does the 9-year study recommend people do when planning vacations?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Spend 14 days for vacation every year.",
+              },
+              {
+                key: "B",
+                text: "Aim for three separate vacations yearly.",
+              },
+              {
+                key: "C",
+                text: "Space out their vacations evenly instead of taking one long vacation.",
+              },
+              {
+                key: "D",
+                text: "Use all their days off for a long summer break to achieve full-on calm.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“That above-mentioned study also recommends you space out your vacations evenly instead of using up all of your days at once.”，与正确选项 C) Space out their vacations evenly instead of taking one long vacation. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-6",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l21",
+          number: 21,
+          type: "single",
+          groupId: "ls-6",
+          stem: "Why is vacation frequency important according to the speaker?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Expecting to have more vacations in a year will boost one's work efficiency.",
+              },
+              {
+                key: "B",
+                text: "Anticipating more vacations would reduce one's feelings of despair at work.",
+              },
+              {
+                key: "C",
+                text: "Taking more than three vacations yearly would prolong one's excitement.",
+              },
+              {
+                key: "D",
+                text: "Planning multiple breaks throughout the year will add to one's happiness.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中的关键信息与选项 D) Planning multiple breaks throughout the year will add to one's happiness. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-6",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l22",
+          number: 22,
+          type: "single",
+          groupId: "ls-7",
+          stem: "What are researchers doing in Sweden?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Surveying when drivers are caught in the heat of arguments.",
+              },
+              {
+                key: "B",
+                text: "Designing devices to prevent drivers from being distracted.",
+              },
+              {
+                key: "C",
+                text: "Testing models for monitoring drivers easily getting tired.",
+              },
+              {
+                key: "D",
+                text: "Developing sensor-based systems for autonomous vehicles.",
+              },
+            ],
+          answer: "D",
+          explanation: "录音中诰及“Researchers working as part of the European Union's €77 billion research program are developing sensor-based systems that monitor whether a driver is…”，与正确选项 D) Developing sensor-based systems for autonomous vehicles. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-7",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l23",
+          number: 23,
+          type: "single",
+          groupId: "ls-7",
+          stem: "What did the researchers' project aim to do according to Dr. Anna Anund?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Make sure the autonomous vehicle operates in the simplest manner.",
+              },
+              {
+                key: "B",
+                text: "Ensure the transition from the driver to the vehicle is safely made.",
+              },
+              {
+                key: "C",
+                text: "Alleviate the driver's pressure as much as possible.",
+              },
+              {
+                key: "D",
+                text: "Record the driver's state as accurately as possible.",
+              },
+            ],
+          answer: "B",
+          explanation: "录音中的关键信息与选项 B) Ensure the transition from the driver to the vehicle is safely made. 对应，为正确答案。",
+          evidence:
+            {
+              paragraphId: "ls-7",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l24",
+          number: 24,
+          type: "single",
+          groupId: "ls-7",
+          stem: "What is thought to be responsible for a fifth of road accidents across the European Union?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Driver fatigue.",
+              },
+              {
+                key: "B",
+                text: "Dreadful traffic.",
+              },
+              {
+                key: "C",
+                text: "Drunk driving.",
+              },
+              {
+                key: "D",
+                text: "Driving time.",
+              },
+            ],
+          answer: "A",
+          explanation: "录音中诰及“Driver fatigue is thought to be responsible for as many as a fifth of road crashes across the EU, although there are certain times of the day when mor…”，与正确选项 A) Driver fatigue. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-7",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-l25",
+          number: 25,
+          type: "single",
+          groupId: "ls-7",
+          stem: "Why do drivers now view self-driving cars as less safe than they used to?",
+          options:
+            [
+              {
+                key: "A",
+                text: "There has been a strong debate on the feasibility of Level 3 cars.",
+              },
+              {
+                key: "B",
+                text: "There have been few remarkable advances in auto technology.",
+              },
+              {
+                key: "C",
+                text: "There has been a rise in attention-grabbing accidents recently.",
+              },
+              {
+                key: "D",
+                text: "There have been few feasible ways to shift public sentiment.",
+              },
+            ],
+          answer: "C",
+          explanation: "录音中诰及“With an increase in attention-grabbing accidents recently, drivers now view self-driving cars as less safe than they used to.”，与正确选项 C) There has been a rise in attention-grabbing accidents recently. 对应。",
+          evidence:
+            {
+              paragraphId: "ls-7",
+            },
+          score: 1,
+        },
+      ],
+  },
+  {
+    id: "cloze",
+    kind: "cloze",
+    title: "Part III Section A Banked Cloze",
+    instructions: "Directions: In this section, there is a passage with ten blanks. You are required to select one word for each blank from a list of choices given in a word bank following the passage. Read the passage through carefully before making your choices. Each choice in the bank is identified by a letter. Please mark the corresponding letter for each item on Answer Sheet 2 with a single line through the centre. You may not use any of the words in the bank more than once.",
+    minutes: 10,
+    bank:
+      {
+        A: "ascertain",
+        B: "buffer",
+        C: "correlated",
+        D: "crave",
+        E: "demographics",
+        F: "entail",
+        G: "legitimately",
+        H: "mandated",
+        I: "potential",
+        J: "proximity",
+        K: "rigid",
+        L: "statistics",
+        M: "substantially",
+        N: "trait",
+        O: "underlie",
+      },
+    passages:
+      [
+        {
+          id: "p1",
+          title: "Section A Passage",
+          source: "2026年6月英语六级真题（第3套）",
+          paragraphs:
+            [
+              {
+                id: "p1-1",
+                text: "Imagine you and a stranger are sitting on a couch. How close would you sit to them? It turns out that how much of a [26] zone you prefer may reveal a lot about your personality. In one study, researchers sought to [27] how our personality may be linked to our preferred amount of personal space. The researchers found that people who scored higher in the [28] of agreeableness tended to sit closer to others, as did people who were more open and outgoing.",
+              },
+              {
+                id: "p1-2",
+                text: "Other individual differences, such as gender and age, can also affect how much personal space we [29]. Women tend to prefer more physical distance from strangers or acquaintances and older adults also generally tend to prefer to keep more distance between themselves and others. Beyond reflecting our personality and [30], the amount of personal space we prefer is also linked to our cultural backgrounds. In a study involving participants from 42 countries, researchers found that around the world people's desired amount of personal space varied [31].",
+              },
+              {
+                id: "p1-3",
+                text: "For example, in Romania, the average amount of personal space people said they would prefer from a stranger was more than 4 feet, whereas in Argentina it was roughly half that. What might [32] this variation? The researchers looked at a number of [33] factors, but the only one that was significantly [34] with preferred interpersonal distance was average temperature. The warmer the place, it seems, the \"warmer\" the people and the less space they needed between them and others.",
+              },
+              {
+                id: "p1-4",
+                text: "Personal space may also reflect interpersonal attraction. Researchers have found that our chosen physical [35] also appears to reflect how much we like others. The more people would like to be friends with the other person, the closer they sat to them.",
+              },
+            ],
+        },
+      ],
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s3-c26",
+          number: 26,
+          type: "bank",
+          stem: "It turns out that how much of a [26] zone you prefer may reveal a lot about your personality.",
+          answer: "B",
+          explanation: "“ 你喜欢多大的缓冲区域 ” ，buffer zone 表示 “ 缓冲区 ” ，此处指个人空间。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s3-c27",
+          number: 27,
+          type: "bank",
+          stem: "In one study, researchers sought to [27] how our personality may be linked to our preferred amount of personal space.",
+          answer: "A",
+          explanation: "“ 研究人员试图确定性格与个人空间偏好之间的关系 ” ，ascertain 意为 “ 确定、查明 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s3-c28",
+          number: 28,
+          type: "bank",
+          stem: "The researchers found that people who scored higher in the [28] of agreeableness tended to sit closer to others, as did people who were more open and outgoing.",
+          answer: "N",
+          explanation: "“ 在宜人性这一特质上得分更高 ” ，trait 表示 “ 特征、特质 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s3-c29",
+          number: 29,
+          type: "bank",
+          stem: "Other individual differences, such as gender and age, can also affect how much personal space we [29].",
+          answer: "D",
+          explanation: "“ 影响我们对个人空间的需求” ，crave 意为 “ 渴望、需求 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s3-c30",
+          number: 30,
+          type: "bank",
+          stem: "Beyond reflecting our personality and [30], the amount of personal space we prefer is also linked to our cultural backgrounds.",
+          answer: "E",
+          explanation: "“ 除了反映我们的个性和人口特征” ，demographics 表示“ 人口统计数据、人群特征 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s3-c31",
+          number: 31,
+          type: "bank",
+          stem: "In a study involving participants from 42 countries, researchers found that around the world people's desired amount of personal space varied [31].",
+          answer: "M",
+          explanation: "“ 人们想要的个人空间数量显著不同 ” ，substantially 意为“ 显著地、大幅地 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s3-c32",
+          number: 32,
+          type: "bank",
+          stem: "What might [32] this variation?",
+          answer: "O",
+          explanation: "“ 什么可能解释这种差异？ ” ，underlie 表示 “ 构成 … 的基础、解释 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s3-c33",
+          number: 33,
+          type: "bank",
+          stem: "The researchers looked at a number of [33] factors, but the only one that was significantly [34] with preferred interpersonal distance was average temperature.",
+          answer: "I",
+          explanation: "“ 研究人员观察了许多可能的因素 ” ，potential 意为 “ 潜在的、可能的 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s3-c34",
+          number: 34,
+          type: "bank",
+          stem: "The researchers looked at a number of [33] factors, but the only one that was significantly [34] with preferred interpersonal distance was average temperature.",
+          answer: "C",
+          explanation: "“ 唯一与偏好人际距离显著相关的因素 ” ，correlated 表示 “ 相关的 ” 。",
+          score: 0.5,
+        },
+        {
+          id: "cet6-2026-06-s3-c35",
+          number: 35,
+          type: "bank",
+          stem: "Researchers have found that our chosen physical [35] also appears to reflect how much we like others.",
+          answer: "J",
+          explanation: "“ 我们选择的物理距离 / 亲近度” ，proximity 意为 “ 接近、亲近 ” 。",
+          score: 0.5,
+        },
+      ],
+  },
+  {
+    id: "reading",
+    kind: "reading",
+    title: "Part III Section B & C Reading Comprehension",
+    instructions: "Directions: In this section, you are going to read a passage with ten statements attached to it. Each statement contains information given in one of the paragraphs. Identify the paragraph from which the information is derived. You may choose a paragraph more than once. Each paragraph is marked with a letter. Answer the questions by marking the corresponding letter on Answer Sheet 2. Directions: There are 2 passages in this section. Each passage is followed by some questions or unfinished statements. For each of them there are four choices marked A), B), C) and D). You should decide on the best choice and mark the corresponding letter on Answer Sheet 2 with a single line through the centre.",
+    minutes: 30,
+    passages:
+      [
+        {
+          id: "p1",
+          title: "Section B Passage",
+          source: "2026年6月英语六级真题（第3套）",
+          paragraphs:
+            [
+              {
+                id: "p1-1",
+                marker: "A",
+                text: "A The cost of a mortgage or rents, meeting monthly utility bills, paying for a new car —— all headaches most people get to worry about from their 20s. But while some may struggle to pay their bills after a few too many nights out at the start of the month, others will have a tightly followed plan for their repayments. So what is the difference between the shrewd saver and the more reckless spender?",
+              },
+              {
+                id: "p1-2",
+                marker: "B",
+                text: "B Experts believe it is all about the age you learn how to spend responsibly. Adult money habits are typically set by the age of seven, according to a large-scale study by the government's Money Advice Service and behaviour experts at Cambridge University. By then, most children have grasped how to recognise the value of money and are capable of complex functions such as planning ahead, delaying a decision until later and understanding that some choices are irreversible.",
+              },
+              {
+                id: "p1-3",
+                marker: "C",
+                text: "C Tomorrow marks the start of Global Money Week, a worldwide initiative to help children make smart financial decisions and learn that \"money matters matter\". But for many young people in the UK, it's a matter of too little, too late. \"The habits of mind which influence the ways children approach complex problems and decisions, including financial ones, are largely determined in the first few years of life,\" says Dr David Whitebread, the co-author of the study. And this core behaviour is very likely to influence their financial decisions when they are adults, he says.",
+              },
+              {
+                id: "p1-4",
+                marker: "D",
+                text: "D The study also urges parents not to underestimate their own good and bad money habits. \"Since young children have few monetary resources they control independently, it is the basic approaches and skills which are modelled, discussed and demonstrated by parents that are likely to be influential levers, breeding efficient habits and practices,\" it says.",
+              },
+              {
+                id: "p1-5",
+                marker: "E",
+                text: "E Parents who choose to help their children learn how to plan ahead, reflect on the past and self-regulate can make a huge difference in promoting good financial behaviour in the future, explains Whitebread. According to a survey by M&G Investments, the vast majority (83%) of parents recognise the value of teaching their children about money. However, this concern does not always carry through to practice —— one in six do not feel confident enough to do it. More than one in every four parents think children should take responsibility for understanding money themselves.",
+              },
+              {
+                id: "p1-6",
+                marker: "F",
+                text: "F \"There's joy in the fact that young children are spontaneous and live life in the moment, unrestrained by adult problems. But teaching children about money when they are young is a good way for parents to help them learn to delay satisfaction, so that the child thinks: 'I'd like to do this but I'm not going to'. Hard evidence suggests, if you want your child to do well in life, the earlier you can start trying to teach them inhibition and self-discipline, the better,\" says Whitebread, pointing to research that has shown people in prison frequently have poor impulse control, a personality trait that can affect relationships and long-term health.",
+              },
+              {
+                id: "p1-7",
+                marker: "G",
+                text: "G But how should a parent try to teach their child to spend responsibly? One simple way is to give them pocket money and then help them to analyse and learn from any foolish spending decisions.",
+              },
+              {
+                id: "p1-8",
+                marker: "H",
+                text: "H Another is through board games which can help teach financial responsibility. Pop to the Shops, a shopping board game for five-to-nine-year-olds, has been one of Orchard Toys' top 10 best-selling board games every year for the past 15 years. To win, players must use fake coins to purchase everyday grocery items from various shops around the board, and give the other players who visit their shop the correct change. If they don't have enough money, they must purchase a cheaper item. \"It acts as a conversation starter about money —— parents can fill in the gaps,\" says Orchard Toys product manager Rachael Sutcliffe.",
+              },
+              {
+                id: "p1-9",
+                marker: "I",
+                text: "I There are also some pocket-money-tracking and payment apps, such as RoosterMoney and goHenry, which are designed to be used by under-sevens, and which boast that they can help children develop good money habits. This is dependent on the children receiving enough pocket money to need an app to track their spending, which research suggests is not always the case.",
+              },
+              {
+                id: "p1-10",
+                marker: "J",
+                text: "J Surprisingly, given the research about habit-forming in young children, there are very few gaming apps that can help under-sevens —— Pigby's Fair, developed by NatWest, being a notable exception. In this, children who solve basic puzzles will earn virtual money selling what they have made at different stalls in a fair, then spend or save it. But the need to shift virtual money around, and take into account interest payments and pocket money bonuses, makes it a complex financial education tool.",
+              },
+              {
+                id: "p1-11",
+                marker: "K",
+                text: "K There are plenty of online games which focus on coin recognition and counting with money, such as the Igloo Shopping game or Top Marks' Coins Game. So what if children find such games boring? An exciting (and free) real-world option for parents to use is a visit to Metro Bank. Although, like most banks, it does not allow children to open an account until they turn 11, it specifically tries to offer young children a chance to learn about money inside its branches by inviting kids to use the \"magic money machines\" to count their coins. Children who accurately guess how much was in their piggy bank (猪形储钱罐) get a prize, and free candies are handed out when the coins are exchanged for banknotes. The bank does not take a commission from the transaction.",
+              },
+              {
+                id: "p1-12",
+                marker: "L",
+                text: "L At six years old, my daughter Flora is getting to grips with her finances early. She tested out a number of games aimed at teaching children her age the value of money. She enjoyed them all, but best, in her view, is Money Match Cafe, a board game where she must work out the value of different denominations (面额) of coin in her imaginary restaurant, her \"customers\" being her stuffed toys. \"It was really fun because you get to serve food to your own toys on a little tray with a napkin on it, and then you can hug them,\" she says.",
+              },
+              {
+                id: "p1-13",
+                marker: "M",
+                text: "M \"If you're six and you play this game, you'll learn that you might not have the right amount of money for what you want to buy. You just have to cross your fingers and hope. It's a good challenge, and I enjoyed adding the coins up to see how much they made. But I don't like the name. Money Match Cafe is not a good name for a café. I would have liked it more if it had been Flora's Cafe or Fantastically Baked Lunches.\"",
+              },
+              {
+                id: "p1-14",
+                marker: "N",
+                text: "N Seven out of ten teachers think children are now faced with financial decisions earlier. On Wednesday, Lifesavers —— a new project which promotes financial education in primary schools —— is hosting a conference to encourage teachers to join its programme and get free classroom resources and training. Almost two-thirds of millennials (千禧一代) wish they had received more money advice at a younger age, according to a Santander survey.",
+              },
+              {
+                id: "p1-15",
+                marker: "O",
+                text: "O Only a third of parents involve their children in discussions about their household finances, even though less than half of young people aged seven to seventeen receive financial education at school, another survey shows.",
+              },
+              {
+                id: "p1-16",
+                marker: "P",
+                text: "P Most adults believe their parents have had the biggest influence on their money behaviour. So when should they start trying to instil (灌输) good habits? As early as possible before the age of seven, research suggests. money, but many of them actually don't do much in this respect. draw lessons from bad decisions on spending. learn them early enough. the most by their parents. pocket money spending. determines the way they handle money thereafter. decisions at a younger age. management habits. in discussions on their family finances.",
+              },
+            ],
+        },
+        {
+          id: "p2",
+          title: "Passage One",
+          source: "2026年6月英语六级真题（第3套）",
+          paragraphs:
+            [
+              {
+                id: "p2-1",
+                marker: "A",
+                text: "Three artists have brought a lawsuit against Stability AI, DeviantArt, and Midjourney, alleging that the text-to-image AI tools have infringed the rights of thousands of artists. The lawsuit claims that the Stable Diffusion tool used by Stability AI, DeviantArt, and Midjourney was trained on billions of copyrighted images downloaded from the internet and used by the companies \"without compensation or consent from the artists.\" The artists are represented by The Joseph Saveri Law Firm and Matthew Butterick.",
+              },
+              {
+                id: "p2-2",
+                marker: "B",
+                text: "\"If Stable Diffusion and similar products are allowed to continue to operate as they do now, the foreseeable result is they will replace the very artists whose stolen works power these AI products with whom they are competing,\" the law firm wrote in a press release. \"AI image products are not just an infringement of artists' rights; they will eliminate 'artist' as a viable career path. In addition to obtaining compensation for the wrongful conduct, this lawsuit seeks to prevent that outcome and ensure these products follow the same rules as any other new technology that involves the use of massive amounts of intellectual property.",
+              },
+              {
+                id: "p2-3",
+                marker: "C",
+                text: "If streaming music can be accomplished within the law, so can AI products.\" Since text-to-image generators have increased in popularity in the past year, many artists have been vocalizing their opposition to AI art after seeing their own distorted signatures appear in AI art and finding out that their work was used to train the tools without their permission. Not only are many artists furious at the possible copyright violations of AI art, but they have also been frustrated by how AI tools are able to sidestep the labor and art processes they are required to go through.",
+              },
+              {
+                id: "p2-4",
+                marker: "D",
+                text: "As a result, many artists have been trying to ban AI art from art-sharing platforms. As AI innovation continues at a rapid speed, it seems that artists and lawmakers are trying to put a brake on further developments before it's too late. Many tech enthusiasts are still rallying around the promise of AI tools to create detailed images cheaply and quickly —— anonymous tech supporters have already published a response to Butterick and Joseph Saveri's lawsuit on a website, using the \"fair use\" clause as the basis for why copyrighted images could be used by the tool.",
+              },
+              {
+                id: "p2-5",
+                marker: "E",
+                text: "Fair use, a legal doctrine that allows for a limited usage of copyrighted materials without permission by the original creators for purposes such as teaching and news sharing, is what a lot of generative model creators claim that their training data is covered by. However, since fair use applies differently to each case, it's hard to make a blanket statement about all works in a dataset as being applicable.",
+              },
+            ],
+        },
+        {
+          id: "p3",
+          title: "Passage Two",
+          source: "2026年6月英语六级真题（第3套）",
+          paragraphs:
+            [
+              {
+                id: "p3-1",
+                marker: "A",
+                text: "On a warm October morning, Daniel Agok woke up to another disappointing day at his school in Wanyjok, South Sudan. The classes he had planned teaching computer skills to aspiring young professionals were canceled, due to an unreliable diesel generator and the absence of a municipal power grid in his area. Now, he would be losing frustrated customers as well as income. Agok is just one of the hundreds of millions of people in sub-Saharan Africa, many of whom are business owners, who still do not have dependable electricity.",
+              },
+              {
+                id: "p3-2",
+                marker: "B",
+                text: "This inequitable access to energy continues to put their livelihood and future at risk. The current system keeps a lid on the economic talents of people like Agok and his students. We must instead unleash their abilities and let Africa reach its true economic potential. That means wiring Africa with clean, dependable energy. Historically, national governments on the continent have led electrification efforts, but fewer than half of the people surveyed say that the national grid is providing a reliable supply of electricity.",
+              },
+              {
+                id: "p3-3",
+                marker: "C",
+                text: "This has led to expensive and harmful temporary \"solutions\". In Nigeria alone, experts estimate people spend $13 billion every year on fuel for toxic, polluting generators. That number will only grow as the continent's population hits 2.5 billion people by 2050. Deploying modern grid infrastructure with speed and at scale is essential to replacing these temporary solutions with reliable and affordable alternatives. The rapidly growing private power sector in Africa holds the key to achieving the speed and scale necessary to close the continent's energy access gap.",
+              },
+              {
+                id: "p3-4",
+                marker: "D",
+                text: "Private companies today are building world-class infrastructure and driving forward economic growth with sustainable business models. In fact, many governments agree and have begun to embrace the private sector as partners in providing reliable power at scale. In South Africa, President Cyril Ramaphosa has streamlined licensing requirements and enlisted the private sector to play a key role. South Africa is just one example.",
+              },
+              {
+                id: "p3-5",
+                marker: "E",
+                text: "Across the continent, the private sector has delivered power faster and more reliably, and governments are increasingly turning to private partners. With the right funding and structure in place, the private sector will come together to provide this essential service. After all, electrifying sub-Saharan Africa is a $350 billion opportunity. Today, Daniel Agok is steadily growing his business in South Sudan. His town of Wanyjok was electrified by a private company, providing clean, reliable, and affordable power to his business and his neighbors.",
+              },
+              {
+                id: "p3-6",
+                marker: "F",
+                text: "Agok now operates his growing computer skills training business smoothly. His classes are no longer affected by the smell and the constant noise of the diesel generator, and he saves money with more affordable power. His students are developing hardware and software skills.",
+              },
+            ],
+        },
+      ],
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s3-m36",
+          number: 36,
+          type: "single",
+          stem: "Most parents realise the importance of teaching their children how to handle money, but many of them actually don't do much in this respect.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A The cost of a mortgage or rents, meeting monthly utility…",
+              },
+              {
+                key: "B",
+                text: "B Experts believe it is all about the age you learn how to…",
+              },
+              {
+                key: "C",
+                text: "C Tomorrow marks the start of Global Money Week, a…",
+              },
+              {
+                key: "D",
+                text: "D The study also urges parents not to underestimate their…",
+              },
+              {
+                key: "E",
+                text: "E Parents who choose to help their children learn how to…",
+              },
+              {
+                key: "F",
+                text: "F \"There's joy in the fact that young children are…",
+              },
+              {
+                key: "G",
+                text: "G But how should a parent try to teach their child to spend…",
+              },
+              {
+                key: "H",
+                text: "H Another is through board games which can help teach…",
+              },
+              {
+                key: "I",
+                text: "I There are also some pocket-money-tracking and payment…",
+              },
+              {
+                key: "J",
+                text: "J Surprisingly, given the research about habit-forming in…",
+              },
+              {
+                key: "K",
+                text: "K There are plenty of online games which focus on coin…",
+              },
+              {
+                key: "L",
+                text: "L At six years old, my daughter Flora is getting to grips…",
+              },
+              {
+                key: "M",
+                text: "M \"If you're six and you play this game, you'll learn that…",
+              },
+              {
+                key: "N",
+                text: "N Seven out of ten teachers think children are now faced…",
+              },
+              {
+                key: "O",
+                text: "O Only a third of parents involve their children in…",
+              },
+              {
+                key: "P",
+                text: "P Most adults believe their parents have had the biggest…",
+              },
+            ],
+          answer: "E",
+          explanation: "E 段： 83% 的父母认识到教孩子理财的价值，但很多人并未付诸实践。",
+          evidence:
+            {
+              paragraphId: "p1-5",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-m37",
+          number: 37,
+          type: "single",
+          stem: "People differ substantially in their way of managing finance.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A The cost of a mortgage or rents, meeting monthly utility…",
+              },
+              {
+                key: "B",
+                text: "B Experts believe it is all about the age you learn how to…",
+              },
+              {
+                key: "C",
+                text: "C Tomorrow marks the start of Global Money Week, a…",
+              },
+              {
+                key: "D",
+                text: "D The study also urges parents not to underestimate their…",
+              },
+              {
+                key: "E",
+                text: "E Parents who choose to help their children learn how to…",
+              },
+              {
+                key: "F",
+                text: "F \"There's joy in the fact that young children are…",
+              },
+              {
+                key: "G",
+                text: "G But how should a parent try to teach their child to spend…",
+              },
+              {
+                key: "H",
+                text: "H Another is through board games which can help teach…",
+              },
+              {
+                key: "I",
+                text: "I There are also some pocket-money-tracking and payment…",
+              },
+              {
+                key: "J",
+                text: "J Surprisingly, given the research about habit-forming in…",
+              },
+              {
+                key: "K",
+                text: "K There are plenty of online games which focus on coin…",
+              },
+              {
+                key: "L",
+                text: "L At six years old, my daughter Flora is getting to grips…",
+              },
+              {
+                key: "M",
+                text: "M \"If you're six and you play this game, you'll learn that…",
+              },
+              {
+                key: "N",
+                text: "N Seven out of ten teachers think children are now faced…",
+              },
+              {
+                key: "O",
+                text: "O Only a third of parents involve their children in…",
+              },
+              {
+                key: "P",
+                text: "P Most adults believe their parents have had the biggest…",
+              },
+            ],
+          answer: "A",
+          explanation: "A 段：人们在理财方式上存在很大差异（精明储蓄者与挥霍者的对比）。",
+          evidence:
+            {
+              paragraphId: "p1-1",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-m38",
+          number: 38,
+          type: "single",
+          stem: "Parents can easily teach children how to spend responsibly by helping them draw lessons from bad decisions on spending.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A The cost of a mortgage or rents, meeting monthly utility…",
+              },
+              {
+                key: "B",
+                text: "B Experts believe it is all about the age you learn how to…",
+              },
+              {
+                key: "C",
+                text: "C Tomorrow marks the start of Global Money Week, a…",
+              },
+              {
+                key: "D",
+                text: "D The study also urges parents not to underestimate their…",
+              },
+              {
+                key: "E",
+                text: "E Parents who choose to help their children learn how to…",
+              },
+              {
+                key: "F",
+                text: "F \"There's joy in the fact that young children are…",
+              },
+              {
+                key: "G",
+                text: "G But how should a parent try to teach their child to spend…",
+              },
+              {
+                key: "H",
+                text: "H Another is through board games which can help teach…",
+              },
+              {
+                key: "I",
+                text: "I There are also some pocket-money-tracking and payment…",
+              },
+              {
+                key: "J",
+                text: "J Surprisingly, given the research about habit-forming in…",
+              },
+              {
+                key: "K",
+                text: "K There are plenty of online games which focus on coin…",
+              },
+              {
+                key: "L",
+                text: "L At six years old, my daughter Flora is getting to grips…",
+              },
+              {
+                key: "M",
+                text: "M \"If you're six and you play this game, you'll learn that…",
+              },
+              {
+                key: "N",
+                text: "N Seven out of ten teachers think children are now faced…",
+              },
+              {
+                key: "O",
+                text: "O Only a third of parents involve their children in…",
+              },
+              {
+                key: "P",
+                text: "P Most adults believe their parents have had the biggest…",
+              },
+            ],
+          answer: "G",
+          explanation: "G 段：给孩子零花钱并帮助他们从错误消费决策中吸取教训。",
+          evidence:
+            {
+              paragraphId: "p1-7",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-m39",
+          number: 39,
+          type: "single",
+          stem: "Many young British people badly lack money management skills and they don't learn them early enough.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A The cost of a mortgage or rents, meeting monthly utility…",
+              },
+              {
+                key: "B",
+                text: "B Experts believe it is all about the age you learn how to…",
+              },
+              {
+                key: "C",
+                text: "C Tomorrow marks the start of Global Money Week, a…",
+              },
+              {
+                key: "D",
+                text: "D The study also urges parents not to underestimate their…",
+              },
+              {
+                key: "E",
+                text: "E Parents who choose to help their children learn how to…",
+              },
+              {
+                key: "F",
+                text: "F \"There's joy in the fact that young children are…",
+              },
+              {
+                key: "G",
+                text: "G But how should a parent try to teach their child to spend…",
+              },
+              {
+                key: "H",
+                text: "H Another is through board games which can help teach…",
+              },
+              {
+                key: "I",
+                text: "I There are also some pocket-money-tracking and payment…",
+              },
+              {
+                key: "J",
+                text: "J Surprisingly, given the research about habit-forming in…",
+              },
+              {
+                key: "K",
+                text: "K There are plenty of online games which focus on coin…",
+              },
+              {
+                key: "L",
+                text: "L At six years old, my daughter Flora is getting to grips…",
+              },
+              {
+                key: "M",
+                text: "M \"If you're six and you play this game, you'll learn that…",
+              },
+              {
+                key: "N",
+                text: "N Seven out of ten teachers think children are now faced…",
+              },
+              {
+                key: "O",
+                text: "O Only a third of parents involve their children in…",
+              },
+              {
+                key: "P",
+                text: "P Most adults believe their parents have had the biggest…",
+              },
+            ],
+          answer: "C",
+          explanation: "C 段： “ 对于许多英国年轻人来说，这太少了，也太晚了 ” ，暗示缺乏理财技能。",
+          evidence:
+            {
+              paragraphId: "p1-3",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-m40",
+          number: 40,
+          type: "single",
+          stem: "The majority of adults believe that their spending habits have been influenced the most by their parents.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A The cost of a mortgage or rents, meeting monthly utility…",
+              },
+              {
+                key: "B",
+                text: "B Experts believe it is all about the age you learn how to…",
+              },
+              {
+                key: "C",
+                text: "C Tomorrow marks the start of Global Money Week, a…",
+              },
+              {
+                key: "D",
+                text: "D The study also urges parents not to underestimate their…",
+              },
+              {
+                key: "E",
+                text: "E Parents who choose to help their children learn how to…",
+              },
+              {
+                key: "F",
+                text: "F \"There's joy in the fact that young children are…",
+              },
+              {
+                key: "G",
+                text: "G But how should a parent try to teach their child to spend…",
+              },
+              {
+                key: "H",
+                text: "H Another is through board games which can help teach…",
+              },
+              {
+                key: "I",
+                text: "I There are also some pocket-money-tracking and payment…",
+              },
+              {
+                key: "J",
+                text: "J Surprisingly, given the research about habit-forming in…",
+              },
+              {
+                key: "K",
+                text: "K There are plenty of online games which focus on coin…",
+              },
+              {
+                key: "L",
+                text: "L At six years old, my daughter Flora is getting to grips…",
+              },
+              {
+                key: "M",
+                text: "M \"If you're six and you play this game, you'll learn that…",
+              },
+              {
+                key: "N",
+                text: "N Seven out of ten teachers think children are now faced…",
+              },
+              {
+                key: "O",
+                text: "O Only a third of parents involve their children in…",
+              },
+              {
+                key: "P",
+                text: "P Most adults believe their parents have had the biggest…",
+              },
+            ],
+          answer: "P",
+          explanation: "P 段： “ 大多数成年人认为父母对他们的金钱行为影响最大 ” 。",
+          evidence:
+            {
+              paragraphId: "p1-16",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-m41",
+          number: 41,
+          type: "single",
+          stem: "There are apps designed specifically for children under 7 to help them track pocket money spending.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A The cost of a mortgage or rents, meeting monthly utility…",
+              },
+              {
+                key: "B",
+                text: "B Experts believe it is all about the age you learn how to…",
+              },
+              {
+                key: "C",
+                text: "C Tomorrow marks the start of Global Money Week, a…",
+              },
+              {
+                key: "D",
+                text: "D The study also urges parents not to underestimate their…",
+              },
+              {
+                key: "E",
+                text: "E Parents who choose to help their children learn how to…",
+              },
+              {
+                key: "F",
+                text: "F \"There's joy in the fact that young children are…",
+              },
+              {
+                key: "G",
+                text: "G But how should a parent try to teach their child to spend…",
+              },
+              {
+                key: "H",
+                text: "H Another is through board games which can help teach…",
+              },
+              {
+                key: "I",
+                text: "I There are also some pocket-money-tracking and payment…",
+              },
+              {
+                key: "J",
+                text: "J Surprisingly, given the research about habit-forming in…",
+              },
+              {
+                key: "K",
+                text: "K There are plenty of online games which focus on coin…",
+              },
+              {
+                key: "L",
+                text: "L At six years old, my daughter Flora is getting to grips…",
+              },
+              {
+                key: "M",
+                text: "M \"If you're six and you play this game, you'll learn that…",
+              },
+              {
+                key: "N",
+                text: "N Seven out of ten teachers think children are now faced…",
+              },
+              {
+                key: "O",
+                text: "O Only a third of parents involve their children in…",
+              },
+              {
+                key: "P",
+                text: "P Most adults believe their parents have had the biggest…",
+              },
+            ],
+          answer: "I",
+          explanation: "I 段：有一些专为 7 岁以下儿童设计的追踪零花钱的应用程序。",
+          evidence:
+            {
+              paragraphId: "p1-9",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-m42",
+          number: 42,
+          type: "single",
+          stem: "According to experts, the age a person learns to manage finance responsibly determines the way they handle money thereafter.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A The cost of a mortgage or rents, meeting monthly utility…",
+              },
+              {
+                key: "B",
+                text: "B Experts believe it is all about the age you learn how to…",
+              },
+              {
+                key: "C",
+                text: "C Tomorrow marks the start of Global Money Week, a…",
+              },
+              {
+                key: "D",
+                text: "D The study also urges parents not to underestimate their…",
+              },
+              {
+                key: "E",
+                text: "E Parents who choose to help their children learn how to…",
+              },
+              {
+                key: "F",
+                text: "F \"There's joy in the fact that young children are…",
+              },
+              {
+                key: "G",
+                text: "G But how should a parent try to teach their child to spend…",
+              },
+              {
+                key: "H",
+                text: "H Another is through board games which can help teach…",
+              },
+              {
+                key: "I",
+                text: "I There are also some pocket-money-tracking and payment…",
+              },
+              {
+                key: "J",
+                text: "J Surprisingly, given the research about habit-forming in…",
+              },
+              {
+                key: "K",
+                text: "K There are plenty of online games which focus on coin…",
+              },
+              {
+                key: "L",
+                text: "L At six years old, my daughter Flora is getting to grips…",
+              },
+              {
+                key: "M",
+                text: "M \"If you're six and you play this game, you'll learn that…",
+              },
+              {
+                key: "N",
+                text: "N Seven out of ten teachers think children are now faced…",
+              },
+              {
+                key: "O",
+                text: "O Only a third of parents involve their children in…",
+              },
+              {
+                key: "P",
+                text: "P Most adults believe their parents have had the biggest…",
+              },
+            ],
+          answer: "B",
+          explanation: "B 段：专家的研究表明，学习负责任理财的年龄决定了此后处理金钱的方式。",
+          evidence:
+            {
+              paragraphId: "p1-2",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-m43",
+          number: 43,
+          type: "single",
+          stem: "Most teachers are of the opinion that children today need to make financial decisions at a younger age.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A The cost of a mortgage or rents, meeting monthly utility…",
+              },
+              {
+                key: "B",
+                text: "B Experts believe it is all about the age you learn how to…",
+              },
+              {
+                key: "C",
+                text: "C Tomorrow marks the start of Global Money Week, a…",
+              },
+              {
+                key: "D",
+                text: "D The study also urges parents not to underestimate their…",
+              },
+              {
+                key: "E",
+                text: "E Parents who choose to help their children learn how to…",
+              },
+              {
+                key: "F",
+                text: "F \"There's joy in the fact that young children are…",
+              },
+              {
+                key: "G",
+                text: "G But how should a parent try to teach their child to spend…",
+              },
+              {
+                key: "H",
+                text: "H Another is through board games which can help teach…",
+              },
+              {
+                key: "I",
+                text: "I There are also some pocket-money-tracking and payment…",
+              },
+              {
+                key: "J",
+                text: "J Surprisingly, given the research about habit-forming in…",
+              },
+              {
+                key: "K",
+                text: "K There are plenty of online games which focus on coin…",
+              },
+              {
+                key: "L",
+                text: "L At six years old, my daughter Flora is getting to grips…",
+              },
+              {
+                key: "M",
+                text: "M \"If you're six and you play this game, you'll learn that…",
+              },
+              {
+                key: "N",
+                text: "N Seven out of ten teachers think children are now faced…",
+              },
+              {
+                key: "O",
+                text: "O Only a third of parents involve their children in…",
+              },
+              {
+                key: "P",
+                text: "P Most adults believe their parents have had the biggest…",
+              },
+            ],
+          answer: "N",
+          explanation: "N 段： “ 十分之七的教师认为孩子现在面临更早的财务决策 ” 。",
+          evidence:
+            {
+              paragraphId: "p1-14",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-m44",
+          number: 44,
+          type: "single",
+          stem: "Parents serve as effective role models in shaping children's money management habits.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A The cost of a mortgage or rents, meeting monthly utility…",
+              },
+              {
+                key: "B",
+                text: "B Experts believe it is all about the age you learn how to…",
+              },
+              {
+                key: "C",
+                text: "C Tomorrow marks the start of Global Money Week, a…",
+              },
+              {
+                key: "D",
+                text: "D The study also urges parents not to underestimate their…",
+              },
+              {
+                key: "E",
+                text: "E Parents who choose to help their children learn how to…",
+              },
+              {
+                key: "F",
+                text: "F \"There's joy in the fact that young children are…",
+              },
+              {
+                key: "G",
+                text: "G But how should a parent try to teach their child to spend…",
+              },
+              {
+                key: "H",
+                text: "H Another is through board games which can help teach…",
+              },
+              {
+                key: "I",
+                text: "I There are also some pocket-money-tracking and payment…",
+              },
+              {
+                key: "J",
+                text: "J Surprisingly, given the research about habit-forming in…",
+              },
+              {
+                key: "K",
+                text: "K There are plenty of online games which focus on coin…",
+              },
+              {
+                key: "L",
+                text: "L At six years old, my daughter Flora is getting to grips…",
+              },
+              {
+                key: "M",
+                text: "M \"If you're six and you play this game, you'll learn that…",
+              },
+              {
+                key: "N",
+                text: "N Seven out of ten teachers think children are now faced…",
+              },
+              {
+                key: "O",
+                text: "O Only a third of parents involve their children in…",
+              },
+              {
+                key: "P",
+                text: "P Most adults believe their parents have had the biggest…",
+              },
+            ],
+          answer: "D",
+          explanation: "D 段：父母在塑造孩子理财习惯方面是有效的榜样。",
+          evidence:
+            {
+              paragraphId: "p1-4",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-m45",
+          number: 45,
+          type: "single",
+          stem: "According to one study, about 30% of parents allow their children to participate in discussions on their family finances.",
+          options:
+            [
+              {
+                key: "A",
+                text: "A The cost of a mortgage or rents, meeting monthly utility…",
+              },
+              {
+                key: "B",
+                text: "B Experts believe it is all about the age you learn how to…",
+              },
+              {
+                key: "C",
+                text: "C Tomorrow marks the start of Global Money Week, a…",
+              },
+              {
+                key: "D",
+                text: "D The study also urges parents not to underestimate their…",
+              },
+              {
+                key: "E",
+                text: "E Parents who choose to help their children learn how to…",
+              },
+              {
+                key: "F",
+                text: "F \"There's joy in the fact that young children are…",
+              },
+              {
+                key: "G",
+                text: "G But how should a parent try to teach their child to spend…",
+              },
+              {
+                key: "H",
+                text: "H Another is through board games which can help teach…",
+              },
+              {
+                key: "I",
+                text: "I There are also some pocket-money-tracking and payment…",
+              },
+              {
+                key: "J",
+                text: "J Surprisingly, given the research about habit-forming in…",
+              },
+              {
+                key: "K",
+                text: "K There are plenty of online games which focus on coin…",
+              },
+              {
+                key: "L",
+                text: "L At six years old, my daughter Flora is getting to grips…",
+              },
+              {
+                key: "M",
+                text: "M \"If you're six and you play this game, you'll learn that…",
+              },
+              {
+                key: "N",
+                text: "N Seven out of ten teachers think children are now faced…",
+              },
+              {
+                key: "O",
+                text: "O Only a third of parents involve their children in…",
+              },
+              {
+                key: "P",
+                text: "P Most adults believe their parents have had the biggest…",
+              },
+            ],
+          answer: "O",
+          explanation: "O 段： “ 只有三分之一的父母让孩子参与家庭财务讨论 ” 。",
+          evidence:
+            {
+              paragraphId: "p1-15",
+            },
+          score: 1,
+        },
+        {
+          id: "cet6-2026-06-s3-r46",
+          number: 46,
+          type: "single",
+          stem: "Why have three artists brought a lawsuit against Stability AI, DeviantArt, and Midjourney?",
+          options:
+            [
+              {
+                key: "A",
+                text: "They claim that the use of the Stable Diffusion tool is a violation of law.",
+              },
+              {
+                key: "B",
+                text: "They claim these companies infringed their intellectual property rights.",
+              },
+              {
+                key: "C",
+                text: "They want to stop the use of all AI tools in the creation of art works.",
+              },
+              {
+                key: "D",
+                text: "They want to prevent artists from being compelled to rely on AI tools.",
+              },
+            ],
+          answer: "B",
+          explanation: "第二段： “trained on billions of copyrighted images…without compensation or consent” 即侵犯了知识产权。",
+          evidence:
+            {
+              paragraphId: "p2-1",
+              quote: "trained on billions of copyrighted images",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s3-r47",
+          number: 47,
+          type: "single",
+          stem: "What will happen if Stable Diffusion and similar products are allowed to continue to operate as they do now, according to the law firm?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Intellectual property laws will be hard to enforce.",
+              },
+              {
+                key: "B",
+                text: "Fewer artists will invest talent in artistic creation.",
+              },
+              {
+                key: "C",
+                text: "Artists will lose their means of subsistence.",
+              },
+              {
+                key: "D",
+                text: "Copied works will flood the art market.",
+              },
+            ],
+          answer: "C",
+          explanation: "第四段： “eliminate 'artist' as a viable career path” 即艺术家将失去谋生手段。",
+          evidence:
+            {
+              paragraphId: "p2-2",
+              quote: "eliminate 'artist' as a viable career path",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s3-r48",
+          number: 48,
+          type: "single",
+          stem: "What makes artists furious aside from copyright infringement?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Art works produced with AI tools are not banned from art-sharing platforms.",
+              },
+              {
+                key: "B",
+                text: "Text-to-image generators have won such great popularity in the past year.",
+              },
+              {
+                key: "C",
+                text: "Their distorted signatures appear more and more frequently in AI art.",
+              },
+              {
+                key: "D",
+                text: "AI tools can bypass the considerable labor involved in creating art works.",
+              },
+            ],
+          answer: "D",
+          explanation: "第七段： “frustrated by how AI tools are able to sidestep the labor and art processes” 即 AI 工具绕过了创作所需的劳动和艺术过程。",
+          evidence:
+            {
+              paragraphId: "p2-3",
+              quote: "frustrated by how AI tools are able to sidestep the labor and art processes",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s3-r49",
+          number: 49,
+          type: "single",
+          stem: "What do we learn from the passage about many AI enthusiasts?",
+          options:
+            [
+              {
+                key: "A",
+                text: "They look forward to AI tools creating good-quality art works.",
+              },
+              {
+                key: "B",
+                text: "They claim artists can use copyrighted materials just as teachers do.",
+              },
+              {
+                key: "C",
+                text: "They support AI's limited use of copyrighted images without permission.",
+              },
+              {
+                key: "D",
+                text: "They wish the \"fair use\" clause would be applicable to all works in a dataset.",
+              },
+            ],
+          answer: "C",
+          explanation: "倒数第二段：科技爱好者以 “ 合理使用 ” 条款为依据，支持 AI 在未经许可的情况下有限使用受版权保护的图像。",
+          evidence:
+            {
+              paragraphId: "p2-4",
+              quote: "Many tech enthusiasts are still rallying around the promise of AI tools to create detailed images cheaply and quickly —— anonymous tech supporters have already published a response to Butterick and Joseph Saveri's lawsuit on a website, using the \"fair use\" clause as the basis for why copyrighted images could be used by the tool.",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s3-r50",
+          number: 50,
+          type: "single",
+          stem: "What does the author think of the \"fair use\" clause in copyright law?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It may determine the final verdict of the case.",
+              },
+              {
+                key: "B",
+                text: "It may not apply to the present legal case.",
+              },
+              {
+                key: "C",
+                text: "It does not cover the works of all artists.",
+              },
+              {
+                key: "D",
+                text: "It is subject to different interpretations.",
+              },
+            ],
+          answer: "B",
+          explanation: "末段： “since fair use applies differently to each case” 即合理使用条款可能不适用于当前案件。",
+          evidence:
+            {
+              paragraphId: "p2-5",
+              quote: "since fair use applies differently to each case",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s3-r51",
+          number: 51,
+          type: "single",
+          stem: "What do we learn about the current electric supply system in Africa?",
+          options:
+            [
+              {
+                key: "A",
+                text: "It curbs the economic development of the continent.",
+              },
+              {
+                key: "B",
+                text: "It mainly depends on the polluting diesel generators.",
+              },
+              {
+                key: "C",
+                text: "It is the primary cause of inequitable distribution of wealth.",
+              },
+              {
+                key: "D",
+                text: "It deprives many Africans of the opportunity to use computers.",
+              },
+            ],
+          answer: "A",
+          explanation: "第一段： “The current system keeps a lid on the economic talents” 即制约了经济发展。",
+          evidence:
+            {
+              paragraphId: "p3-2",
+              quote: "The current system keeps a lid on the economic talents",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s3-r52",
+          number: 52,
+          type: "single",
+          stem: "What do we learn from the passage about Africa's past electrification efforts?",
+          options:
+            [
+              {
+                key: "A",
+                text: "They have failed to meet most Africans' need of a reliable power supply.",
+              },
+              {
+                key: "B",
+                text: "They have failed to build a national grid to provide electric power.",
+              },
+              {
+                key: "C",
+                text: "They have unleashed the true economic potential of the continent.",
+              },
+              {
+                key: "D",
+                text: "They have aimed at wiring Africa with clean, dependable energy.",
+              },
+            ],
+          answer: "A",
+          explanation: "第四段： “fewer than half…say the national grid is providing a reliable supply” 即未能满足可靠供电需求。",
+          evidence:
+            {
+              paragraphId: "p3-2",
+              quote: "Historically, national governments on the continent have led electrification efforts, but fewer than half of the people surveyed say that the national grid is providing a reliable supply of electricity.",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s3-r53",
+          number: 53,
+          type: "single",
+          stem: "What is essential to tackling the power supply shortage in Africa?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Replacing temporary solutions with long-term strategies.",
+              },
+              {
+                key: "B",
+                text: "Accelerating economic growth with sustainable policies.",
+              },
+              {
+                key: "C",
+                text: "Restructuring national power generation companies.",
+              },
+              {
+                key: "D",
+                text: "Putting in place a large-scale modern power grid speedily.",
+              },
+            ],
+          answer: "D",
+          explanation: "第五段： “Deploying modern grid infrastructure with speed and at scale is essential” 即快速大规模部署现代电网。",
+          evidence:
+            {
+              paragraphId: "p3-3",
+              quote: "Deploying modern grid infrastructure with speed and at scale is essential",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s3-r54",
+          number: 54,
+          type: "single",
+          stem: "What are many governments in Africa doing to solve the electricity supply problem?",
+          options:
+            [
+              {
+                key: "A",
+                text: "Focusing on building world-class infrastructures.",
+              },
+              {
+                key: "B",
+                text: "Relying on the private sector for scale economy.",
+              },
+              {
+                key: "C",
+                text: "Launching sustainable business models.",
+              },
+              {
+                key: "D",
+                text: "Cooperating with private companies.",
+              },
+            ],
+          answer: "D",
+          explanation: "第七段： “governments have begun to embrace the private sector as partners” 即与私营企业合作。",
+          evidence:
+            {
+              paragraphId: "p3-4",
+              quote: "In fact, many governments agree and have begun to embrace the private sector as partners in providing reliable power at scale.",
+            },
+          score: 2,
+        },
+        {
+          id: "cet6-2026-06-s3-r55",
+          number: 55,
+          type: "single",
+          stem: "Why will private companies be motivated to join the effort of electrifying sub- Saharan Africa?",
+          options:
+            [
+              {
+                key: "A",
+                text: "There is big money to be made.",
+              },
+              {
+                key: "B",
+                text: "They have enough funding in place.",
+              },
+              {
+                key: "C",
+                text: "South Africa has set a successful example.",
+              },
+              {
+                key: "D",
+                text: "Governments are turning to them for help.",
+              },
+            ],
+          answer: "A",
+          explanation: "第八段： “electrifying sub-Saharan Africa is a $350 billion opportunity”即有巨大的利润可赚。",
+          evidence:
+            {
+              paragraphId: "p3-5",
+              quote: "electrifying sub-Saharan Africa is a $350 billion opportunity",
+            },
+          score: 2,
+        },
+      ],
+  },
+  {
+    id: "translation",
+    kind: "translation",
+    title: "Part IV Translation",
+    instructions: "Part IV Translation (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2.",
+    minutes: 30,
+    questions:
+      [
+        {
+          id: "cet6-2026-06-s3-t1",
+          number: 56,
+          type: "translation",
+          stem: "近年来，中国无人机 (drone) 产业蓬勃发展，出口量跃升为全球第一。中国的无人机以出色的稳定性、高清 (high-definition) 拍摄能力和便捷的操作，受到全球消费者的喜爱，在民用领域得到广泛应用。无人机已被国家纳入战略性新兴产业，逐步成为能满足多种场景需求的智能助手。在农村，无人机可精准识别农作物病虫害，高效喷洒农药。在城市，无人机可快速运送生鲜食品。在不久的将来，无人机能够在更多领域实现其独特价值，为经济社会发展注入新动能。",
+          answer: "见参考",
+          explanation: "翻译要点：“蓬勃发展”：译为 “witnessed remarkable growth”，也可用 “has boomed”。“跃升为全球第一”：“leaping to the top worldwide”。“出色的稳定性”：“excellent stability”。“便捷的操作”：“user-friendly operation”。“战略性新兴产业”：“strategic emerging industries”。“精准识别”：“accurately identify”。“高效喷洒”：“efficiently spray”。“生鲜食品”：“fresh food”。“注入新动能”：“injecting new momentum into”。全真试题整理 · 答案解析 · 仅供学习参考",
+          score: 15,
+        },
+      ],
+    reference:
+      {
+        translation: "In recent years, China's drone industry has witnessed remarkable growth, with its export volume leaping to the top worldwide. Chinese drones are favored by global consumers for their excellent stability, high-definition imaging capabilities, and user-friendly operation, and have been widely applied in the civilian sector. Drones have been included in the national strategic emerging industries and are gradually becoming intelligent assistants capable of meeting diverse needs. In rural areas, drones can accurately identify crop pests and diseases and efficiently spray pesticides. In cities, they can rapidly deliver fresh food. In the near future, drones will be able to realize their unique value in more fields, injecting new momentum into economic and social development.",
+      },
+  },
+];
+
+const content: Record<string, Partial<Paper>> = {
+  "cet6-2026-06-s1":
+    {
+      subtitle: "2026 年 6 月 · 站内收录",
+      minutes: 130,
+      words: 1500,
+      tags:
+        [
+          "真题",
+          "六级",
+        ],
+      summary: "2026年6月英语六级真题第1套，站内收录完整题面与答案，听力提供站内合成朗读。",
+      parts: s1Parts,
+    },
+  "cet6-2026-06-s2":
+    {
+      subtitle: "2026 年 6 月 · 站内收录",
+      minutes: 130,
+      words: 1500,
+      tags:
+        [
+          "真题",
+          "六级",
+        ],
+      summary: "2026年6月英语六级真题第2套，站内收录完整题面与答案，听力提供站内合成朗读。",
+      parts: s2Parts,
+    },
+  "cet6-2026-06-s3":
+    {
+      subtitle: "2026 年 6 月 · 站内收录",
+      minutes: 130,
+      words: 1500,
+      tags:
+        [
+          "真题",
+          "六级",
+        ],
+      summary: "2026年6月英语六级真题第3套，站内收录完整题面与答案，听力提供站内合成朗读。",
+      parts: s3Parts,
+    },
+};
+export default content;
