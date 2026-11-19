@@ -24,7 +24,10 @@ function mergeImported(p: Paper): Paper {
           ...prov,
           license: 'unknown',
           flags: Array.from(
-            new Set([...prov.flags.filter((f) => f !== 'external-only'), 'collected' as ResourceFlag])
+            new Set([
+              ...prov.flags.filter((f) => f !== 'external-only' && f !== 'pending'),
+              'collected' as ResourceFlag
+            ])
           ),
           note: COLLECTED_NOTE
         }

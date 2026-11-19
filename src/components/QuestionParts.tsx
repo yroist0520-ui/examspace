@@ -53,7 +53,9 @@ export function Options({
             >
               {isAnswer ? <Check size={11} /> : isWrongPick ? <X size={11} /> : opt.key}
             </span>
-            <span className="text-[13px] leading-relaxed">{opt.text}</span>
+            <span className="text-[13px] leading-relaxed">
+              {opt.text.replace(/^[A-Z]\)\s*/, '')}
+            </span>
           </button>
         );
       })}
