@@ -1,7 +1,7 @@
 /* EXAMSPACE Service Worker：应用外壳离线缓存 + 静态资源缓存
- * 缓存版本由构建注入（mwm7vr2a），每次部署自动失效旧缓存，避免旧 HTML 引用已删除的旧 JS 造成白屏。
+ * 缓存版本由构建注入（mwmviwb4），每次部署自动失效旧缓存，避免旧 HTML 引用已删除的旧 JS 造成白屏。
  */
-const CACHE = 'examspace-mwm7vr2a';
+const CACHE = 'examspace-mwmviwb4';
 // 相对路径：SW 作用域解析，兼容部署在根域或子路径（GitHub Pages / Gitee Pages）
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon.svg', './favicon.svg'];
 
