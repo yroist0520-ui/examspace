@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 import {
@@ -14,16 +14,21 @@ import {
   X
 } from 'lucide-react';
 import Home from '@/pages/Home';
-import LibraryPage from '@/pages/Library';
-import PaperDetail from '@/pages/PaperDetail';
-import Reader from '@/pages/Reader';
-import Exam from '@/pages/Exam';
-import Result from '@/pages/Result';
-import Practice from '@/pages/Practice';
-import Words from '@/pages/Words';
-import Mistakes from '@/pages/Mistakes';
-import Stats from '@/pages/Stats';
-import Settings from '@/pages/Settings';
+// 非首屏页面按需加载：首页只下载必要代码，其余进入时再取，显著加快首屏。
+const LibraryPage = lazy(() => import('@/pages/Library'));
+const PaperDetail = lazy(() => import('@/pages/PaperDetail'));
+const Reader = lazy(() => import('@/pages/Reader'));
+const Exam = lazy(() => import('@/pages/Exam'));
+const Result = lazy(() => import('@/pages/Result'));
+const Practice = lazy(() => import('@/pages/Practice'));
+const Words = lazy(() => import('@/pages/Words'));
+const Mistakes = lazy(() => import('@/pages/Mistakes'));
+const Stats = lazy(() => import('@/pages/Stats'));
+const Settings = lazy(() => import('@/pages/Settings'));
+
+const PageLoading = () => (
+  <div className="grid min-h-[40vh] place-items-center text-[13px] text-ink-mute">正在加载…</div>
+);
 import WordPopover from '@/components/WordPopover';
 import InstallPrompt from '@/components/InstallPrompt';
 
@@ -57,11 +62,13 @@ export default function App() {
   if (immersive) {
     return (
       <>
+        <Suspense fallback={<PageLoading />}>
         <Routes>
           <Route path="/read/:paperId" element={<Reader />} />
           <Route path="/exam/:paperId" element={<Exam />} />
           <Route path="/result/:attemptId" element={<Result />} />
         </Routes>
+        </Suspense>
         <WordPopover />
       </>
     );
@@ -113,6 +120,7 @@ export default function App() {
 
       <main className="mx-auto max-w-content px-4 pb-24 pt-5 sm:px-6 sm:pt-7 md:pb-12">
         <InstallPrompt />
+        <Suspense fallback={<PageLoading />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/library" element={<LibraryPage />} />
@@ -125,6 +133,7 @@ export default function App() {
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<div className="card p-10 text-center text-sm text-ink-mute">页面不存在</div>} />
         </Routes>
+        </Suspense>
       </main>
 
       <nav className="no-print fixed inset-x-0 bottom-0 z-40 border-t hairline bg-paper/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-xl md:hidden">
