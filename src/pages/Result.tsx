@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import clsx from 'clsx';
 import { Bookmark, BookmarkCheck, ChevronLeft, House, RotateCcw, Target } from 'lucide-react';
-import { paperById } from '@/data/papers';
+import { usePaper, paperReady } from '@/data/papers';
 import { getAttempt, listDrafts, saveDraft } from '@/db';
 import { checkAnswer, isObjective } from '@/lib/score';
 import { formatClock } from '@/lib/text';
@@ -32,7 +32,8 @@ export default function Result() {
     };
   }, [attemptId]);
 
-  const paper: Paper | undefined = attempt ? paperById(attempt.paperId) : undefined;
+  const paper: Paper | undefined = usePaper(attempt?.paperId);
+  const ready = paperReady(attempt?.paperId);
 
   const scoped = useMemo(() => {
     if (!paper || !attempt) return [] as { part: PaperPart; question: Question }[];
@@ -101,6 +102,9 @@ export default function Result() {
     setSavedEssays(next);
   };
 
+  if (!ready) {
+    return <div className="py-16 text-center text-[13px] text-ink-mute">正在加载试卷题目…</div>;
+  }
   return (
     <div className="min-h-full">
       <header className="no-print sticky top-0 z-40 border-b hairline bg-paper/90 backdrop-blur-xl">

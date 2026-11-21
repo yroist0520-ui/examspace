@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import clsx from 'clsx';
 import { ChevronLeft, ClipboardList, PenLine, Timer, X } from 'lucide-react';
-import { paperById } from '@/data/papers';
+import { usePaper, paperReady } from '@/data/papers';
 import {
   bumpDaily,
   createAttempt,
@@ -36,7 +36,8 @@ export default function Exam() {
     return raw ? raw.split(',').filter(Boolean) : null;
   }, [searchParams]);
 
-  const paper: Paper | undefined = paperById(paperId);
+  const paper: Paper | undefined = usePaper(paperId);
+  const ready = paperReady(paperId);
   const [attempt, setAttempt] = useState<Attempt | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [now, setNow] = useState(Date.now());
@@ -184,6 +185,9 @@ export default function Exam() {
         试卷不存在。<button className="btn btn-ghost mt-3" onClick={() => navigate('/library')}>返回真题库</button>
       </div>
     );
+  }
+  if (!ready) {
+    return <div className="py-16 text-center text-[13px] text-ink-mute">正在加载试卷题目…</div>;
   }
   if (!attempt) {
     return <div className="py-16 text-center text-[13px] text-ink-mute">正在准备考试…</div>;

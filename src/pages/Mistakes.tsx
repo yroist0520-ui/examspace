@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { BookOpenCheck, ChevronDown, ExternalLink, RotateCcw } from 'lucide-react';
 import { listMistakes, markMastered } from '@/db';
 import { examMap, exams, partKindLabel } from '@/data/exams';
-import { getQuestion, paperById } from '@/data/papers';
+import { getQuestion, paperById, loadPaper } from '@/data/papers';
 import { relativeDay } from '@/lib/text';
 import { Explanation, Options, QuestionHead } from '@/components/QuestionParts';
 import type { ExamCode, MistakeRecord, PartKind } from '@/types/paper';
@@ -21,10 +21,15 @@ export default function Mistakes() {
   const [onlyPending, setOnlyPending] = useState(true);
   const [expanded, setExpanded] = useState<string | null>(null);
 
+  const [, setContentTick] = useState(0);
   useEffect(() => {
-    void listMistakes().then((list) => {
+    void listMistakes().then(async (list) => {
       setItems(list);
       setLoaded(true);
+      // 错题涉及多套试卷：按需加载各自正文，全部就绪后刷新一次列表
+      const ids = Array.from(new Set(list.map((m) => m.paperId)));
+      await Promise.all(ids.map((id) => loadPaper(id).catch(() => undefined)));
+      setContentTick((t) => t + 1);
     });
   }, []);
 

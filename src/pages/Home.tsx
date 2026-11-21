@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { useDbVersion } from '@/state/AppContext';
 import { listAttempts, listBookmarks, listDaily, listMistakes, listWords, loadSettings, todayKey } from '@/db';
-import { paperById, paperMetas, availableExamCodes } from '@/data/papers';
+import { paperById, paperMetas, availableExamCodes, warmupPopular } from '@/data/papers';
 import { exams, examMap } from '@/data/exams';
 import { accuracyOf, totalMinutes } from '@/lib/score';
 import { streakDays } from '@/lib/srs';
@@ -42,6 +42,12 @@ export default function Home() {
       }
     );
   }, [v]);
+
+  // 首屏渲染完成后，后台预热最近四六级真题正文，点开即秒开；不阻塞首屏。
+  useEffect(() => {
+    const timer = window.setTimeout(() => warmupPopular(), 1500);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   const today = daily.find((d) => d.date === todayKey());
   const todayMinutes = today?.minutes ?? 0;

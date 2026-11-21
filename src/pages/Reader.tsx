@@ -18,7 +18,7 @@ import {
   Type,
   X
 } from 'lucide-react';
-import { paperById, findPassage } from '@/data/papers';
+import { usePaper, paperReady, findPassage } from '@/data/papers';
 import { partKindLabel, examMap } from '@/data/exams';
 import { useApp } from '@/state/AppContext';
 import {
@@ -44,7 +44,8 @@ export default function Reader() {
   const [params, setParams] = useSearchParams();
   const navigate = useNavigate();
   const { settings, update } = useApp();
-  const paper = paperById(paperId);
+  const paper = usePaper(paperId);
+  const ready = paperReady(paperId);
 
   const initialPart = params.get('part') ?? paper?.parts[0]?.id ?? '';
   const [partId, setPartId] = useState(initialPart);
@@ -140,6 +141,15 @@ export default function Reader() {
         <div className="card px-6 py-10 text-center">
           <p className="text-sm text-ink-mute">未找到这套试卷。</p>
           <Link to="/library" className="btn btn-ghost mt-4">返回真题库</Link>
+        </div>
+      </div>
+    );
+  }
+  if (!ready) {
+    return (
+      <div className="grid min-h-screen place-items-center px-6">
+        <div className="card px-6 py-10 text-center">
+          <p className="text-sm text-ink-mute">正在加载试卷题目…</p>
         </div>
       </div>
     );

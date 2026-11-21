@@ -13,7 +13,7 @@ import {
   Timer
 } from 'lucide-react';
 import { examMap, partKindLabel, difficultyLabel } from '@/data/exams';
-import { paperById } from '@/data/papers';
+import { usePaper, paperReady } from '@/data/papers';
 import { DifficultyDots } from './Library';
 import { SampleBadge, ResourceBadges } from '@/components/ui';
 import { listBookmarks, toggleBookmark, listAttempts, getPdf, savePdf } from '@/db';
@@ -25,7 +25,8 @@ import { relativeDay } from '@/lib/text';
 export default function PaperDetail() {
   const { paperId = '' } = useParams();
   const navigate = useNavigate();
-  const paper = paperById(paperId);
+  const paper = usePaper(paperId);
+  const ready = paperReady(paperId);
   const [v, bump] = useDbVersion();
   const [saved, setSaved] = useState(false);
   const [attempts, setAttempts] = useState<Attempt[]>([]);
@@ -55,6 +56,11 @@ export default function PaperDetail() {
   const active = attempts.find((a) => !a.submittedAt);
   const submitted = attempts.filter((a) => a.submittedAt);
 
+  if (!ready) {
+    return (
+      <div className="card p-10 text-center text-sm text-ink-mute">正在加载试卷题目…</div>
+    );
+  }
   // 未上线试卷（含已下架示例）不在任何列表中展示，仅保留直接访问时的说明
   if (paper.parts.every((p) => p.questions.length === 0)) {
     return (

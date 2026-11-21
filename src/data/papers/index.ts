@@ -1,8 +1,10 @@
+import { useEffect, useState } from 'react';
 import type { Paper, PaperMeta, ExamCode, PartKind, ResourceFlag } from '@/types/paper';
 import { cet4_2024_12 } from './cet4-2024-12';
 import { cet4_2023_06, cet6_2024_12, kaoyan1_2025, tem4_2024 } from './more';
 import { realPapers } from './real-papers';
-import { realContent } from './real-content';
+import { paperCatalog } from './paper-catalog';
+import { loadPaperContent, isContentReady, getLoadedContent, preloadPapers } from './real-content';
 
 /** 已收录题面的标准内容声明（覆盖“仅外链”时代的旧说明） */
 const COLLECTED_NOTE =
@@ -12,13 +14,22 @@ const COLLECTED_NOTE =
  * 将联网检索导入的站内题面合并到真实资源记录：
  * 有内容的卷标记「已收录」并可直接在线作答；无内容的卷保持「筹备中」，不提供外部跳转。
  */
-function mergeImported(p: Paper): Paper {
-  const c = realContent[p.id];
-  if (!c || !c.parts || c.parts.length === 0) return p;
+function withCatalog(p: Paper): Paper {
+  const entry = paperCatalog[p.id];
+  if (!entry) return p; // 无正文的筹备中记录保持原样
   const prov = p.provenance;
+  // 目录里有元信息、但题目正文按需加载：此处只填元数据，parts 留空由加载服务填充。
+  // 若正文恰好已在内存（预热完成），一并填入，避免重复构造。
+  const loaded = getLoadedContent(p.id);
   return {
     ...p,
-    ...c,
+    subtitle: entry.subtitle || p.subtitle,
+    summary: entry.summary || p.summary,
+    minutes: entry.minutes || p.minutes,
+    words: entry.words || p.words,
+    tags: entry.tags?.length ? entry.tags : p.tags,
+    parts: loaded?.parts ?? [],
+    difficulty: p.difficulty,
     provenance: prov
       ? {
           ...prov,
@@ -40,7 +51,12 @@ function countQuestions(p: Paper) {
 }
 
 export function toMeta(p: Paper): PaperMeta {
-  const kinds = Array.from(new Set(p.parts.map((x) => x.kind))) as PartKind[];
+  const entry = paperCatalog[p.id];
+  const kinds = entry?.kinds
+    ? (entry.kinds as PartKind[])
+    : (Array.from(new Set(p.parts.map((x) => x.kind))) as PartKind[]);
+  const loaded = getLoadedContent(p.id);
+  const parts = loaded?.parts ?? p.parts;
   return {
     id: p.id,
     exam: p.exam,
@@ -56,9 +72,11 @@ export function toMeta(p: Paper): PaperMeta {
     summary: p.summary,
     sample: p.sample,
     provenance: p.provenance,
-    hasAudio: p.parts.some((x) => !!x.audio) || !!p.provenance?.sources.find((s) => s.kind === '听力音频'),
+    hasAudio: entry
+      ? entry.hasAudio
+      : parts.some((x) => !!x.audio) || !!p.provenance?.sources.find((s) => s.kind === '听力音频'),
     kinds,
-    questionCount: countQuestions(p)
+    questionCount: entry ? entry.questionCount : parts.reduce((n, part) => n + part.questions.length, 0)
   };
 }
 
@@ -122,7 +140,7 @@ export const samplePapers: Paper[] = [
 ];
 
 /** 合并站内导入内容后的真实资源记录 */
-const collectedRealPapers: Paper[] = realPapers.map(mergeImported);
+const collectedRealPapers: Paper[] = realPapers.map(withCatalog);
 
 /** 全量试卷（真实资源记录 + 已下架示例）：仅用于 id → 详情回查 */
 export const papers: Paper[] = [...collectedRealPapers, ...samplePapers];
@@ -133,7 +151,7 @@ export const papers: Paper[] = [...collectedRealPapers, ...samplePapers];
  * 避免出现「点进去却只能跳外站」的死胡同。
  */
 export const listedPapers: Paper[] = collectedRealPapers.filter((p) =>
-  p.parts.some((part) => part.questions.length > 0)
+  !!paperCatalog[p.id] || p.parts.some((part) => part.questions.length > 0)
 );
 
 /** 当前有站内可用试卷的考试类型（列表页与首页只展示这些考试） */
@@ -187,4 +205,58 @@ export function partMinutes(paper: Paper, partId: string): number {
   if (part.minutes) return part.minutes;
   const share = part.questions.length / Math.max(1, countQuestions(paper));
   return Math.max(5, Math.round(paper.minutes * share));
+}
+
+/* --------------------------------- 按需加载正文 --------------------------------- */
+
+/**
+ * 加载一套试卷的题目正文，并把 parts 填充进 paperMap 中的单例对象。
+ * 因为 paperById 返回的就是该单例，填充后所有持有引用的组件都能读到正文；
+ * 由 usePaper hook 负责在加载完成后触发一次重渲染。
+ */
+export async function loadPaper(id: string): Promise<Paper | undefined> {
+  const paper = paperMap.get(id);
+  if (!paper || !paperCatalog[id]) return paper;
+  if (isContentReady(id)) {
+    const loaded = getLoadedContent(id);
+    if (loaded?.parts && paper.parts.length === 0) paper.parts = loaded.parts;
+    return paper;
+  }
+  const content = await loadPaperContent(id);
+  if (content?.parts) paper.parts = content.parts;
+  return paper;
+}
+
+/** 首页加载完成后，后台预热最近的高频真题（四六级优先），提升点开速度 */
+export function warmupPopular(): void {
+  const recent = listedPapers
+    .filter((p) => p.exam === 'cet4' || p.exam === 'cet6')
+    .slice(0, 4)
+    .map((p) => p.id);
+  preloadPapers(recent);
+}
+
+/**
+ * React hook：进入答题/阅读/详情等页面时调用，确保该试卷正文已加载。
+ * 正文就绪后触发重渲染，使 paperById 的单例对象带上 parts。
+ */
+export function usePaper(id: string | undefined): Paper | undefined {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [tick, setTick] = useState(0);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    if (!id || !paperCatalog[id] || isContentReady(id)) return;
+    let alive = true;
+    loadPaper(id).then(() => { if (alive) setTick((t) => t + 1); }).catch(() => undefined);
+    return () => { alive = false; };
+  }, [id, tick]);
+  void tick;
+  return id ? paperMap.get(id) : undefined;
+}
+
+/** 正文是否就绪（供页面显示加载态） */
+export function paperReady(id: string | undefined): boolean {
+  if (!id) return false;
+  if (!paperCatalog[id]) return true; // 示例卷自带正文
+  return isContentReady(id) || (paperMap.get(id)?.parts.length ?? 0) > 0;
 }
