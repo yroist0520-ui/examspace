@@ -27,36 +27,57 @@
     </div>
     <div id="root"></div>
     <script>
-      // React 成功挂载后移除兜底层；8 秒仍未挂载则判定为加载失败（多为旧缓存导致）。
+      // React 成功挂载后移除兜底层；超时未挂载则先自动清理旧缓存并重载一次，仍失败再给手动按钮。
       (function () {
         var boot = document.getElementById('boot');
         var removed = false;
+        var RETRY_KEY = 'examspace_boot_autoretry';
         function hideBoot() {
           var root = document.getElementById('root');
           if (!removed && root && root.firstElementChild) {
             removed = true;
+            try { sessionStorage.removeItem(RETRY_KEY); } catch (e) {}
             if (boot && boot.parentNode) boot.parentNode.removeChild(boot);
             clearTimeout(timer);
           }
         }
         var observer = new MutationObserver(hideBoot);
         observer.observe(document.getElementById('root'), { childList: true });
+
+        function cleanAndReload() {
+          var p = Promise.resolve();
+          if ('caches' in window) p = p.then(function () {
+            return caches.keys().then(function (keys) { return Promise.all(keys.map(function (k) { return caches.delete(k); })); });
+          });
+          if ('serviceWorker' in navigator) p = p.then(function () {
+            return navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); });
+          });
+          // 加时间戳参数绕过任何残留缓存；无论清理成功与否都必须重载，避免卡死。
+          p.catch(function () {}).then(function () {
+            location.replace(location.pathname + '?_fresh=' + Date.now());
+          });
+        }
+
         var timer = setTimeout(function () {
           if (removed) return;
+          var tried = false;
+          try { tried = sessionStorage.getItem(RETRY_KEY) === '1'; } catch (e) {}
+          // 首次超时：多数是旧 SW/缓存或网络抖动，自动清一次并重载（仅一次，避免死循环）。
+          if (!tried) {
+            try { sessionStorage.setItem(RETRY_KEY, '1'); } catch (e) {}
+            var m = document.getElementById('boot-msg');
+            if (m) m.textContent = '首次加载较慢，正在自动重试…';
+            cleanAndReload();
+            return;
+          }
+          // 第二次仍未挂载：给可读提示与手动按钮（例如网络真的很慢时让用户再等等）。
           var msg = document.getElementById('boot-msg');
           var retry = document.getElementById('boot-retry');
-          if (msg) msg.textContent = '加载较慢，可能是旧缓存所致。点击下方按钮清除缓存后重试。';
+          if (msg) msg.textContent = '题库较大，加载稍慢，请稍候；若长时间无响应可点下方按钮重试。';
           if (retry) retry.hidden = false;
           var btn = document.getElementById('boot-btn');
-          if (btn) btn.onclick = function () {
-            if ('caches' in window) {
-              caches.keys().then(function (keys) { return Promise.all(keys.map(function (k) { return caches.delete(k); })); })
-                .then(function () { if ('serviceWorker' in navigator) return navigator.serviceWorker.getRegistrations().then(function (rs) { return Promise.all(rs.map(function (r) { return r.unregister(); })); }); })
-                .then(function () { location.reload(true); })
-                .catch(function () { location.reload(true); });
-            } else { location.reload(true); }
-          };
-        }, 8000);
+          if (btn) btn.onclick = cleanAndReload;
+        }, 20000);
       })();
     </script>
     <script type="module" src="/src/main.tsx"></script>
